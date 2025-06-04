@@ -1,6 +1,3 @@
-#ifndef BPlusTree_H
-#define BPlusTree_H
-
 #include <iostream>
 
 template <typename T> struct Node {
@@ -707,5 +704,3 @@ public:
     }
   }
 };
-
-#endif

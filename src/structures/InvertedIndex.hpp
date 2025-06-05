@@ -1,4 +1,4 @@
-#include "HashMap.hpp"
+#include "HashMap.cpp"
 #include <string>
 #include <vector>
 

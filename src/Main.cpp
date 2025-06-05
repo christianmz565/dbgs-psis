@@ -1,26 +1,46 @@
-#include "system/Table.hpp"
+#include "system/Table.cpp"
+#include <iostream>
 
 int main() {
 
   std::vector<std::pair<std::string, DataType>> cols = {
       {"id", DataType::INT},
       {"name", DataType::STRING},
-      {"gpa", DataType::DOUBLE}};
-  Table students(cols);
+      {"gpa", DataType::DOUBLE},
+      {"comment", DataType::STRING}};
+
+  Table students(cols, /*hashCapacity=*/101);
+
+  students.insertRow({1, std::string("Alice"), 3.9, std::string("CS major")});
+  students.insertRow({2, std::string("Bob"), 3.4, std::string("Math minor")});
+  students.insertRow({3, std::string("Carol"), 3.8, std::string("Physics")});
+  students.insertRow({4, std::string("Dave"), 3.4, std::string("Math minor")});
+
+  students.createBPlusTreeIndex("gpa", /*degree=*/3);
+
+  students.createInvertedIndex("comment");
 
   students.printSchema();
-  std::cout << "\n";
-
-  students.insertRow({1, std::string("Alice"), 3.8});
-
-  students.insertRow({{"name", std::string("Bob")}, {"id", 2}, {"gpa", 3.4}});
-
+  std::cout << "\nAll rows:\n";
   students.printAllRows();
-  std::cout << "\n";
 
-  Cell c = students.getCell(1, "name");
-  std::string bobName = std::get<std::string>(c);
-  std::cout << "Row 2, column 'name' = " << bobName << "\n";
+  std::vector<int> matchesGPA = students.searchByIndex("gpa", Cell(3.4));
+  std::cout << "\nRows with gpa == 3.4:\n";
+  for (int rid : matchesGPA) {
+    std::cout << "  Row #" << rid << " → ";
+
+    std::string nm = std::get<std::string>(students.getCell(rid, "name"));
+    std::cout << nm << "\n";
+  }
+
+  std::vector<int> matchesComment =
+      students.searchByIndex("comment", Cell(std::string("Math minor")));
+  std::cout << "\nRows whose comment == \"Math minor\":\n";
+  for (int rid : matchesComment) {
+    std::cout << "  Row #" << rid << " → ";
+    std::string nm = std::get<std::string>(students.getCell(rid, "name"));
+    std::cout << nm << "\n";
+  }
 
   return 0;
 }

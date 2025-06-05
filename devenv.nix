@@ -8,8 +8,8 @@
 
 {
   packages = with pkgs; [
-
+    gcc
+    cmake
+    stdenv.cc.cc.lib
   ];
-
-  languages.cplusplus.enable = true;
 }

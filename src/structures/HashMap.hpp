@@ -1,119 +1,29 @@
-#include <iostream>
-using namespace std;
-
-template <typename K, typename V>
-
-class HashNode {
+template <typename K, typename V> class HashNode {
 public:
   V value;
   K key;
 
-  HashNode(K key, V value) {
-    this->value = value;
-    this->key = key;
-  }
+  HashNode(K key, V value);
 };
 
-template <typename K, typename V>
-
-class HashMap {
-
+template <typename K, typename V> class HashMap {
   HashNode<K, V> **arr;
   int capacity;
-
   int size;
-
   HashNode<K, V> *dummy;
 
 public:
-  HashMap(int cap) {
-    capacity = cap;
-    size = 0;
-    arr = new HashNode<K, V> *[capacity];
+  HashMap(int cap);
+  ~HashMap();
 
-    for (int i = 0; i < capacity; i++)
-      arr[i] = NULL;
+  int _hashCode(K key);
 
-    dummy = new HashNode<K, V>(-1, -1);
-  }
-
-  ~HashMap() {
-    for (int i = 0; i < capacity; i++) {
-      if (arr[i] != NULL) {
-        delete arr[i];
-      }
-    }
-    delete[] arr;
-    delete dummy;
-  }
-
-  int _hashCode(K key) { return key % capacity; }
-
-  void insert(K key, V value) {
-    HashNode<K, V> *temp = new HashNode<K, V>(key, value);
-
-    int hashIndex = _hashCode(key);
-
-    while (arr[hashIndex] != NULL && arr[hashIndex]->key != key &&
-           arr[hashIndex]->key != -1) {
-      hashIndex++;
-      hashIndex %= capacity;
-    }
-
-    if (arr[hashIndex] == NULL || arr[hashIndex]->key == -1)
-      size++;
-    arr[hashIndex] = temp;
-  }
-
-  V remove(int key) {
-
-    int hashIndex = _hashCode(key);
-
-    while (arr[hashIndex] != NULL) {
-
-      if (arr[hashIndex]->key == key) {
-        HashNode<K, V> *temp = arr[hashIndex];
-
-        arr[hashIndex] = dummy;
-
-        size--;
-        return temp->value;
-      }
-      hashIndex++;
-      hashIndex %= capacity;
-    }
-
-    return NULL;
-  }
-
-  V get(int key) {
-
-    int hashIndex = _hashCode(key);
-    int counter = 0;
-
-    while (arr[hashIndex] != NULL) {
-      int counter = 0;
-      if (counter++ > capacity)
-        return NULL;
-
-      if (arr[hashIndex]->key == key)
-        return arr[hashIndex]->value;
-      hashIndex++;
-      hashIndex %= capacity;
-    }
-
-    return NULL;
-  }
-
-  int getSize() { return size; }
-
-  bool isEmpty() { return size == 0; }
-
-  void display() {
-    for (int i = 0; i < capacity; i++) {
-      if (arr[i] != NULL && arr[i]->key != -1)
-        cout << "key = " << arr[i]->key << "  value = " << arr[i]->value
-             << endl;
-    }
-  }
+  void insert(K key, V value);
+  V get(K key);
+  V remove(K key);
+  bool containsKey(K key);
+  int getSize();
+  bool isEmpty();
+  void display();
+  void clear();
 };

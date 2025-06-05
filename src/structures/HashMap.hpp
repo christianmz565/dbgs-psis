@@ -26,9 +26,8 @@ class HashMap {
   HashNode<K, V> *dummy;
 
 public:
-  HashMap() {
-
-    capacity = 20;
+  HashMap(int cap) {
+    capacity = cap;
     size = 0;
     arr = new HashNode<K, V> *[capacity];
 
@@ -38,12 +37,22 @@ public:
     dummy = new HashNode<K, V>(-1, -1);
   }
 
-  int hashCode(K key) { return key % capacity; }
+  ~HashMap() {
+    for (int i = 0; i < capacity; i++) {
+      if (arr[i] != NULL) {
+        delete arr[i];
+      }
+    }
+    delete[] arr;
+    delete dummy;
+  }
 
-  void insertNode(K key, V value) {
+  int _hashCode(K key) { return key % capacity; }
+
+  void insert(K key, V value) {
     HashNode<K, V> *temp = new HashNode<K, V>(key, value);
 
-    int hashIndex = hashCode(key);
+    int hashIndex = _hashCode(key);
 
     while (arr[hashIndex] != NULL && arr[hashIndex]->key != key &&
            arr[hashIndex]->key != -1) {
@@ -56,9 +65,9 @@ public:
     arr[hashIndex] = temp;
   }
 
-  V deleteNode(int key) {
+  V remove(int key) {
 
-    int hashIndex = hashCode(key);
+    int hashIndex = _hashCode(key);
 
     while (arr[hashIndex] != NULL) {
 
@@ -79,7 +88,7 @@ public:
 
   V get(int key) {
 
-    int hashIndex = hashCode(key);
+    int hashIndex = _hashCode(key);
     int counter = 0;
 
     while (arr[hashIndex] != NULL) {
@@ -96,7 +105,7 @@ public:
     return NULL;
   }
 
-  int sizeofMap() { return size; }
+  int getSize() { return size; }
 
   bool isEmpty() { return size == 0; }
 

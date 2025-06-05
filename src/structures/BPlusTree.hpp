@@ -39,11 +39,12 @@ public:
     this->root = nullptr;
     this->degree = _degree;
   }
+
   ~BPlusTree() { clear(this->root); }
 
-  Node<T> *getroot() { return this->root; }
+  Node<T> *getRoot() { return this->root; }
 
-  Node<T> *BPlusTreeSearch(Node<T> *node, T key) {
+  Node<T> *_findKey(Node<T> *node, T key) {
     if (node == nullptr) {
       return nullptr;
     } else {
@@ -72,7 +73,7 @@ public:
       return nullptr;
     }
   }
-  Node<T> *BPlusTreeRangeSearch(Node<T> *node, T key) {
+  Node<T> *_findRange(Node<T> *node, T key) {
     if (node == nullptr) {
       return nullptr;
     } else {
@@ -94,10 +95,10 @@ public:
       return cursor;
     }
   }
-  int range_search(T start, T end, T *result_data, int arr_length) {
+  int searchRange(T start, T end, T *result_data, int arr_length) {
     int index = 0;
 
-    Node<T> *start_node = BPlusTreeRangeSearch(this->root, start);
+    Node<T> *start_node = _findRange(this->root, start);
     Node<T> *cursor = start_node;
     T temp = cursor->item[0];
 
@@ -116,9 +117,9 @@ public:
     }
     return index;
   }
-  bool search(T data) { return BPlusTreeSearch(this->root, data) != nullptr; }
+  bool search(T data) { return _findKey(this->root, data) != nullptr; }
 
-  int find_index(T *arr, T data, int len) {
+  int _findIndex(T *arr, T data, int len) {
     int index = 0;
     for (int i = 0; i < len; i++) {
       if (data < arr[i]) {
@@ -132,7 +133,7 @@ public:
     }
     return index;
   }
-  T *item_insert(T *arr, T data, int len) {
+  T *_insertItem(T *arr, T data, int len) {
     int index = 0;
     for (int i = 0; i < len; i++) {
       if (data < arr[i]) {
@@ -153,7 +154,7 @@ public:
 
     return arr;
   }
-  Node<T> **child_insert(Node<T> **child_arr, Node<T> *child, int len,
+  Node<T> **_innerInsert(Node<T> **child_arr, Node<T> *child, int len,
                          int index) {
     for (int i = len; i > index; i--) {
       child_arr[i] = child_arr[i - 1];
@@ -161,7 +162,7 @@ public:
     child_arr[index] = child;
     return child_arr;
   }
-  Node<T> *child_item_insert(Node<T> *node, T data, Node<T> *child) {
+  Node<T> *_insertInChild(Node<T> *node, T data, Node<T> *child) {
     int item_index = 0;
     int child_index = 0;
     for (int i = 0; i < node->size; i++) {
@@ -188,12 +189,12 @@ public:
 
     return node;
   }
-  void InsertPar(Node<T> *par, Node<T> *child, T data) {
+  void _insertInParent(Node<T> *par, Node<T> *child, T data) {
 
     Node<T> *cursor = par;
     if (cursor->size < this->degree - 1) {
 
-      cursor = child_item_insert(cursor, data, child);
+      cursor = _insertInChild(cursor, data, child);
       cursor->size++;
     } else {
 
@@ -204,15 +205,15 @@ public:
       for (int i = 0; i < cursor->size; i++) {
         item_copy[i] = cursor->item[i];
       }
-      item_copy = item_insert(item_copy, data, cursor->size);
+      item_copy = _insertItem(item_copy, data, cursor->size);
 
       auto **child_copy = new Node<T> *[cursor->size + 2];
       for (int i = 0; i < cursor->size + 1; i++) {
         child_copy[i] = cursor->children[i];
       }
       child_copy[cursor->size + 1] = nullptr;
-      child_copy = child_insert(child_copy, child, cursor->size + 1,
-                                find_index(item_copy, data, cursor->size + 1));
+      child_copy = _innerInsert(child_copy, child, cursor->size + 1,
+                                _findIndex(item_copy, data, cursor->size + 1));
 
       cursor->size = (this->degree) / 2;
       if ((this->degree) % 2 == 0) {
@@ -255,7 +256,7 @@ public:
         this->root = Newparent;
 
       } else {
-        InsertPar(cursor->parent, Newnode, paritem);
+        _insertInParent(cursor->parent, Newnode, paritem);
       }
     }
   }
@@ -268,11 +269,11 @@ public:
     } else {
       Node<T> *cursor = this->root;
 
-      cursor = BPlusTreeRangeSearch(cursor, data);
+      cursor = _findRange(cursor, data);
 
       if (cursor->size < (this->degree - 1)) {
 
-        cursor->item = item_insert(cursor->item, data, cursor->size);
+        cursor->item = _insertItem(cursor->item, data, cursor->size);
         cursor->size++;
 
         cursor->children[cursor->size] = cursor->children[cursor->size - 1];
@@ -288,7 +289,7 @@ public:
           item_copy[i] = cursor->item[i];
         }
 
-        item_copy = item_insert(item_copy, data, cursor->size);
+        item_copy = _insertItem(item_copy, data, cursor->size);
 
         cursor->size = (this->degree) / 2;
         if ((this->degree) % 2 == 0) {
@@ -325,7 +326,7 @@ public:
 
           this->root = Newparent;
         } else {
-          InsertPar(cursor->parent, Newnode, paritem);
+          _insertInParent(cursor->parent, Newnode, paritem);
         }
       }
     }
@@ -335,7 +336,7 @@ public:
 
     Node<T> *cursor = this->root;
 
-    cursor = BPlusTreeRangeSearch(cursor, data);
+    cursor = _findRange(cursor, data);
 
     int sib_index = -1;
     for (int i = 0; i < cursor->parent->size + 1; i++) {
@@ -387,7 +388,7 @@ public:
             temp[i] = cursor->item[i];
           }
 
-          item_insert(temp, leftsibling->item[leftsibling->size - 1],
+          _insertItem(temp, leftsibling->item[leftsibling->size - 1],
                       cursor->size);
           for (int i = 0; i < cursor->size + 1; i++) {
             cursor->item[i] = temp[i];
@@ -419,7 +420,7 @@ public:
             temp[i] = cursor->item[i];
           }
 
-          item_insert(temp, rightsibling->item[0], cursor->size);
+          _insertItem(temp, rightsibling->item[0], cursor->size);
           for (int i = 0; i < cursor->size + 1; i++) {
             cursor->item[i] = temp[i];
           }
@@ -456,7 +457,7 @@ public:
         leftsibling->children[leftsibling->size] =
             cursor->children[cursor->size];
 
-        Removepar(cursor, left, cursor->parent);
+        _removeFromParent(cursor, left, cursor->parent);
         for (int i = 0; i < cursor->size; i++) {
           cursor->item[i] = 0;
           cursor->children[i] = nullptr;
@@ -481,7 +482,7 @@ public:
         cursor->children[cursor->size] =
             rightsibling->children[rightsibling->size];
 
-        Removepar(rightsibling, right - 1, cursor->parent);
+        _removeFromParent(rightsibling, right - 1, cursor->parent);
 
         for (int i = 0; i < rightsibling->size; i++) {
           rightsibling->item[i] = 0;
@@ -500,7 +501,7 @@ public:
     }
   }
 
-  void Removepar(Node<T> *node, int index, Node<T> *par) {
+  void _removeFromParent(Node<T> *node, int index, Node<T> *par) {
     Node<T> *remover = node;
     Node<T> *cursor = par;
     T target = cursor->item[index];
@@ -572,7 +573,7 @@ public:
             temp[i] = cursor->item[i];
           }
 
-          item_insert(temp, cursor->parent->item[left], cursor->size);
+          _insertItem(temp, cursor->parent->item[left], cursor->size);
           for (int i = 0; i < cursor->size + 1; i++) {
             cursor->item[i] = temp[i];
           }
@@ -585,7 +586,7 @@ public:
             child_temp[i] = cursor->children[i];
           }
 
-          child_insert(child_temp, leftsibling->children[leftsibling->size],
+          _innerInsert(child_temp, leftsibling->children[leftsibling->size],
                        cursor->size, 0);
 
           for (int i = 0; i < cursor->size + 2; i++) {
@@ -609,7 +610,7 @@ public:
             temp[i] = cursor->item[i];
           }
 
-          item_insert(temp, cursor->parent->item[sib_index], cursor->size);
+          _insertItem(temp, cursor->parent->item[sib_index], cursor->size);
           for (int i = 0; i < cursor->size + 1; i++) {
             cursor->item[i] = temp[i];
           }
@@ -646,7 +647,7 @@ public:
         }
         leftsibling->size = leftsibling->size + cursor->size + 1;
 
-        Removepar(cursor, left, cursor->parent);
+        _removeFromParent(cursor, left, cursor->parent);
         return;
       }
       if (right <= cursor->parent->size) {
@@ -667,7 +668,7 @@ public:
 
         rightsibling->size = rightsibling->size + cursor->size + 1;
 
-        Removepar(rightsibling, right - 1, cursor->parent);
+        _removeFromParent(rightsibling, right - 1, cursor->parent);
         return;
       }
     } else {
@@ -687,8 +688,8 @@ public:
       delete cursor;
     }
   }
-  void bpt_print() { print(this->root); }
-  void print(Node<T> *cursor) {
+  void print() { _print(this->root); }
+  void _print(Node<T> *cursor) {
 
     if (cursor != NULL) {
       for (int i = 0; i < cursor->size; ++i) {
@@ -698,7 +699,7 @@ public:
 
       if (!cursor->is_leaf) {
         for (int i = 0; i < cursor->size + 1; ++i) {
-          print(cursor->children[i]);
+          _print(cursor->children[i]);
         }
       }
     }

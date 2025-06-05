@@ -1,23 +1,21 @@
-#include <cstddef>
-
 template <typename T> struct Node {
   bool is_leaf;
-  std::size_t degree;
-  std::size_t size;
+  int degree;
+  int size;
   T *item;
   Node<T> **children;
   Node<T> *parent;
 
 public:
-  Node(std::size_t _degree);
+  Node(int _degree);
 };
 
 template <typename T> class BPlusTree {
   Node<T> *root;
-  std::size_t degree;
+  int degree;
 
 public:
-  BPlusTree(std::size_t _degree);
+  BPlusTree(int _degree);
   ~BPlusTree();
 
   Node<T> *_findKey(Node<T> *node, T key);

@@ -1,7 +1,7 @@
 #include "BPlusTree.hpp"
 #include <iostream>
 
-template <typename T> Node<T>::Node(std::size_t _degree) {
+template <typename T> Node<T>::Node(int _degree) {
   this->is_leaf = false;
   this->degree = _degree;
   this->size = 0;
@@ -21,7 +21,7 @@ template <typename T> Node<T>::Node(std::size_t _degree) {
   this->parent = nullptr;
 }
 
-template <typename T> BPlusTree<T>::BPlusTree(std::size_t _degree) {
+template <typename T> BPlusTree<T>::BPlusTree(int _degree) {
   this->root = nullptr;
   this->degree = _degree;
 }

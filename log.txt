@@ -1,0 +1,6 @@
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/cricro/projects/dbgs-psis/build
+[ 50%] Building CXX object CMakeFiles/DBGS.dir/Main.cpp.o
+[100%] Linking CXX executable DBGS
+[100%] Built target DBGS

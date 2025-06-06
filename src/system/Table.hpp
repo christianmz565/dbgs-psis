@@ -1,4 +1,4 @@
-#include "../structures/BPlusTree.cpp"
+#include "../structures/BPlusTree.hpp"
 #include "../structures/InvertedIndex.cpp"
 #include <stdexcept>
 #include <string>
@@ -32,6 +32,10 @@ struct IndexEntry {
 
     return std::get<std::string>(key) < std::get<std::string>(other.key);
   }
+
+  bool operator>(const IndexEntry &other) const { return other < *this; }
+  bool operator<=(const IndexEntry &other) const { return !(*this > other); }
+  bool operator>=(const IndexEntry &other) const { return !(*this < other); }
 
   bool operator==(const IndexEntry &other) const {
     return key == other.key && rowId == other.rowId;

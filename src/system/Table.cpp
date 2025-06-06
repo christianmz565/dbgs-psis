@@ -1,5 +1,5 @@
 #include "Table.hpp"
-#include <cstdint>
+#include <climits>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
@@ -31,11 +31,11 @@ Table::~Table() {
   for (int i = 0; i < schema_.size(); ++i) {
     const auto &colName = schema_[i].name;
     if (bptIndices_.containsKey(colName)) {
-      BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName);
+      BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName).value();
       delete treePtr;
     }
     if (invIndices_.containsKey(colName)) {
-      InvertedIndex *idxPtr = invIndices_.get(colName);
+      InvertedIndex *idxPtr = invIndices_.get(colName).value();
       delete idxPtr;
     }
   }
@@ -69,7 +69,7 @@ int Table::columnIndex(const std::string &colName) {
   if (!nameToIndex_.containsKey(colName)) {
     throw std::invalid_argument("Unknown column '" + colName + "'");
   }
-  return nameToIndex_.get(colName);
+  return nameToIndex_.get(colName).value();
 }
 
 void Table::printSchema() const {
@@ -124,7 +124,7 @@ void Table::insertRow(const std::vector<Cell> &row) {
   for (int i = 0; i < schema_.size(); ++i) {
     const std::string &colName = schema_[i].name;
     if (bptIndices_.containsKey(colName)) {
-      BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName);
+      BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName).value();
       IndexEntry ie{row[i], newRowId};
       treePtr->insert(ie);
     }
@@ -134,7 +134,7 @@ void Table::insertRow(const std::vector<Cell> &row) {
     if (schema_[i].type == DataType::STRING) {
       const std::string &colName = schema_[i].name;
       if (invIndices_.containsKey(colName)) {
-        InvertedIndex *invPtr = invIndices_.get(colName);
+        InvertedIndex *invPtr = invIndices_.get(colName).value();
         const std::string &keyStr = std::get<std::string>(row[i]);
         invPtr->add(keyStr, newRowId);
       }
@@ -155,7 +155,7 @@ void Table::createBPlusTreeIndex(const std::string &colName, int degree) {
   }
 
   if (bptIndices_.containsKey(colName)) {
-    delete bptIndices_.get(colName);
+    delete bptIndices_.get(colName).value();
   }
   bptIndices_.insert(colName, treePtr);
 }
@@ -174,7 +174,7 @@ void Table::createInvertedIndex(const std::string &colName) {
   }
 
   if (invIndices_.containsKey(colName)) {
-    delete invIndices_.get(colName);
+    delete invIndices_.get(colName).value();
   }
   invIndices_.insert(colName, invPtr);
 }
@@ -185,13 +185,13 @@ std::vector<int> Table::searchByIndex(const std::string &colName,
   DataType dt = schema_[cidx].type;
 
   if (bptIndices_.containsKey(colName)) {
-    BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName);
+    BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName).value();
 
     int maxPossible = data_.size();
     IndexEntry *buffer = new IndexEntry[maxPossible];
 
     IndexEntry start{key, 0};
-    IndexEntry end{key, SIZE_MAX};
+    IndexEntry end{key, INT_MAX};
 
     int foundCount = treePtr->searchRange(start, end, buffer, (int)maxPossible);
 
@@ -206,7 +206,7 @@ std::vector<int> Table::searchByIndex(const std::string &colName,
 
   if (schema_[cidx].type == DataType::STRING &&
       invIndices_.containsKey(colName)) {
-    InvertedIndex *invPtr = invIndices_.get(colName);
+    InvertedIndex *invPtr = invIndices_.get(colName).value();
     const std::string &keyStr = std::get<std::string>(key);
     return invPtr->get(keyStr);
   }

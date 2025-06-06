@@ -6,7 +6,7 @@ InvertedIndex::~InvertedIndex() { clear(); }
 
 void InvertedIndex::add(const std::string &key, int rowId) {
   if (map_.containsKey(key)) {
-    std::vector<int> existing = map_.get(key);
+    std::vector<int> existing = map_.get(key).value();
     existing.push_back(rowId);
     map_.insert(key, existing);
   } else {
@@ -18,7 +18,7 @@ void InvertedIndex::add(const std::string &key, int rowId) {
 
 std::vector<int> InvertedIndex::get(const std::string &key) {
   if (map_.containsKey(key)) {
-    return map_.get(key);
+    return map_.get(key).value();
   } else {
     return {};
   }
@@ -28,7 +28,7 @@ void InvertedIndex::remove(const std::string &key, int rowId) {
   if (!map_.containsKey(key))
     return;
 
-  std::vector<int> existing = map_.get(key);
+  std::vector<int> existing = map_.get(key).value();
 
   std::vector<int> temp;
   for (int x : existing) {

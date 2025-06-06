@@ -6,10 +6,7 @@ template <typename T> Node<T>::Node(int _degree) {
   this->degree = _degree;
   this->size = 0;
 
-  T *_item = new T[degree - 1];
-  for (int i = 0; i < degree - 1; i++) {
-    _item[i] = 0;
-  }
+  T *_item = new T[degree - 1]();
   this->item = _item;
 
   Node<T> **_children = new Node<T> *[degree];

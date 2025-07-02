@@ -1,0 +1,109 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Índice de clases}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lista de clases}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Índice de archivos}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista de archivos}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Documentación de clases}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Referencia de la plantilla de la clase BPlus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tree$<$ T $>$}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Descripción detallada}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Documentación de constructores y destructores}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}BPlusTree()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $BPlusTree()}{7}{subsubsection.3.1.2.2}%
+\contentsline {subsection}{\numberline {3.1.3}Documentación de funciones miembro}{7}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}\_findIndex()}{7}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}\_findKey()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}\_findRange()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}\_innerInsert()}{8}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}\_insertInChild()}{8}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}\_insertInParent()}{9}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}\_insertItem()}{9}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}\_print()}{9}{subsubsection.3.1.3.8}%
+\contentsline {subsubsection}{\numberline {3.1.3.9}\_removeFromParent()}{10}{subsubsection.3.1.3.9}%
+\contentsline {subsubsection}{\numberline {3.1.3.10}clear()}{11}{subsubsection.3.1.3.10}%
+\contentsline {subsubsection}{\numberline {3.1.3.11}getRoot()}{11}{subsubsection.3.1.3.11}%
+\contentsline {subsubsection}{\numberline {3.1.3.12}insert()}{11}{subsubsection.3.1.3.12}%
+\contentsline {subsubsection}{\numberline {3.1.3.13}remove()}{11}{subsubsection.3.1.3.13}%
+\contentsline {subsubsection}{\numberline {3.1.3.14}search()}{12}{subsubsection.3.1.3.14}%
+\contentsline {subsubsection}{\numberline {3.1.3.15}searchRange()}{12}{subsubsection.3.1.3.15}%
+\contentsline {section}{\numberline {3.2}Referencia de la estructura Column}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Descripción detallada}{13}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Referencia de la plantilla de la clase Hash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map$<$ K, V $>$}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Descripción detallada}{14}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Documentación de constructores y destructores}{14}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}HashMap()}{14}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}$\sim $HashMap()}{15}{subsubsection.3.3.2.2}%
+\contentsline {subsection}{\numberline {3.3.3}Documentación de funciones miembro}{15}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}\_getLoadFactor()}{15}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}\_getPows()}{15}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}\_hashCode()}{15}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}\_insert()}{16}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.3.5}\_toStringGeneric()}{16}{subsubsection.3.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.3.6}\_wrap()}{16}{subsubsection.3.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.3.7}containsKey()}{17}{subsubsection.3.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.3.8}get()}{17}{subsubsection.3.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.3.9}getSize()}{17}{subsubsection.3.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.3.10}insert()}{18}{subsubsection.3.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.3.11}isEmpty()}{18}{subsubsection.3.3.3.11}%
+\contentsline {subsubsection}{\numberline {3.3.3.12}remove()}{18}{subsubsection.3.3.3.12}%
+\contentsline {subsubsection}{\numberline {3.3.3.13}toList()}{18}{subsubsection.3.3.3.13}%
+\contentsline {section}{\numberline {3.4}Referencia de la plantilla de la clase Hash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Node$<$ K, V $>$}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Descripción detallada}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Documentación de constructores y destructores}{19}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}HashNode()}{19}{subsubsection.3.4.2.1}%
+\contentsline {section}{\numberline {3.5}Referencia de la estructura Index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry}{20}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Descripción detallada}{20}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Documentación de funciones miembro}{20}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}operator$<$()}{20}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}operator$<$=()}{20}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}operator==()}{21}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}operator$>$()}{21}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}operator$>$=()}{21}{subsubsection.3.5.2.5}%
+\contentsline {section}{\numberline {3.6}Referencia de la clase Inverted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index}{21}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Descripción detallada}{22}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Documentación de constructores y destructores}{22}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}InvertedIndex()}{22}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}$\sim $InvertedIndex()}{22}{subsubsection.3.6.2.2}%
+\contentsline {subsection}{\numberline {3.6.3}Documentación de funciones miembro}{22}{subsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.3.1}add()}{22}{subsubsection.3.6.3.1}%
+\contentsline {subsubsection}{\numberline {3.6.3.2}get()}{22}{subsubsection.3.6.3.2}%
+\contentsline {subsubsection}{\numberline {3.6.3.3}remove()}{23}{subsubsection.3.6.3.3}%
+\contentsline {section}{\numberline {3.7}Referencia de la plantilla de la estructura Node$<$ T $>$}{23}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Descripción detallada}{24}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Documentación de constructores y destructores}{24}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}Node()}{24}{subsubsection.3.7.2.1}%
+\contentsline {section}{\numberline {3.8}Referencia de la clase Table}{24}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Descripción detallada}{26}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Documentación de constructores y destructores}{26}{subsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}Table()}{26}{subsubsection.3.8.2.1}%
+\contentsline {subsubsection}{\numberline {3.8.2.2}$\sim $Table()}{26}{subsubsection.3.8.2.2}%
+\contentsline {subsection}{\numberline {3.8.3}Documentación de funciones miembro}{26}{subsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.3.1}cellMatchesType()}{26}{subsubsection.3.8.3.1}%
+\contentsline {subsubsection}{\numberline {3.8.3.2}columnIndex()}{26}{subsubsection.3.8.3.2}%
+\contentsline {subsubsection}{\numberline {3.8.3.3}createBPlusTreeIndex()}{27}{subsubsection.3.8.3.3}%
+\contentsline {subsubsection}{\numberline {3.8.3.4}createInvertedIndex()}{27}{subsubsection.3.8.3.4}%
+\contentsline {subsubsection}{\numberline {3.8.3.5}dataTypeToString()}{27}{subsubsection.3.8.3.5}%
+\contentsline {subsubsection}{\numberline {3.8.3.6}getCell()}{27}{subsubsection.3.8.3.6}%
+\contentsline {subsubsection}{\numberline {3.8.3.7}insertRow()}{28}{subsubsection.3.8.3.7}%
+\contentsline {subsubsection}{\numberline {3.8.3.8}searchByIndex()}{28}{subsubsection.3.8.3.8}%
+\contentsline {chapter}{\numberline {4}Documentación de archivos}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Referencia del archivo src/structures/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}BPlus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tree.hpp}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descripción detallada}{29}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}BPlus\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tree.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Referencia del archivo src/structures/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.hpp}{38}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descripción detallada}{38}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Hash\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{39}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Inverted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{41}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Referencia del archivo src/structures/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inverted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.hpp}{42}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Descripción detallada}{42}{subsection.4.6.1}%
+\contentsline {section}{\numberline {4.7}Inverted\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{43}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Referencia del archivo src/system/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry.hpp}{43}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Descripción detallada}{43}{subsection.4.8.1}%
+\contentsline {section}{\numberline {4.9}Index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{44}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Referencia del archivo src/system/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table.cpp}{44}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Descripción detallada}{44}{subsection.4.10.1}%
+\contentsline {section}{\numberline {4.11}Table.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{44}{section.4.11}%
+\contentsline {section}{\numberline {4.12}Referencia del archivo src/system/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table.hpp}{47}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Descripción detallada}{47}{subsection.4.12.1}%
+\contentsline {section}{\numberline {4.13}Table.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.4.13}%
+\contentsline {chapter}{\'{I}ndice alfab\'{e}tico}{49}{section*.30}%

@@ -1,8 +1,17 @@
 #include "Table.hpp"
+#include "IndexEntry.hpp"
 #include <climits>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
+
+/** \file Table.cpp
+ * Implementación de la clase Table.
+ * La clase Table representa una tabla de base de datos simple.
+ * Permite definir un esquema, insertar filas,
+ * crear índices numéricos y de texto,
+ * y realizar búsquedas indexadas.
+ */
 
 Table::Table(const std::vector<std::pair<std::string, DataType>> &cols,
              int hashCapacity)
@@ -41,6 +50,9 @@ Table::~Table() {
   }
 }
 
+/**
+ * Verifica si una celda coincide con un tipo de dato específico.
+ */
 bool Table::cellMatchesType(const Cell &cell, DataType dt) {
   switch (dt) {
   case DataType::INT:

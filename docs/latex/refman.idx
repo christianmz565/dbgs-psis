@@ -1,0 +1,129 @@
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{5}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!BPlusTree@{BPlusTree}|hyperpage}{6}
+\indexentry{BPlusTree@{BPlusTree}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{6}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!````~BPlusTree@{\texorpdfstring{$\sim$}{\string~}BPlusTree}|hyperpage}{6}
+\indexentry{````~BPlusTree@{\texorpdfstring{$\sim$}{\string~}BPlusTree}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{6}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findIndex@{\_findIndex}|hyperpage}{7}
+\indexentry{\_findIndex@{\_findIndex}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{7}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findKey@{\_findKey}|hyperpage}{7}
+\indexentry{\_findKey@{\_findKey}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{7}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findRange@{\_findRange}|hyperpage}{7}
+\indexentry{\_findRange@{\_findRange}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{7}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_innerInsert@{\_innerInsert}|hyperpage}{8}
+\indexentry{\_innerInsert@{\_innerInsert}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{8}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertInChild@{\_insertInChild}|hyperpage}{8}
+\indexentry{\_insertInChild@{\_insertInChild}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{8}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertInParent@{\_insertInParent}|hyperpage}{8}
+\indexentry{\_insertInParent@{\_insertInParent}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{8}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertItem@{\_insertItem}|hyperpage}{9}
+\indexentry{\_insertItem@{\_insertItem}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{9}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_print@{\_print}|hyperpage}{9}
+\indexentry{\_print@{\_print}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{9}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_removeFromParent@{\_removeFromParent}|hyperpage}{9}
+\indexentry{\_removeFromParent@{\_removeFromParent}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{9}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!clear@{clear}|hyperpage}{11}
+\indexentry{clear@{clear}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{11}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!getRoot@{getRoot}|hyperpage}{11}
+\indexentry{getRoot@{getRoot}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{11}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!insert@{insert}|hyperpage}{11}
+\indexentry{insert@{insert}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{11}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!remove@{remove}|hyperpage}{11}
+\indexentry{remove@{remove}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{11}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!search@{search}|hyperpage}{12}
+\indexentry{search@{search}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{12}
+\indexentry{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!searchRange@{searchRange}|hyperpage}{12}
+\indexentry{searchRange@{searchRange}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}|hyperpage}{12}
+\indexentry{Column@{Column}|hyperpage}{13}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{13}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!HashMap@{HashMap}|hyperpage}{14}
+\indexentry{HashMap@{HashMap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{14}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}|hyperpage}{15}
+\indexentry{````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{15}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_getLoadFactor@{\_getLoadFactor}|hyperpage}{15}
+\indexentry{\_getLoadFactor@{\_getLoadFactor}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{15}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_getPows@{\_getPows}|hyperpage}{15}
+\indexentry{\_getPows@{\_getPows}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{15}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_hashCode@{\_hashCode}|hyperpage}{15}
+\indexentry{\_hashCode@{\_hashCode}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{15}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_insert@{\_insert}|hyperpage}{16}
+\indexentry{\_insert@{\_insert}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{16}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_toStringGeneric@{\_toStringGeneric}|hyperpage}{16}
+\indexentry{\_toStringGeneric@{\_toStringGeneric}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{16}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_wrap@{\_wrap}|hyperpage}{16}
+\indexentry{\_wrap@{\_wrap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{16}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!containsKey@{containsKey}|hyperpage}{17}
+\indexentry{containsKey@{containsKey}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{17}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!get@{get}|hyperpage}{17}
+\indexentry{get@{get}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{17}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!getSize@{getSize}|hyperpage}{17}
+\indexentry{getSize@{getSize}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{17}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!insert@{insert}|hyperpage}{17}
+\indexentry{insert@{insert}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{17}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!isEmpty@{isEmpty}|hyperpage}{18}
+\indexentry{isEmpty@{isEmpty}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{18}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!remove@{remove}|hyperpage}{18}
+\indexentry{remove@{remove}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{18}
+\indexentry{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!toList@{toList}|hyperpage}{18}
+\indexentry{toList@{toList}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}|hyperpage}{18}
+\indexentry{HashNode$<$ K, V $>$@{HashNode$<$ K, V $>$}|hyperpage}{19}
+\indexentry{HashNode$<$ K, V $>$@{HashNode$<$ K, V $>$}!HashNode@{HashNode}|hyperpage}{19}
+\indexentry{HashNode@{HashNode}!HashNode$<$ K, V $>$@{HashNode$<$ K, V $>$}|hyperpage}{19}
+\indexentry{IndexEntry@{IndexEntry}|hyperpage}{20}
+\indexentry{IndexEntry@{IndexEntry}!operator$<$@{operator$<$}|hyperpage}{20}
+\indexentry{operator$<$@{operator$<$}!IndexEntry@{IndexEntry}|hyperpage}{20}
+\indexentry{IndexEntry@{IndexEntry}!operator$<$=@{operator$<$=}|hyperpage}{20}
+\indexentry{operator$<$=@{operator$<$=}!IndexEntry@{IndexEntry}|hyperpage}{20}
+\indexentry{IndexEntry@{IndexEntry}!operator==@{operator==}|hyperpage}{20}
+\indexentry{operator==@{operator==}!IndexEntry@{IndexEntry}|hyperpage}{20}
+\indexentry{IndexEntry@{IndexEntry}!operator$>$@{operator$>$}|hyperpage}{21}
+\indexentry{operator$>$@{operator$>$}!IndexEntry@{IndexEntry}|hyperpage}{21}
+\indexentry{IndexEntry@{IndexEntry}!operator$>$=@{operator$>$=}|hyperpage}{21}
+\indexentry{operator$>$=@{operator$>$=}!IndexEntry@{IndexEntry}|hyperpage}{21}
+\indexentry{InvertedIndex@{InvertedIndex}|hyperpage}{21}
+\indexentry{InvertedIndex@{InvertedIndex}!InvertedIndex@{InvertedIndex}|hyperpage}{22}
+\indexentry{InvertedIndex@{InvertedIndex}!InvertedIndex@{InvertedIndex}|hyperpage}{22}
+\indexentry{InvertedIndex@{InvertedIndex}!````~InvertedIndex@{\texorpdfstring{$\sim$}{\string~}InvertedIndex}|hyperpage}{22}
+\indexentry{````~InvertedIndex@{\texorpdfstring{$\sim$}{\string~}InvertedIndex}!InvertedIndex@{InvertedIndex}|hyperpage}{22}
+\indexentry{InvertedIndex@{InvertedIndex}!add@{add}|hyperpage}{22}
+\indexentry{add@{add}!InvertedIndex@{InvertedIndex}|hyperpage}{22}
+\indexentry{InvertedIndex@{InvertedIndex}!get@{get}|hyperpage}{22}
+\indexentry{get@{get}!InvertedIndex@{InvertedIndex}|hyperpage}{22}
+\indexentry{InvertedIndex@{InvertedIndex}!remove@{remove}|hyperpage}{23}
+\indexentry{remove@{remove}!InvertedIndex@{InvertedIndex}|hyperpage}{23}
+\indexentry{Node$<$ T $>$@{Node$<$ T $>$}|hyperpage}{23}
+\indexentry{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}|hyperpage}{24}
+\indexentry{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}|hyperpage}{24}
+\indexentry{Table@{Table}|hyperpage}{24}
+\indexentry{Table@{Table}!Table@{Table}|hyperpage}{26}
+\indexentry{Table@{Table}!Table@{Table}|hyperpage}{26}
+\indexentry{Table@{Table}!````~Table@{\texorpdfstring{$\sim$}{\string~}Table}|hyperpage}{26}
+\indexentry{````~Table@{\texorpdfstring{$\sim$}{\string~}Table}!Table@{Table}|hyperpage}{26}
+\indexentry{Table@{Table}!cellMatchesType@{cellMatchesType}|hyperpage}{26}
+\indexentry{cellMatchesType@{cellMatchesType}!Table@{Table}|hyperpage}{26}
+\indexentry{Table@{Table}!columnIndex@{columnIndex}|hyperpage}{26}
+\indexentry{columnIndex@{columnIndex}!Table@{Table}|hyperpage}{26}
+\indexentry{Table@{Table}!createBPlusTreeIndex@{createBPlusTreeIndex}|hyperpage}{27}
+\indexentry{createBPlusTreeIndex@{createBPlusTreeIndex}!Table@{Table}|hyperpage}{27}
+\indexentry{Table@{Table}!createInvertedIndex@{createInvertedIndex}|hyperpage}{27}
+\indexentry{createInvertedIndex@{createInvertedIndex}!Table@{Table}|hyperpage}{27}
+\indexentry{Table@{Table}!dataTypeToString@{dataTypeToString}|hyperpage}{27}
+\indexentry{dataTypeToString@{dataTypeToString}!Table@{Table}|hyperpage}{27}
+\indexentry{Table@{Table}!getCell@{getCell}|hyperpage}{27}
+\indexentry{getCell@{getCell}!Table@{Table}|hyperpage}{27}
+\indexentry{Table@{Table}!insertRow@{insertRow}|hyperpage}{28}
+\indexentry{insertRow@{insertRow}!Table@{Table}|hyperpage}{28}
+\indexentry{Table@{Table}!searchByIndex@{searchByIndex}|hyperpage}{28}
+\indexentry{searchByIndex@{searchByIndex}!Table@{Table}|hyperpage}{28}
+\indexentry{src/structures/BPlusTree.hpp@{src/structures/BPlusTree.hpp}|hyperpage}{29}
+\indexentry{src/structures/BPlusTree.hpp@{src/structures/BPlusTree.hpp}|hyperpage}{29}
+\indexentry{src/structures/HashMap.hpp@{src/structures/HashMap.hpp}|hyperpage}{38}
+\indexentry{src/structures/HashMap.hpp@{src/structures/HashMap.hpp}|hyperpage}{39}
+\indexentry{src/structures/InvertedIndex.cpp@{src/structures/InvertedIndex.cpp}|hyperpage}{41}
+\indexentry{src/structures/InvertedIndex.hpp@{src/structures/InvertedIndex.hpp}|hyperpage}{42}
+\indexentry{src/structures/InvertedIndex.hpp@{src/structures/InvertedIndex.hpp}|hyperpage}{43}
+\indexentry{src/system/IndexEntry.hpp@{src/system/IndexEntry.hpp}|hyperpage}{43}
+\indexentry{src/system/IndexEntry.hpp@{src/system/IndexEntry.hpp}|hyperpage}{44}
+\indexentry{src/system/Table.cpp@{src/system/Table.cpp}|hyperpage}{44}
+\indexentry{src/system/Table.cpp@{src/system/Table.cpp}|hyperpage}{44}
+\indexentry{src/system/Table.hpp@{src/system/Table.hpp}|hyperpage}{47}
+\indexentry{src/system/Table.hpp@{src/system/Table.hpp}|hyperpage}{48}

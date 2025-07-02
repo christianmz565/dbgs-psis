@@ -1,0 +1,410 @@
+\doxysection{Referencia de la plantilla de la clase BPlus\+Tree\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classBPlusTree}{}\label{classBPlusTree}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+
+
+Implementación genérica de un árbol B+.  
+
+
+
+
+{\ttfamily \#include $<$BPlus\+Tree.\+hpp$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBPlusTree_a4d9509d0ec05ced79115cc166b05752a}{BPlus\+Tree}} (int \+\_\+degree)
+\begin{DoxyCompactList}\small\item\em Constructor del árbol B+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBPlusTree_a752124f662e468d2b64192b0e719416f}{\texorpdfstring{$\sim$}{\string~}\+BPlus\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor del árbol B+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_a6007ebee7746060e6ad5e285d5928d97}{\+\_\+find\+Key}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, T key)
+\begin{DoxyCompactList}\small\item\em Busca el nodo hoja que contiene la clave especificada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_ae7c2a935b449e2e0a612a3588e45a44d}{\+\_\+find\+Range}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, T key)
+\begin{DoxyCompactList}\small\item\em Busca el nodo hoja donde debería estar la clave. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBPlusTree_aa24b5c807f56cc8744b1f55cc92bcb36}{\+\_\+find\+Index}} (T \texorpdfstring{$\ast$}{*}arr, T data, int len)
+\begin{DoxyCompactList}\small\item\em Encuentra el índice donde insertar un dato en un arreglo ordenado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_aec0ecbf3a19e05986e6436a40f8bf15d}{\+\_\+inner\+Insert}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}child\+\_\+arr, \mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}child, int len, int index)
+\begin{DoxyCompactList}\small\item\em Inserta un hijo en el arreglo de hijos de un nodo interno. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_a58d3db76c90c6992a04d8f4956d621f4}{\+\_\+insert\+Item}} (T \texorpdfstring{$\ast$}{*}arr, T data, int len)
+\begin{DoxyCompactList}\small\item\em Inserta un dato en el arreglo de items de un nodo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_a277d0008ebba74507c79e15cf60430ef}{\+\_\+insert\+In\+Child}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, T data, \mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}child)
+\begin{DoxyCompactList}\small\item\em Inserta un dato y un hijo en un nodo interno. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_af6998f41f090a392a96df62dfd934601}{\+\_\+insert\+In\+Parent}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}par, \mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}child, T data)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo hijo en el nodo padre después de una división. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_a67d4c75873bb9e23129e59edd8b2d7db}{\+\_\+remove\+From\+Parent}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}node, int index, \mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}par)
+\begin{DoxyCompactList}\small\item\em Elimina un hijo del nodo padre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_ab8d46833cebaf8a792b530b0bea2f822}{\+\_\+print}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}cursor)
+\begin{DoxyCompactList}\small\item\em Imprime recursivamente el árbol desde el nodo dado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree_acddcb2b47c5e32aefe3e2f396c1d8c7d}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la raíz del árbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBPlusTree_aa36392ade55454111f2242146c78145a}{search\+Range}} (T start, T end, T \texorpdfstring{$\ast$}{*}result\+\_\+data, int arr\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Busca todos los elementos en el rango \mbox{[}start, end\mbox{]}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBPlusTree_af5045a7dc826903eb372fdcc239e18fb}{search}} (T data)
+\begin{DoxyCompactList}\small\item\em Busca si un elemento existe en el árbol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_a4966e3487f49cb393d329446306cad62}{insert}} (T data)
+\begin{DoxyCompactList}\small\item\em Inserta un elemento en el árbol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_a7218a3c667fd0a8e64884f196b9809ea}{remove}} (T data)
+\begin{DoxyCompactList}\small\item\em Elimina un elemento del árbol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBPlusTree_afeecd6a2d1bb69d02c634b9067f8cfa1}{clear}} (\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}cursor)
+\begin{DoxyCompactList}\small\item\em Libera la memoria de todos los nodos del árbol. \end{DoxyCompactList}\item 
+\Hypertarget{classBPlusTree_aeb1f65d74183e073938cacffafc25711}\label{classBPlusTree_aeb1f65d74183e073938cacffafc25711} 
+void {\bfseries print} ()
+\begin{DoxyCompactList}\small\item\em Imprime el contenido del árbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classBPlusTree_a80a12d75b32fd3f2d3da1429f0ecb338}\label{classBPlusTree_a80a12d75b32fd3f2d3da1429f0ecb338} 
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} {\bfseries root}
+\begin{DoxyCompactList}\small\item\em Puntero a la raíz del árbol B+. \end{DoxyCompactList}\item 
+\Hypertarget{classBPlusTree_a26b4e566b4c15273a3c6e41fdb23beee}\label{classBPlusTree_a26b4e566b4c15273a3c6e41fdb23beee} 
+int {\bfseries degree}
+\begin{DoxyCompactList}\small\item\em Grado del árbol (máximo número de hijos por nodo). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class BPlus\+Tree$<$ T $>$}
+Implementación genérica de un árbol B+. 
+
+Esta clase implementa un árbol B+ que permite almacenar, buscar, eliminar y recorrer elementos de tipo T. El árbol B+ es una estructura de datos balanceada utilizada comúnmente en sistemas de bases de datos y sistemas de archivos.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de dato de los elementos almacenados en el árbol. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classBPlusTree_a4d9509d0ec05ced79115cc166b05752a}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!BPlusTree@{BPlusTree}}
+\index{BPlusTree@{BPlusTree}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BPlusTree()}{BPlusTree()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a4d9509d0ec05ced79115cc166b05752a} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\mbox{\hyperlink{classBPlusTree}{\+::\+BPlus\+Tree}} (\begin{DoxyParamCaption}\item[{int}]{\+\_\+degree}{}\end{DoxyParamCaption})}
+
+
+
+Constructor del árbol B+. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \+\_\+degree} & Grado del árbol (máximo número de hijos por nodo). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_a752124f662e468d2b64192b0e719416f}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!````~BPlusTree@{\texorpdfstring{$\sim$}{\string~}BPlusTree}}
+\index{````~BPlusTree@{\texorpdfstring{$\sim$}{\string~}BPlusTree}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BPlusTree()}{\string~BPlusTree()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a752124f662e468d2b64192b0e719416f} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor del árbol B+. 
+
+Libera toda la memoria utilizada. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classBPlusTree_aa24b5c807f56cc8744b1f55cc92bcb36}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findIndex@{\_findIndex}}
+\index{\_findIndex@{\_findIndex}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_findIndex()}{\_findIndex()}}
+{\footnotesize\ttfamily \label{classBPlusTree_aa24b5c807f56cc8744b1f55cc92bcb36} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+find\+Index (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{T}]{data}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Encuentra el índice donde insertar un dato en un arreglo ordenado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arr} & Arreglo de datos. \\
+\hline
+{\em data} & Dato a insertar. \\
+\hline
+{\em len} & Longitud del arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Índice de inserción. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_a6007ebee7746060e6ad5e285d5928d97}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findKey@{\_findKey}}
+\index{\_findKey@{\_findKey}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_findKey()}{\_findKey()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a6007ebee7746060e6ad5e285d5928d97} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+find\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{T}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Busca el nodo hoja que contiene la clave especificada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em node} & Nodo desde el cual iniciar la búsqueda. \\
+\hline
+{\em key} & Clave a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al nodo que contiene la clave, o nullptr si no se encuentra. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_ae7c2a935b449e2e0a612a3588e45a44d}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_findRange@{\_findRange}}
+\index{\_findRange@{\_findRange}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_findRange()}{\_findRange()}}
+{\footnotesize\ttfamily \label{classBPlusTree_ae7c2a935b449e2e0a612a3588e45a44d} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+find\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{T}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Busca el nodo hoja donde debería estar la clave. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em node} & Nodo desde el cual iniciar la búsqueda. \\
+\hline
+{\em key} & Clave a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al nodo hoja correspondiente. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_aec0ecbf3a19e05986e6436a40f8bf15d}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_innerInsert@{\_innerInsert}}
+\index{\_innerInsert@{\_innerInsert}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_innerInsert()}{\_innerInsert()}}
+{\footnotesize\ttfamily \label{classBPlusTree_aec0ecbf3a19e05986e6436a40f8bf15d} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+inner\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{child\+\_\+arr}{, }\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{child}{, }\item[{int}]{len}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un hijo en el arreglo de hijos de un nodo interno. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em child\+\_\+arr} & Arreglo de hijos. \\
+\hline
+{\em child} & Nuevo hijo a insertar. \\
+\hline
+{\em len} & Longitud actual del arreglo. \\
+\hline
+{\em index} & Índice donde insertar el nuevo hijo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Arreglo de hijos actualizado. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_a277d0008ebba74507c79e15cf60430ef}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertInChild@{\_insertInChild}}
+\index{\_insertInChild@{\_insertInChild}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_insertInChild()}{\_insertInChild()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a277d0008ebba74507c79e15cf60430ef} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+insert\+In\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{T}]{data}{, }\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{child}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un dato y un hijo en un nodo interno. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em node} & Nodo interno. \\
+\hline
+{\em data} & Dato a insertar. \\
+\hline
+{\em child} & Hijo a insertar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Nodo actualizado. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_af6998f41f090a392a96df62dfd934601}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertInParent@{\_insertInParent}}
+\index{\_insertInParent@{\_insertInParent}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_insertInParent()}{\_insertInParent()}}
+{\footnotesize\ttfamily \label{classBPlusTree_af6998f41f090a392a96df62dfd934601} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+insert\+In\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{par}{, }\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{child}{, }\item[{T}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un nuevo hijo en el nodo padre después de una división. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em par} & Nodo padre. \\
+\hline
+{\em child} & Nuevo hijo. \\
+\hline
+{\em data} & Dato promovido. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_a58d3db76c90c6992a04d8f4956d621f4}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_insertItem@{\_insertItem}}
+\index{\_insertItem@{\_insertItem}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_insertItem()}{\_insertItem()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a58d3db76c90c6992a04d8f4956d621f4} 
+template$<$typename T$>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+insert\+Item (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{T}]{data}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un dato en el arreglo de items de un nodo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arr} & Arreglo de items. \\
+\hline
+{\em data} & Dato a insertar. \\
+\hline
+{\em len} & Longitud actual del arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Arreglo de items actualizado. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_ab8d46833cebaf8a792b530b0bea2f822}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_print@{\_print}}
+\index{\_print@{\_print}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_print()}{\_print()}}
+{\footnotesize\ttfamily \label{classBPlusTree_ab8d46833cebaf8a792b530b0bea2f822} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+
+
+Imprime recursivamente el árbol desde el nodo dado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cursor} & Nodo desde el cual imprimir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_a67d4c75873bb9e23129e59edd8b2d7db}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!\_removeFromParent@{\_removeFromParent}}
+\index{\_removeFromParent@{\_removeFromParent}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_removeFromParent()}{\_removeFromParent()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a67d4c75873bb9e23129e59edd8b2d7db} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::\+\_\+remove\+From\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{int}]{index}{, }\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{par}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un hijo del nodo padre. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em node} & Nodo a eliminar. \\
+\hline
+{\em index} & Índice del hijo a eliminar. \\
+\hline
+{\em par} & Nodo padre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_afeecd6a2d1bb69d02c634b9067f8cfa1}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classBPlusTree_afeecd6a2d1bb69d02c634b9067f8cfa1} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{cursor}{}\end{DoxyParamCaption})}
+
+
+
+Libera la memoria de todos los nodos del árbol. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cursor} & Nodo desde el cual iniciar la liberación. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_acddcb2b47c5e32aefe3e2f396c1d8c7d}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \label{classBPlusTree_acddcb2b47c5e32aefe3e2f396c1d8c7d} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::get\+Root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene la raíz del árbol. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero a la raíz. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_a4966e3487f49cb393d329446306cad62}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a4966e3487f49cb393d329446306cad62} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un elemento en el árbol. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Elemento a insertar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_a7218a3c667fd0a8e64884f196b9809ea}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{classBPlusTree_a7218a3c667fd0a8e64884f196b9809ea} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un elemento del árbol. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Elemento a eliminar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBPlusTree_af5045a7dc826903eb372fdcc239e18fb}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!search@{search}}
+\index{search@{search}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \label{classBPlusTree_af5045a7dc826903eb372fdcc239e18fb} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::search (\begin{DoxyParamCaption}\item[{T}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Busca si un elemento existe en el árbol. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Elemento a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si existe, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classBPlusTree_aa36392ade55454111f2242146c78145a}\index{BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}!searchRange@{searchRange}}
+\index{searchRange@{searchRange}!BPlusTree$<$ T $>$@{BPlusTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{searchRange()}{searchRange()}}
+{\footnotesize\ttfamily \label{classBPlusTree_aa36392ade55454111f2242146c78145a} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{classBPlusTree}{BPlus\+Tree}}$<$ T $>$\+::search\+Range (\begin{DoxyParamCaption}\item[{T}]{start}{, }\item[{T}]{end}{, }\item[{T \texorpdfstring{$\ast$}{*}}]{result\+\_\+data}{, }\item[{int}]{arr\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Busca todos los elementos en el rango \mbox{[}start, end\mbox{]}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em start} & Límite inferior del rango. \\
+\hline
+{\em end} & Límite superior del rango. \\
+\hline
+{\em result\+\_\+data} & Arreglo donde se almacenan los resultados. \\
+\hline
+{\em arr\+\_\+length} & Longitud máxima del arreglo de resultados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Número de elementos encontrados. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/structures/\mbox{\hyperlink{BPlusTree_8hpp}{BPlus\+Tree.\+hpp}}\end{DoxyCompactItemize}

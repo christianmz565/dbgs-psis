@@ -9,7 +9,7 @@ int main() {
       {"gpa", DataType::DOUBLE},
       {"comment", DataType::STRING}};
 
-  Table students(cols, /*hashCapacity=*/101);
+  Table students(cols);
 
   students.insertRow({1, std::string("Alice"), 3.9, std::string("CS major")});
   students.insertRow({2, std::string("Bob"), 3.4, std::string("Math minor")});

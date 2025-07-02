@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DBGS - PSIS: Archivo de código fuente src/system/Table.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DBGS - PSIS<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('Table_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Table.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Table_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="IndexEntry_8hpp.html">IndexEntry.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="BPlusTree_8hpp.html">../structures/BPlusTree.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../structures/InvertedIndex.cpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;variant&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">   20</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">DataType</a> { INT, DOUBLE, STRING };</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">using </span><a class="code hl_typedef" href="IndexEntry_8hpp.html#a4a2c946b68dab4a12f893c96df6312ee">Cell</a> = std::variant&lt;int, double, std::string&gt;;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structColumn.html">   32</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structColumn.html">Column</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structColumn.html#a595ac5954328e5b63465bcade99ca1a3">   33</a></span>  std::string <a class="code hl_variable" href="structColumn.html#a595ac5954328e5b63465bcade99ca1a3">name</a>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structColumn.html#a6b8431b7140b986758dd2debe909aec7">   34</a></span>  <a class="code hl_enumeration" href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">DataType</a> <a class="code hl_variable" href="structColumn.html#a6b8431b7140b986758dd2debe909aec7">type</a>;    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classTable.html">   44</a></span><span class="keyword">class </span><a class="code hl_function" href="classTable.html#a1ad00dd60ecd0922ffa896cc5cb7e1d9">Table</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_function" href="classTable.html#a1ad00dd60ecd0922ffa896cc5cb7e1d9">Table</a>(<span class="keyword">const</span> std::vector&lt;std::pair&lt;std::string, DataType&gt;&gt; &amp;cols,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">int</span> hashCapacity = 101);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_function" href="classTable.html#a9a559f2e7beb37b511ee9f88873164f8">~Table</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTable.html#ac646bf81aa6df157a606c7267c5eafd5">insertRow</a>(<span class="keyword">const</span> std::vector&lt;Cell&gt; &amp;row);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTable.html#abd152e8049a267da5f0d881859a90c52">printSchema</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTable.html#aa5fb3145287d62fde91cb8cbb17ccdc1">printAllRows</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  Cell <a class="code hl_function" href="classTable.html#a760ad456a26f7cecf258085134d3c838">getCell</a>(<span class="keywordtype">int</span> rowIndex, <span class="keyword">const</span> std::string &amp;colName);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTable.html#a67ffe5e0243e705ab013e5f4646e79fd">createBPlusTreeIndex</a>(<span class="keyword">const</span> std::string &amp;colName, <span class="keywordtype">int</span> degree);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTable.html#a735116cd947dd67d36923781a15cffa4">createInvertedIndex</a>(<span class="keyword">const</span> std::string &amp;colName);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  std::vector&lt;int&gt; <a class="code hl_function" href="classTable.html#abf82e6e0a16eeb9024209b8eafaf71e5">searchByIndex</a>(<span class="keyword">const</span> std::string &amp;colName, <span class="keyword">const</span> Cell &amp;key);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classTable.html#abe8ebfff3a0d5f7b6ffa217d1fc2136b">  105</a></span>  std::vector&lt;Column&gt; <a class="code hl_variable" href="classTable.html#abe8ebfff3a0d5f7b6ffa217d1fc2136b">schema_</a>; </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classTable.html#a3e1acfdf54853312829ff499026f375c">  106</a></span>  <a class="code hl_class" href="classHashMap.html">HashMap&lt;std::string, int&gt;</a> <a class="code hl_variable" href="classTable.html#a3e1acfdf54853312829ff499026f375c">nameToIndex_</a>; </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classTable.html#a6ca62a00f831612732c53991e6a14ca3">  107</a></span>  std::vector&lt;std::vector&lt;Cell&gt;&gt; <a class="code hl_variable" href="classTable.html#a6ca62a00f831612732c53991e6a14ca3">data_</a>; </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classTable.html#a35ca3e147a33ce493da10dceed8b79c9">  109</a></span>  <a class="code hl_class" href="classHashMap.html">HashMap&lt;std::string, BPlusTree&lt;IndexEntry&gt;</a> *&gt; <a class="code hl_variable" href="classTable.html#a35ca3e147a33ce493da10dceed8b79c9">bptIndices_</a>; </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classTable.html#aa3666985fc68547ef531137e485d9abd">  110</a></span>  <a class="code hl_class" href="classHashMap.html">HashMap&lt;std::string, InvertedIndex *&gt;</a> <a class="code hl_variable" href="classTable.html#aa3666985fc68547ef531137e485d9abd">invIndices_</a>;         </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classTable.html#afae433049cb2cc703680be5111bbe0bf">cellMatchesType</a>(<span class="keyword">const</span> Cell &amp;cell, <a class="code hl_enumeration" href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">DataType</a> dt);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">static</span> std::string <a class="code hl_function" href="classTable.html#a373d261e6ed95e4c3da61a38841359af">dataTypeToString</a>(<a class="code hl_enumeration" href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">DataType</a> dt);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classTable.html#adfc9244a1dabf6fa093b6e312188351a">columnIndex</a>(<span class="keyword">const</span> std::string &amp;colName);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>};</div>
+</div>
+<div class="ttc" id="aBPlusTree_8hpp_html"><div class="ttname"><a href="BPlusTree_8hpp.html">BPlusTree.hpp</a></div><div class="ttdoc">Implementación de un árbol B+ genérico.</div></div>
+<div class="ttc" id="aIndexEntry_8hpp_html"><div class="ttname"><a href="IndexEntry_8hpp.html">IndexEntry.hpp</a></div><div class="ttdoc">Definición de la estructura IndexEntry para índices de tablas.</div></div>
+<div class="ttc" id="aIndexEntry_8hpp_html_a4a2c946b68dab4a12f893c96df6312ee"><div class="ttname"><a href="IndexEntry_8hpp.html#a4a2c946b68dab4a12f893c96df6312ee">Cell</a></div><div class="ttdeci">std::variant&lt; int, double, std::string &gt; Cell</div><div class="ttdoc">Representa el valor de una celda, que puede ser int, double o string.</div><div class="ttdef"><b>Definition</b> IndexEntry.hpp:13</div></div>
+<div class="ttc" id="aTable_8hpp_html_ad8ed01ff3ff33333d8e19db4d2818bb6"><div class="ttname"><a href="Table_8hpp.html#ad8ed01ff3ff33333d8e19db4d2818bb6">DataType</a></div><div class="ttdeci">DataType</div><div class="ttdoc">Tipos de datos soportados por las columnas de la tabla.</div><div class="ttdef"><b>Definition</b> Table.hpp:20</div></div>
+<div class="ttc" id="aclassHashMap_html"><div class="ttname"><a href="classHashMap.html">HashMap</a></div><div class="ttdoc">Implementación genérica de un mapa hash con direccionamiento abierto y redimensionamiento.</div><div class="ttdef"><b>Definition</b> HashMap.hpp:48</div></div>
+<div class="ttc" id="aclassTable_html_a1ad00dd60ecd0922ffa896cc5cb7e1d9"><div class="ttname"><a href="classTable.html#a1ad00dd60ecd0922ffa896cc5cb7e1d9">Table::Table</a></div><div class="ttdeci">Table(const std::vector&lt; std::pair&lt; std::string, DataType &gt; &gt; &amp;cols, int hashCapacity=101)</div><div class="ttdoc">Constructor de Table.</div><div class="ttdef"><b>Definition</b> Table.cpp:16</div></div>
+<div class="ttc" id="aclassTable_html_a35ca3e147a33ce493da10dceed8b79c9"><div class="ttname"><a href="classTable.html#a35ca3e147a33ce493da10dceed8b79c9">Table::bptIndices_</a></div><div class="ttdeci">HashMap&lt; std::string, BPlusTree&lt; IndexEntry &gt; * &gt; bptIndices_</div><div class="ttdoc">Índices B+ por columna.</div><div class="ttdef"><b>Definition</b> Table.hpp:109</div></div>
+<div class="ttc" id="aclassTable_html_a373d261e6ed95e4c3da61a38841359af"><div class="ttname"><a href="classTable.html#a373d261e6ed95e4c3da61a38841359af">Table::dataTypeToString</a></div><div class="ttdeci">static std::string dataTypeToString(DataType dt)</div><div class="ttdoc">Convierte un tipo de dato a su representación en string.</div><div class="ttdef"><b>Definition</b> Table.cpp:68</div></div>
+<div class="ttc" id="aclassTable_html_a3e1acfdf54853312829ff499026f375c"><div class="ttname"><a href="classTable.html#a3e1acfdf54853312829ff499026f375c">Table::nameToIndex_</a></div><div class="ttdeci">HashMap&lt; std::string, int &gt; nameToIndex_</div><div class="ttdoc">Mapa de nombre de columna a índice.</div><div class="ttdef"><b>Definition</b> Table.hpp:106</div></div>
+<div class="ttc" id="aclassTable_html_a67ffe5e0243e705ab013e5f4646e79fd"><div class="ttname"><a href="classTable.html#a67ffe5e0243e705ab013e5f4646e79fd">Table::createBPlusTreeIndex</a></div><div class="ttdeci">void createBPlusTreeIndex(const std::string &amp;colName, int degree)</div><div class="ttdoc">Crea un índice B+ sobre una columna específica.</div><div class="ttdef"><b>Definition</b> Table.cpp:157</div></div>
+<div class="ttc" id="aclassTable_html_a6ca62a00f831612732c53991e6a14ca3"><div class="ttname"><a href="classTable.html#a6ca62a00f831612732c53991e6a14ca3">Table::data_</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Cell &gt; &gt; data_</div><div class="ttdoc">Datos almacenados en la tabla.</div><div class="ttdef"><b>Definition</b> Table.hpp:107</div></div>
+<div class="ttc" id="aclassTable_html_a735116cd947dd67d36923781a15cffa4"><div class="ttname"><a href="classTable.html#a735116cd947dd67d36923781a15cffa4">Table::createInvertedIndex</a></div><div class="ttdeci">void createInvertedIndex(const std::string &amp;colName)</div><div class="ttdoc">Crea un índice invertido sobre una columna específica.</div><div class="ttdef"><b>Definition</b> Table.cpp:175</div></div>
+<div class="ttc" id="aclassTable_html_a760ad456a26f7cecf258085134d3c838"><div class="ttname"><a href="classTable.html#a760ad456a26f7cecf258085134d3c838">Table::getCell</a></div><div class="ttdeci">Cell getCell(int rowIndex, const std::string &amp;colName)</div><div class="ttdoc">Obtiene el valor de una celda dado el índice de fila y el nombre de columna.</div><div class="ttdef"><b>Definition</b> Table.cpp:111</div></div>
+<div class="ttc" id="aclassTable_html_a9a559f2e7beb37b511ee9f88873164f8"><div class="ttname"><a href="classTable.html#a9a559f2e7beb37b511ee9f88873164f8">Table::~Table</a></div><div class="ttdeci">~Table()</div><div class="ttdoc">Destructor de Table.</div><div class="ttdef"><b>Definition</b> Table.cpp:35</div></div>
+<div class="ttc" id="aclassTable_html_aa3666985fc68547ef531137e485d9abd"><div class="ttname"><a href="classTable.html#aa3666985fc68547ef531137e485d9abd">Table::invIndices_</a></div><div class="ttdeci">HashMap&lt; std::string, InvertedIndex * &gt; invIndices_</div><div class="ttdoc">Índices invertidos por columna.</div><div class="ttdef"><b>Definition</b> Table.hpp:110</div></div>
+<div class="ttc" id="aclassTable_html_aa5fb3145287d62fde91cb8cbb17ccdc1"><div class="ttname"><a href="classTable.html#aa5fb3145287d62fde91cb8cbb17ccdc1">Table::printAllRows</a></div><div class="ttdeci">void printAllRows() const</div><div class="ttdoc">Imprime todas las filas almacenadas en la tabla.</div><div class="ttdef"><b>Definition</b> Table.cpp:95</div></div>
+<div class="ttc" id="aclassTable_html_abd152e8049a267da5f0d881859a90c52"><div class="ttname"><a href="classTable.html#abd152e8049a267da5f0d881859a90c52">Table::printSchema</a></div><div class="ttdeci">void printSchema() const</div><div class="ttdoc">Imprime el esquema (columnas y tipos) de la tabla.</div><div class="ttdef"><b>Definition</b> Table.cpp:87</div></div>
+<div class="ttc" id="aclassTable_html_abe8ebfff3a0d5f7b6ffa217d1fc2136b"><div class="ttname"><a href="classTable.html#abe8ebfff3a0d5f7b6ffa217d1fc2136b">Table::schema_</a></div><div class="ttdeci">std::vector&lt; Column &gt; schema_</div><div class="ttdoc">Esquema de columnas de la tabla.</div><div class="ttdef"><b>Definition</b> Table.hpp:105</div></div>
+<div class="ttc" id="aclassTable_html_abf82e6e0a16eeb9024209b8eafaf71e5"><div class="ttname"><a href="classTable.html#abf82e6e0a16eeb9024209b8eafaf71e5">Table::searchByIndex</a></div><div class="ttdeci">std::vector&lt; int &gt; searchByIndex(const std::string &amp;colName, const Cell &amp;key)</div><div class="ttdoc">Busca filas por valor de clave usando el índice correspondiente.</div><div class="ttdef"><b>Definition</b> Table.cpp:194</div></div>
+<div class="ttc" id="aclassTable_html_ac646bf81aa6df157a606c7267c5eafd5"><div class="ttname"><a href="classTable.html#ac646bf81aa6df157a606c7267c5eafd5">Table::insertRow</a></div><div class="ttdeci">void insertRow(const std::vector&lt; Cell &gt; &amp;row)</div><div class="ttdoc">Inserta una nueva fila en la tabla.</div><div class="ttdef"><b>Definition</b> Table.cpp:119</div></div>
+<div class="ttc" id="aclassTable_html_adfc9244a1dabf6fa093b6e312188351a"><div class="ttname"><a href="classTable.html#adfc9244a1dabf6fa093b6e312188351a">Table::columnIndex</a></div><div class="ttdeci">int columnIndex(const std::string &amp;colName)</div><div class="ttdoc">Obtiene el índice de una columna dado su nombre.</div><div class="ttdef"><b>Definition</b> Table.cpp:80</div></div>
+<div class="ttc" id="aclassTable_html_afae433049cb2cc703680be5111bbe0bf"><div class="ttname"><a href="classTable.html#afae433049cb2cc703680be5111bbe0bf">Table::cellMatchesType</a></div><div class="ttdeci">static bool cellMatchesType(const Cell &amp;cell, DataType dt)</div><div class="ttdoc">Verifica si una celda coincide con un tipo de dato.</div><div class="ttdef"><b>Definition</b> Table.cpp:56</div></div>
+<div class="ttc" id="astructColumn_html"><div class="ttname"><a href="structColumn.html">Column</a></div><div class="ttdoc">Representa una columna de la tabla, con nombre y tipo de dato.</div><div class="ttdef"><b>Definition</b> Table.hpp:32</div></div>
+<div class="ttc" id="astructColumn_html_a595ac5954328e5b63465bcade99ca1a3"><div class="ttname"><a href="structColumn.html#a595ac5954328e5b63465bcade99ca1a3">Column::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Nombre de la columna.</div><div class="ttdef"><b>Definition</b> Table.hpp:33</div></div>
+<div class="ttc" id="astructColumn_html_a6b8431b7140b986758dd2debe909aec7"><div class="ttname"><a href="structColumn.html#a6b8431b7140b986758dd2debe909aec7">Column::type</a></div><div class="ttdeci">DataType type</div><div class="ttdoc">Tipo de dato de la columna.</div><div class="ttdef"><b>Definition</b> Table.hpp:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d501334aeb1b78ad67cd3c72c37b1e87.html">system</a></li><li class="navelem"><a class="el" href="Table_8hpp.html">Table.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

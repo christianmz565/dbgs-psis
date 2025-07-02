@@ -1,45 +1,191 @@
 #include <iostream>
 
+/** \file BPlusTree.hpp
+ * Implementación de un árbol B+ genérico.
+ * Este árbol B+ permite insertar, buscar y eliminar elementos de tipo T.
+ */
+
+/**
+ * @struct Node
+ * @brief Representa un nodo en el árbol B+.
+ * Cada nodo puede ser una hoja o un nodo interno. Los nodos internos contienen
+ * claves y punteros a sus hijos, mientras que las hojas contienen los datos
+ * finales del árbol.
+ */
 template <typename T> struct Node {
-  bool is_leaf;
-  int degree;
-  int size;
-  T *item;
-  Node<T> **children;
-  Node<T> *parent;
+  bool is_leaf; /**< Indica si el nodo es una hoja. */
+  int degree;   /**< Grado del nodo, que determina cuántos hijos puede tener. */
+  int size;     /**< Número actual de elementos en el nodo. */
+  T *item;      /**< Arreglo de elementos almacenados en el nodo. */
+  Node<T> **children; /**< Arreglo de punteros a los hijos del nodo. */
+  Node<T> *parent;    /**< Puntero al nodo padre. */
 
 public:
+  /**
+   * @brief Constructor del nodo.
+   * @param _degree Grado del nodo, que determina cuántos hijos puede tener.
+   */
   Node(int _degree);
 };
 
+/**
+ * @class BPlusTree
+ * @brief Implementación genérica de un árbol B+.
+ *
+ * Esta clase implementa un árbol B+ que permite almacenar, buscar, eliminar y
+ * recorrer elementos de tipo T. El árbol B+ es una estructura de datos
+ * balanceada utilizada comúnmente en sistemas de bases de datos y sistemas de
+ * archivos.
+ *
+ * @tparam T Tipo de dato de los elementos almacenados en el árbol.
+ */
 template <typename T> class BPlusTree {
-  Node<T> *root;
-  int degree;
+  Node<T> *root; /**< Puntero a la raíz del árbol B+. */
+  int degree;    /**< Grado del árbol (máximo número de hijos por nodo). */
 
 public:
+  /**
+   * @brief Constructor del árbol B+.
+   * @param _degree Grado del árbol (máximo número de hijos por nodo).
+   */
   BPlusTree(int _degree);
+
+  /**
+   * @brief Destructor del árbol B+. Libera toda la memoria utilizada.
+   */
   ~BPlusTree();
 
+  /**
+   * @brief Busca el nodo hoja que contiene la clave especificada.
+   * @param node Nodo desde el cual iniciar la búsqueda.
+   * @param key Clave a buscar.
+   * @return Puntero al nodo que contiene la clave, o nullptr si no se
+   * encuentra.
+   */
   Node<T> *_findKey(Node<T> *node, T key);
+
+  /**
+   * @brief Busca el nodo hoja donde debería estar la clave.
+   * @param node Nodo desde el cual iniciar la búsqueda.
+   * @param key Clave a buscar.
+   * @return Puntero al nodo hoja correspondiente.
+   */
   Node<T> *_findRange(Node<T> *node, T key);
+
+  /**
+   * @brief Encuentra el índice donde insertar un dato en un arreglo ordenado.
+   * @param arr Arreglo de datos.
+   * @param data Dato a insertar.
+   * @param len Longitud del arreglo.
+   * @return Índice de inserción.
+   */
   int _findIndex(T *arr, T data, int len);
+
+  /**
+   * @brief Inserta un hijo en el arreglo de hijos de un nodo interno.
+   * @param child_arr Arreglo de hijos.
+   * @param child Nuevo hijo a insertar.
+   * @param len Longitud actual del arreglo.
+   * @param index Índice donde insertar el nuevo hijo.
+   * @return Arreglo de hijos actualizado.
+   */
   Node<T> **_innerInsert(Node<T> **child_arr, Node<T> *child, int len,
                          int index);
+
+  /**
+   * @brief Inserta un dato en el arreglo de items de un nodo.
+   * @param arr Arreglo de items.
+   * @param data Dato a insertar.
+   * @param len Longitud actual del arreglo.
+   * @return Arreglo de items actualizado.
+   */
   T *_insertItem(T *arr, T data, int len);
+
+  /**
+   * @brief Inserta un dato y un hijo en un nodo interno.
+   * @param node Nodo interno.
+   * @param data Dato a insertar.
+   * @param child Hijo a insertar.
+   * @return Nodo actualizado.
+   */
   Node<T> *_insertInChild(Node<T> *node, T data, Node<T> *child);
+
+  /**
+   * @brief Inserta un nuevo hijo en el nodo padre después de una división.
+   * @param par Nodo padre.
+   * @param child Nuevo hijo.
+   * @param data Dato promovido.
+   */
   void _insertInParent(Node<T> *par, Node<T> *child, T data);
+
+  /**
+   * @brief Elimina un hijo del nodo padre.
+   * @param node Nodo a eliminar.
+   * @param index Índice del hijo a eliminar.
+   * @param par Nodo padre.
+   */
   void _removeFromParent(Node<T> *node, int index, Node<T> *par);
+
+  /**
+   * @brief Imprime recursivamente el árbol desde el nodo dado.
+   * @param cursor Nodo desde el cual imprimir.
+   */
   void _print(Node<T> *cursor);
 
+  /**
+   * @brief Obtiene la raíz del árbol.
+   * @return Puntero a la raíz.
+   */
   Node<T> *getRoot();
+
+  /**
+   * @brief Busca todos los elementos en el rango [start, end].
+   * @param start Límite inferior del rango.
+   * @param end Límite superior del rango.
+   * @param result_data Arreglo donde se almacenan los resultados.
+   * @param arr_length Longitud máxima del arreglo de resultados.
+   * @return Número de elementos encontrados.
+   */
   int searchRange(T start, T end, T *result_data, int arr_length);
+
+  /**
+   * @brief Busca si un elemento existe en el árbol.
+   * @param data Elemento a buscar.
+   * @return true si existe, false en caso contrario.
+   */
   bool search(T data);
+
+  /**
+   * @brief Inserta un elemento en el árbol.
+   * @param data Elemento a insertar.
+   */
   void insert(T data);
+
+  /**
+   * @brief Elimina un elemento del árbol.
+   * @param data Elemento a eliminar.
+   */
   void remove(T data);
+
+  /**
+   * @brief Libera la memoria de todos los nodos del árbol.
+   * @param cursor Nodo desde el cual iniciar la liberación.
+   */
   void clear(Node<T> *cursor);
+
+  /**
+   * @brief Imprime el contenido del árbol.
+   */
   void print();
 };
 
+/**
+ * Constructor de un nodo del árbol B+.
+ * Inicializa un nodo con el grado especificado. El nodo es conectado al árbol
+ * B+ en la función de inserción.
+ * @param _degree El grado del nodo, que determina cuántos hijos puede tener
+ * este nodo.
+ */
 template <typename T> Node<T>::Node(int _degree) {
   this->is_leaf = false;
   this->degree = _degree;

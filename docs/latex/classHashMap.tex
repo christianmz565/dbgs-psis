@@ -1,0 +1,346 @@
+\doxysection{Referencia de la plantilla de la clase Hash\+Map\texorpdfstring{$<$}{<} K, V \texorpdfstring{$>$}{>}}
+\hypertarget{classHashMap}{}\label{classHashMap}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+
+
+Implementación genérica de un mapa hash con direccionamiento abierto y redimensionamiento.  
+
+
+
+
+{\ttfamily \#include $<$Hash\+Map.\+hpp$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHashMap_af9036b0e59feb210f34bb8ac72157987}{Hash\+Map}} (int cap)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classHashMap}{Hash\+Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashMap_a43fdcb498d0e4f3fae604f3db66d1f4c}{\texorpdfstring{$\sim$}{\string~}\+Hash\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de \doxylink{classHashMap}{Hash\+Map}. \end{DoxyCompactList}\item 
+long long \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashMap_a6cde6466c97fdebfd44b705d9aa7a2b4}{\+\_\+get\+Pows}} ()
+\begin{DoxyCompactList}\small\item\em Calcula y retorna el arreglo de potencias para el hash. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHashMap_a5ef9919d6df93cd260ea953c3a5dc1d7}{\+\_\+get\+Load\+Factor}} ()
+\begin{DoxyCompactList}\small\item\em Calcula el factor de carga actual de la tabla. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHashMap_a518bdddf9cd16964a2d40f927c2dc5d2}{\+\_\+to\+String\+Generic}} (const K \&val)
+\begin{DoxyCompactList}\small\item\em Convierte un valor genérico a string para el hash. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHashMap_aedc48654019e49269f8aa9f59fd7420e}{\+\_\+hash\+Code}} (K key)
+\begin{DoxyCompactList}\small\item\em Calcula el código hash para una clave. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHashMap_a916aea5ea4d56f28baf3c3a52360d4df}{\+\_\+wrap}} (long long key, int \mbox{\hyperlink{classHashMap_a4f29edca46395902a8db6e1a43b8bf13}{size}})
+\begin{DoxyCompactList}\small\item\em Ajusta un valor hash al rango de la tabla. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHashMap_a7c0c2eee05bac0f605eab8ca79248bc1}{\+\_\+insert}} (K key, V value, \mbox{\hyperlink{classHashNode}{Hash\+Node}}$<$ K, V $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arr)
+\begin{DoxyCompactList}\small\item\em Inserta un par clave-\/valor en un arreglo de nodos. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_a15ad3532ce39a26d2c6745cb4d774560}\label{classHashMap_a15ad3532ce39a26d2c6745cb4d774560} 
+void {\bfseries \+\_\+grow} ()
+\begin{DoxyCompactList}\small\item\em Duplica la capacidad de la tabla y reubica los elementos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHashMap_ae3982a325b62431f28788f3aeee0da98}{insert}} (K key, V value)
+\begin{DoxyCompactList}\small\item\em Inserta un par clave-\/valor en el mapa. \end{DoxyCompactList}\item 
+std\+::optional$<$ V $>$ \mbox{\hyperlink{classHashMap_aa2026e5e856de63a45b2fa8fddfd6f74}{get}} (K key)
+\begin{DoxyCompactList}\small\item\em Obtiene el valor asociado a una clave. \end{DoxyCompactList}\item 
+std\+::optional$<$ V $>$ \mbox{\hyperlink{classHashMap_a05c7dab0f793c9ecb6e412ff00cff29c}{remove}} (K key)
+\begin{DoxyCompactList}\small\item\em Elimina un par clave-\/valor del mapa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHashMap_add013375e2e7531733017dd2408ae5f9}{contains\+Key}} (K key)
+\begin{DoxyCompactList}\small\item\em Verifica si una clave existe en el mapa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHashMap_a173d51ca77a2c814b2c0291680e58633}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el número de elementos almacenados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHashMap_adc6660e06fc662593e11d4f4247a9b04}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el mapa está vacío. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHashNode}{Hash\+Node}}$<$ K, V $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashMap_a6a2a2c30924188a331a900effb4f5707}{to\+List}} ()
+\begin{DoxyCompactList}\small\item\em Retorna un arreglo con todos los nodos almacenados. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_a6b664f445d8699421228edad8972993b}\label{classHashMap_a6b664f445d8699421228edad8972993b} 
+void {\bfseries display} ()
+\begin{DoxyCompactList}\small\item\em Muestra por consola todos los pares clave-\/valor almacenados. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_a9cca88092236840b3e40a6cf353c86f2}\label{classHashMap_a9cca88092236840b3e40a6cf353c86f2} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Elimina todos los elementos del mapa y libera la memoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHashMap_ab3df17f25e77307906ce5a12b536a59b}\label{classHashMap_ab3df17f25e77307906ce5a12b536a59b} 
+\mbox{\hyperlink{classHashNode}{Hash\+Node}}$<$ K, V $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries table}
+\begin{DoxyCompactList}\small\item\em Tabla hash de punteros a nodos. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_ae33889e87e76863bcf00516ff5062aa7}\label{classHashMap_ae33889e87e76863bcf00516ff5062aa7} 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacidad actual de la tabla. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_a4f29edca46395902a8db6e1a43b8bf13}\label{classHashMap_a4f29edca46395902a8db6e1a43b8bf13} 
+int {\bfseries size}
+\begin{DoxyCompactList}\small\item\em Número de elementos almacenados. \end{DoxyCompactList}\item 
+\Hypertarget{classHashMap_a87ac98d5c5551a0ee79a86a857ca0c6d}\label{classHashMap_a87ac98d5c5551a0ee79a86a857ca0c6d} 
+long long \texorpdfstring{$\ast$}{*} {\bfseries pows}
+\begin{DoxyCompactList}\small\item\em Potencias precomputadas para el hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename K, typename V$>$\newline
+class Hash\+Map$<$ K, V $>$}
+Implementación genérica de un mapa hash con direccionamiento abierto y redimensionamiento. 
+
+Permite almacenar, buscar, eliminar y mostrar pares clave-\/valor. Utiliza direccionamiento abierto con sondeo cuadrático para resolver colisiones y redimensiona automáticamente la tabla cuando la carga supera cierto umbral.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em K} & Tipo de la clave. \\
+\hline
+{\em V} & Tipo del valor. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classHashMap_af9036b0e59feb210f34bb8ac72157987}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!HashMap@{HashMap}}
+\index{HashMap@{HashMap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{HashMap()}{HashMap()}}
+{\footnotesize\ttfamily \label{classHashMap_af9036b0e59feb210f34bb8ac72157987} 
+template$<$typename K, typename V$>$ \\
+\mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\mbox{\hyperlink{classHashMap}{\+::\+Hash\+Map}} (\begin{DoxyParamCaption}\item[{int}]{cap}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{classHashMap}{Hash\+Map}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cap} & Capacidad inicial de la tabla hash. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashMap_a43fdcb498d0e4f3fae604f3db66d1f4c}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}}
+\index{````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HashMap()}{\string~HashMap()}}
+{\footnotesize\ttfamily \label{classHashMap_a43fdcb498d0e4f3fae604f3db66d1f4c} 
+template$<$typename K, typename V$>$ \\
+\mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classHashMap}{Hash\+Map}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor de \doxylink{classHashMap}{Hash\+Map}. 
+
+Libera la memoria utilizada. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classHashMap_a5ef9919d6df93cd260ea953c3a5dc1d7}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_getLoadFactor@{\_getLoadFactor}}
+\index{\_getLoadFactor@{\_getLoadFactor}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_getLoadFactor()}{\_getLoadFactor()}}
+{\footnotesize\ttfamily \label{classHashMap_a5ef9919d6df93cd260ea953c3a5dc1d7} 
+template$<$typename K, typename V$>$ \\
+double \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+get\+Load\+Factor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el factor de carga actual de la tabla. 
+
+\begin{DoxyReturn}{Devuelve}
+Factor de carga (size/capacity). 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a6cde6466c97fdebfd44b705d9aa7a2b4}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_getPows@{\_getPows}}
+\index{\_getPows@{\_getPows}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_getPows()}{\_getPows()}}
+{\footnotesize\ttfamily \label{classHashMap_a6cde6466c97fdebfd44b705d9aa7a2b4} 
+template$<$typename K, typename V$>$ \\
+long long \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+get\+Pows (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcula y retorna el arreglo de potencias para el hash. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero al arreglo de potencias. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_aedc48654019e49269f8aa9f59fd7420e}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_hashCode@{\_hashCode}}
+\index{\_hashCode@{\_hashCode}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_hashCode()}{\_hashCode()}}
+{\footnotesize\ttfamily \label{classHashMap_aedc48654019e49269f8aa9f59fd7420e} 
+template$<$typename K, typename V$>$ \\
+int \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+hash\+Code (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el código hash para una clave. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a hashear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Índice hash calculado. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a7c0c2eee05bac0f605eab8ca79248bc1}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_insert@{\_insert}}
+\index{\_insert@{\_insert}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_insert()}{\_insert()}}
+{\footnotesize\ttfamily \label{classHashMap_a7c0c2eee05bac0f605eab8ca79248bc1} 
+template$<$typename K, typename V$>$ \\
+void \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+insert (\begin{DoxyParamCaption}\item[{K}]{key}{, }\item[{V}]{value}{, }\item[{\mbox{\hyperlink{classHashNode}{Hash\+Node}}$<$ K, V $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un par clave-\/valor en un arreglo de nodos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a insertar. \\
+\hline
+{\em value} & Valor a insertar. \\
+\hline
+{\em arr} & Arreglo de nodos donde insertar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashMap_a518bdddf9cd16964a2d40f927c2dc5d2}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_toStringGeneric@{\_toStringGeneric}}
+\index{\_toStringGeneric@{\_toStringGeneric}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_toStringGeneric()}{\_toStringGeneric()}}
+{\footnotesize\ttfamily \label{classHashMap_a518bdddf9cd16964a2d40f927c2dc5d2} 
+template$<$typename K, typename V$>$ \\
+std\+::string \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+to\+String\+Generic (\begin{DoxyParamCaption}\item[{const K \&}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Convierte un valor genérico a string para el hash. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em val} & Valor a convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Representación en string del valor. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a916aea5ea4d56f28baf3c3a52360d4df}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!\_wrap@{\_wrap}}
+\index{\_wrap@{\_wrap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{\_wrap()}{\_wrap()}}
+{\footnotesize\ttfamily \label{classHashMap_a916aea5ea4d56f28baf3c3a52360d4df} 
+template$<$typename K, typename V$>$ \\
+int \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::\+\_\+wrap (\begin{DoxyParamCaption}\item[{long long}]{key}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Ajusta un valor hash al rango de la tabla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Valor hash. \\
+\hline
+{\em size} & Tamaño de la tabla. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor ajustado al rango \mbox{[}0, size). 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_add013375e2e7531733017dd2408ae5f9}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!containsKey@{containsKey}}
+\index{containsKey@{containsKey}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{containsKey()}{containsKey()}}
+{\footnotesize\ttfamily \label{classHashMap_add013375e2e7531733017dd2408ae5f9} 
+template$<$typename K, typename V$>$ \\
+bool \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::contains\+Key (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si una clave existe en el mapa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si existe, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_aa2026e5e856de63a45b2fa8fddfd6f74}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!get@{get}}
+\index{get@{get}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classHashMap_aa2026e5e856de63a45b2fa8fddfd6f74} 
+template$<$typename K, typename V$>$ \\
+std\+::optional$<$ V $>$ \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::get (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el valor asociado a una clave. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor asociado si existe, std\+::nullopt en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a173d51ca77a2c814b2c0291680e58633}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classHashMap_a173d51ca77a2c814b2c0291680e58633} 
+template$<$typename K, typename V$>$ \\
+int \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna el número de elementos almacenados. 
+
+\begin{DoxyReturn}{Devuelve}
+Número de elementos. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_ae3982a325b62431f28788f3aeee0da98}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!insert@{insert}}
+\index{insert@{insert}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{classHashMap_ae3982a325b62431f28788f3aeee0da98} 
+template$<$typename K, typename V$>$ \\
+void \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::insert (\begin{DoxyParamCaption}\item[{K}]{key}{, }\item[{V}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un par clave-\/valor en el mapa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a insertar. \\
+\hline
+{\em value} & Valor a insertar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHashMap_adc6660e06fc662593e11d4f4247a9b04}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{classHashMap_adc6660e06fc662593e11d4f4247a9b04} 
+template$<$typename K, typename V$>$ \\
+bool \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el mapa está vacío. 
+
+\begin{DoxyReturn}{Devuelve}
+true si está vacío, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a05c7dab0f793c9ecb6e412ff00cff29c}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!remove@{remove}}
+\index{remove@{remove}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{classHashMap_a05c7dab0f793c9ecb6e412ff00cff29c} 
+template$<$typename K, typename V$>$ \\
+std\+::optional$<$ V $>$ \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::remove (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Elimina un par clave-\/valor del mapa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Valor eliminado si existía, std\+::nullopt en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classHashMap_a6a2a2c30924188a331a900effb4f5707}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!toList@{toList}}
+\index{toList@{toList}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{toList()}{toList()}}
+{\footnotesize\ttfamily \label{classHashMap_a6a2a2c30924188a331a900effb4f5707} 
+template$<$typename K, typename V$>$ \\
+\mbox{\hyperlink{classHashNode}{Hash\+Node}}$<$ K, V $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ K, V $>$\+::to\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna un arreglo con todos los nodos almacenados. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero al arreglo de nodos. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/structures/\mbox{\hyperlink{HashMap_8hpp}{Hash\+Map.\+hpp}}\end{DoxyCompactItemize}

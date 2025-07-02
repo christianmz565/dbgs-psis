@@ -1,0 +1,54 @@
+\doxysection{Inverted\+Index.\+cpp}
+\hypertarget{InvertedIndex_8cpp_source}{}\label{InvertedIndex_8cpp_source}\index{src/structures/InvertedIndex.cpp@{src/structures/InvertedIndex.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{InvertedIndex_8hpp}{InvertedIndex.hpp}}"{}}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \mbox{\hyperlink{classInvertedIndex_a4affd96a535ab2286a48d9dcacfe3714}{InvertedIndex::InvertedIndex}}(\textcolor{keywordtype}{int}\ initialCapacity)\ :\ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}(initialCapacity)\ \{\}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \mbox{\hyperlink{classInvertedIndex_a1bcfe1a8675d674d947aada3c34f7420}{InvertedIndex::\string~InvertedIndex}}()\ \{\ \mbox{\hyperlink{classInvertedIndex_a9f7279bc5b26a51187d2e321fabeef8b}{clear}}();\ \}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{InvertedIndex::add}}(\textcolor{keyword}{const}\ std::string\ \&key,\ \textcolor{keywordtype}{int}\ rowId)\ \{}
+\DoxyCodeLine{00008\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.containsKey(key))\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ std::vector<int>\ existing\ =\ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.get(key).value();}
+\DoxyCodeLine{00010\ \ \ \ \ existing.push\_back(rowId);}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.insert(key,\ existing);}
+\DoxyCodeLine{00012\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<int>\ vec;}
+\DoxyCodeLine{00014\ \ \ \ \ vec.push\_back(rowId);}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.insert(key,\ vec);}
+\DoxyCodeLine{00016\ \ \ \}}
+\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ std::vector<int>\ \mbox{\hyperlink{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf}{InvertedIndex::get}}(\textcolor{keyword}{const}\ std::string\ \&key)\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.containsKey(key))\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.get(key).value();}
+\DoxyCodeLine{00022\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00024\ \ \ \}}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInvertedIndex_a145dd5fd7cc1da4d6d191955a07c0930}{InvertedIndex::remove}}(\textcolor{keyword}{const}\ std::string\ \&key,\ \textcolor{keywordtype}{int}\ rowId)\ \{}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.containsKey(key))}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ std::vector<int>\ existing\ =\ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.get(key).value();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ std::vector<int>\ temp;}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ :\ existing)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ !=\ rowId)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ temp.push\_back(x);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \}}
+\DoxyCodeLine{00039\ \ \ existing\ =\ temp;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordflow}{if}\ (existing.empty())\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.remove(key);}
+\DoxyCodeLine{00043\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.insert(key,\ existing);}
+\DoxyCodeLine{00045\ \ \ \}}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInvertedIndex_a9f7279bc5b26a51187d2e321fabeef8b}{InvertedIndex::clear}}()\ \{\ \mbox{\hyperlink{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}{map\_}}.clear();\ \}}
+
+\end{DoxyCode}

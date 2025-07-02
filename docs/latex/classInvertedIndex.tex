@@ -1,0 +1,127 @@
+\doxysection{Referencia de la clase Inverted\+Index}
+\hypertarget{classInvertedIndex}{}\label{classInvertedIndex}\index{InvertedIndex@{InvertedIndex}}
+
+
+Índice invertido basado en \doxylink{classHashMap}{Hash\+Map} para asociar claves con listas de identificadores.  
+
+
+
+
+{\ttfamily \#include $<$Inverted\+Index.\+hpp$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInvertedIndex_a4affd96a535ab2286a48d9dcacfe3714}{Inverted\+Index}} (int initial\+Capacity=101)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classInvertedIndex}{Inverted\+Index}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInvertedIndex_a1bcfe1a8675d674d947aada3c34f7420}{\texorpdfstring{$\sim$}{\string~}\+Inverted\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de \doxylink{classInvertedIndex}{Inverted\+Index}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{add}} (const std\+::string \&key, int row\+Id)
+\begin{DoxyCompactList}\small\item\em Agrega una asociación entre una clave y un identificador de fila. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf}{get}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de identificadores asociados a una clave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInvertedIndex_a145dd5fd7cc1da4d6d191955a07c0930}{remove}} (const std\+::string \&key, int row\+Id)
+\begin{DoxyCompactList}\small\item\em Elimina la asociación de un identificador de fila para una clave dada. \end{DoxyCompactList}\item 
+\Hypertarget{classInvertedIndex_a9f7279bc5b26a51187d2e321fabeef8b}\label{classInvertedIndex_a9f7279bc5b26a51187d2e321fabeef8b} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Elimina todas las asociaciones del índice invertido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa}\label{classInvertedIndex_acb5a6e92d92a49cc66fd523b1e73affa} 
+\mbox{\hyperlink{classHashMap}{Hash\+Map}}$<$ std\+::string, std\+::vector$<$ int $>$ $>$ {\bfseries map\+\_\+}
+\begin{DoxyCompactList}\small\item\em Mapa hash que almacena las asociaciones clave-\/lista de identificadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Índice invertido basado en \doxylink{classHashMap}{Hash\+Map} para asociar claves con listas de identificadores. 
+
+Permite agregar, obtener, eliminar y limpiar asociaciones entre claves y listas de enteros. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classInvertedIndex_a4affd96a535ab2286a48d9dcacfe3714}\index{InvertedIndex@{InvertedIndex}!InvertedIndex@{InvertedIndex}}
+\index{InvertedIndex@{InvertedIndex}!InvertedIndex@{InvertedIndex}}
+\doxysubsubsection{\texorpdfstring{InvertedIndex()}{InvertedIndex()}}
+{\footnotesize\ttfamily \label{classInvertedIndex_a4affd96a535ab2286a48d9dcacfe3714} 
+Inverted\+Index\+::\+Inverted\+Index (\begin{DoxyParamCaption}\item[{int}]{initial\+Capacity}{ = {\ttfamily 101}}\end{DoxyParamCaption})}
+
+
+
+Constructor de \doxylink{classInvertedIndex}{Inverted\+Index}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em initial\+Capacity} & Capacidad inicial del mapa hash subyacente (por defecto 101). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classInvertedIndex_a1bcfe1a8675d674d947aada3c34f7420}\index{InvertedIndex@{InvertedIndex}!````~InvertedIndex@{\texorpdfstring{$\sim$}{\string~}InvertedIndex}}
+\index{````~InvertedIndex@{\texorpdfstring{$\sim$}{\string~}InvertedIndex}!InvertedIndex@{InvertedIndex}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InvertedIndex()}{\string~InvertedIndex()}}
+{\footnotesize\ttfamily \label{classInvertedIndex_a1bcfe1a8675d674d947aada3c34f7420} 
+Inverted\+Index\+::\texorpdfstring{$\sim$}{\string~}\+Inverted\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor de \doxylink{classInvertedIndex}{Inverted\+Index}. 
+
+Libera la memoria utilizada. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}\index{InvertedIndex@{InvertedIndex}!add@{add}}
+\index{add@{add}!InvertedIndex@{InvertedIndex}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80} 
+void Inverted\+Index\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int}]{row\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Agrega una asociación entre una clave y un identificador de fila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a asociar. \\
+\hline
+{\em row\+Id} & Identificador de fila a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf}\index{InvertedIndex@{InvertedIndex}!get@{get}}
+\index{get@{get}!InvertedIndex@{InvertedIndex}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf} 
+std\+::vector$<$ int $>$ Inverted\+Index\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene la lista de identificadores asociados a una clave. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Vector de identificadores asociados. Si la clave no existe, retorna un vector vacío. 
+\end{DoxyReturn}
+\Hypertarget{classInvertedIndex_a145dd5fd7cc1da4d6d191955a07c0930}\index{InvertedIndex@{InvertedIndex}!remove@{remove}}
+\index{remove@{remove}!InvertedIndex@{InvertedIndex}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{classInvertedIndex_a145dd5fd7cc1da4d6d191955a07c0930} 
+void Inverted\+Index\+::remove (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int}]{row\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Elimina la asociación de un identificador de fila para una clave dada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em key} & Clave de la que se eliminará el identificador. \\
+\hline
+{\em row\+Id} & Identificador de fila a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+src/structures/\mbox{\hyperlink{InvertedIndex_8hpp}{Inverted\+Index.\+hpp}}\item 
+src/structures/Inverted\+Index.\+cpp\end{DoxyCompactItemize}

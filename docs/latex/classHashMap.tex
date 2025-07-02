@@ -101,6 +101,16 @@ Constructor de \doxylink{classHashMap}{Hash\+Map}.
 {\em cap} & Capacidad inicial de la tabla hash. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyNote}{Nota}
+La capacidad debe ser un número potencia de 2 para evitar escenarios donde el redireccionamiento no encuentre un espacio libre. Se recomienda usar un valor mayor a 16 para evitar colisiones frecuentes. 
+\end{DoxyNote}
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em K} & Tipo de la clave. \\
+\hline
+{\em V} & Tipo del valor. \\
+\hline
+\end{DoxyTemplParams}
 \Hypertarget{classHashMap_a43fdcb498d0e4f3fae604f3db66d1f4c}\index{HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}!````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}}
 \index{````~HashMap@{\texorpdfstring{$\sim$}{\string~}HashMap}!HashMap$<$ K, V $>$@{HashMap$<$ K, V $>$}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HashMap()}{\string~HashMap()}}

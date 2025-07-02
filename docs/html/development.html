@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DBGS - PSIS: Instalación y Desarrollo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DBGS - PSIS<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('development.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Instalación y Desarrollo</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+Proceso de Instalación del Entorno de Desarrollo y la Aplicación</h1>
+<p>Este proyecto requiere la instalación de las siguientes herramientas:</p>
+<ul>
+<li><b>GCC</b>: Compilador de C++.</li>
+<li><b>CMake</b>: Herramienta de construcción multiplataforma.</li>
+<li><b>Doxygen</b>: Generador de documentación.</li>
+<li><b>TeX Live</b>: Distribución de LaTeX para generar documentación en PDF.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Instrucciones de Instalación</h2>
+<h3><a class="anchor" id="autotoc_md2"></a>
+En Linux (Debian/Ubuntu)</h3>
+<div class="fragment"><div class="line">sudo apt update</div>
+<div class="line">sudo apt install build-essential cmake doxygen texlive-full</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md3"></a>
+En Windows</h3>
+<ol type="1">
+<li><b>GCC</b>: Instalar <a href="https://www.mingw-w64.org/">MinGW-w64</a> o <a href="https://www.msys2.org/">MSYS2</a>.</li>
+<li><b>CMake</b>: Descargar desde <a href="https://cmake.org/download/">cmake.org</a>.</li>
+<li><b>Doxygen</b>: Descargar desde <a href="https://www.doxygen.nl/download.html">doxygen.nl</a>.</li>
+<li><b>TeX Live</b>: Descargar desde <a href="https://www.tug.org/texlive/acquire-netinstall.html">tug.org/texlive</a>.</li>
+</ol>
+<p>Asegúrese de agregar las herramientas al <code>PATH</code> del sistema.</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Proceso de Desarrollo</h2>
+<ol type="1">
+<li>Clonar el repositorio desde <a href="https://github.com/christianmz565/dbgs-psis.git">https://github.com/christianmz565/dbgs-psis.git</a></li>
+<li>Realizar las modificaciones necesarias en el código fuente.</li>
+<li><p class="startli">Para compilar el proyecto, puede ejecutar el script <code>build.sh</code>:</p>
+<div class="fragment"><div class="line">./build.sh</div>
+</div><!-- fragment --><p class="startli">Alternativamente, puede utilizar el archivo <code>CMakeLists.txt</code> ubicado en <code>src/</code> para configurar y compilar manualmente con CMake.</p>
+</li>
+<li><p class="startli">Para regenerar la documentación HTML, ejecute:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Si requiere el informe en PDF, diríjase a <code>docs/latex/</code> y ejecute:</p>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --></li>
+</ol>
+<p>Esto generará el archivo PDF de la documentación. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

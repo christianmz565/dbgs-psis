@@ -7,10 +7,6 @@
 
 /** \file Table.cpp
  * Implementación de la clase Table.
- * La clase Table representa una tabla de base de datos simple.
- * Permite definir un esquema, insertar filas,
- * crear índices numéricos y de texto,
- * y realizar búsquedas indexadas.
  */
 
 Table::Table(const std::vector<std::pair<std::string, DataType>> &cols,
@@ -50,9 +46,6 @@ Table::~Table() {
   }
 }
 
-/**
- * Verifica si una celda coincide con un tipo de dato específico.
- */
 bool Table::cellMatchesType(const Cell &cell, DataType dt) {
   switch (dt) {
   case DataType::INT:
@@ -178,7 +171,7 @@ void Table::createInvertedIndex(const std::string &colName) {
     throw std::invalid_argument("Inverted index only valid on STRING columns");
   }
 
-  InvertedIndex *invPtr = new InvertedIndex(/*initialCapacity=*/101);
+  InvertedIndex *invPtr = new InvertedIndex();
 
   for (int rid = 0; rid < data_.size(); ++rid) {
     const std::string &val = std::get<std::string>(data_[rid][cidx]);

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/nixos.org) (preloaded format=pdflatex 1980.1.1)  2 JUL 2025 09:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/nixos.org) (preloaded format=pdflatex 1980.1.1)  2 JUL 2025 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,47 +1014,76 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 ]
 Package hyperref Info: Option `pageanchor' set `true' on input line 235.
-
+ (./index.tex
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 237.
+(Font)              scaled to size 18.66588pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 237.
+(Font)              scaled to size 18.66588pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 237.
-(./annotated.tex
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 1.
-)
+(Font)              scaled to size 22.39185pt on input line 1.
+) (./development.tex
 
 [1
 
 ]
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 [2
 
 ]
 Cap\'{\i }tulo 2.
-(./files.tex)
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 3.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 8
+.
 
-[3]
-
-LaTeX Info: Redefining \. on input line 241.
-LaTeX Info: Redefining \% on input line 241.
-[4
-
-]
-Cap\'{\i }tulo 3.
-(./classBPlusTree.tex
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+(/nix/store/i5n783l27h2wn35mp7y39vlmidai2p3i-texlive-combined-full-2024-final-t
+exmfdist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 8.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 12.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 15
 .
 
 (/nix/store/i5n783l27h2wn35mp7y39vlmidai2p3i-texlive-combined-full-2024-final-t
 exmfdist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+
+[3])
+
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
+[4]
+Cap\'{\i }tulo 3.
+(./annotated.tex)
+
+[5
+
+]
+
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+[6
+
+]
+Cap\'{\i }tulo 4.
+(./files.tex)
+
+[7]
+
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+[8
+
+]
+Cap\'{\i }tulo 5.
+(./classBPlusTree.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -1063,9 +1092,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 16.
 
 
-[5]
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 63.
+[9]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 81.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
@@ -1076,7 +1103,7 @@ LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
-[6]
+[10]
 Underfull \hbox (badness 10000) detected at line 128
 [][][]
  []
@@ -1090,7 +1117,7 @@ Underfull \hbox (badness 10000) detected at line 149
 
 LaTeX Info: Redefining \. on input line 169.
 LaTeX Info: Redefining \% on input line 169.
-[7]
+[11]
 Underfull \hbox (badness 10000) detected at line 170
 [][][]
  []
@@ -1109,7 +1136,7 @@ Underfull \hbox (badness 10000) detected at line 218
 
 LaTeX Info: Redefining \. on input line 227.
 LaTeX Info: Redefining \% on input line 227.
-[8]
+[12]
 Underfull \hbox (badness 10000) detected at line 261
 [][][]
  []
@@ -1118,11 +1145,11 @@ Underfull \hbox (badness 10000) detected at line 261
 
 LaTeX Info: Redefining \. on input line 299.
 LaTeX Info: Redefining \% on input line 299.
-[9]
+[13]
 
 LaTeX Info: Redefining \. on input line 299.
 LaTeX Info: Redefining \% on input line 299.
-[10]
+[14]
 Underfull \hbox (badness 10000) detected at line 327
 [][][]
  []
@@ -1131,7 +1158,7 @@ Underfull \hbox (badness 10000) detected at line 327
 
 LaTeX Info: Redefining \. on input line 361.
 LaTeX Info: Redefining \% on input line 361.
-[11]
+[15]
 Underfull \hbox (badness 10000) detected at line 378
 [][][]
  []
@@ -1145,15 +1172,15 @@ Underfull \hbox (badness 10000) detected at line 403
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
-[12]) (./classHashMap.tex
+[16]) (./classHashMap.tex
 
 LaTeX Info: Redefining \. on input line 43.
 LaTeX Info: Redefining \% on input line 43.
-[13]
+[17]
 
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
-[14]
+[18]
 Underfull \hbox (badness 10000) detected at line 129
 [][][]
  []
@@ -1167,7 +1194,7 @@ Underfull \hbox (badness 10000) detected at line 143
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
-[15]
+[19]
 Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
@@ -1181,7 +1208,7 @@ Underfull \hbox (badness 10000) detected at line 201
 
 LaTeX Info: Redefining \. on input line 221.
 LaTeX Info: Redefining \% on input line 221.
-[16]
+[20]
 Underfull \hbox (badness 10000) detected at line 222
 [][][]
  []
@@ -1205,7 +1232,7 @@ Underfull \hbox (badness 10000) detected at line 274
 
 LaTeX Info: Redefining \. on input line 294.
 LaTeX Info: Redefining \% on input line 294.
-[17]
+[21]
 Underfull \hbox (badness 10000) detected at line 306
 [][][]
  []
@@ -1224,19 +1251,19 @@ Underfull \hbox (badness 10000) detected at line 339
 
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
-[18]) (./structIndexEntry.tex
+[22]) (./structIndexEntry.tex
 
 LaTeX Info: Redefining \. on input line 16.
 LaTeX Info: Redefining \% on input line 16.
-[19]
+[23]
 
 LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
-[20]) (./classInvertedIndex.tex
+[24]) (./classInvertedIndex.tex
 
 LaTeX Info: Redefining \. on input line 39.
 LaTeX Info: Redefining \% on input line 39.
-[21]
+[25]
 Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
 []\T1/phv/m/sl/10 row[] 
  []
@@ -1245,7 +1272,7 @@ Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
 
 LaTeX Info: Redefining \. on input line 101.
 LaTeX Info: Redefining \% on input line 101.
-[22]
+[26]
 Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
@@ -1259,53 +1286,53 @@ Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
 
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
-[23]) (./classTable.tex
+[27]) (./classTable.tex
 
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
-[24]
+[28]
 
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
-[25]
-Underfull \hbox (badness 10000) detected at line 122
+[29]
+Underfull \hbox (badness 10000) detected at line 120
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 139.
-LaTeX Info: Redefining \% on input line 139.
-[26]
-Underfull \hbox (badness 10000) detected at line 140
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+[30]
+Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 190
+Underfull \hbox (badness 10000) detected at line 188
 [][][]
  []
 
 
 
-LaTeX Info: Redefining \. on input line 209.
-LaTeX Info: Redefining \% on input line 209.
-[27]
-Underfull \hbox (badness 10000) detected at line 210
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
+[31]
+Underfull \hbox (badness 10000) detected at line 208
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 245
+Underfull \hbox (badness 10000) detected at line 243
 [][][]
  []
 
 )
 
-LaTeX Info: Redefining \. on input line 250.
-LaTeX Info: Redefining \% on input line 250.
-[28]
-Cap\'{\i }tulo 4.
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
+[32]
+Cap\'{\i }tulo 6.
 (./BPlusTree_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
@@ -1313,41 +1340,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 ) (./BPlusTree_8hpp_source.tex
 
-[29
+[33
 
 ]
 
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
-[30]
+[34]
 
 LaTeX Info: Redefining \. on input line 195.
 LaTeX Info: Redefining \% on input line 195.
-[31]
+[35]
 
 LaTeX Info: Redefining \. on input line 282.
 LaTeX Info: Redefining \% on input line 282.
-[32]
+[36]
 
 LaTeX Info: Redefining \. on input line 369.
 LaTeX Info: Redefining \% on input line 369.
-[33]
+[37]
 
 LaTeX Info: Redefining \. on input line 456.
 LaTeX Info: Redefining \% on input line 456.
-[34]
+[38]
 
 LaTeX Info: Redefining \. on input line 543.
 LaTeX Info: Redefining \% on input line 543.
-[35]
+[39]
 
 LaTeX Info: Redefining \. on input line 630.
 LaTeX Info: Redefining \% on input line 630.
-[36]
+[40]
 
 LaTeX Info: Redefining \. on input line 717.
 LaTeX Info: Redefining \% on input line 717.
-[37]) (./HashMap_8hpp.tex
+[41]) (./HashMap_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
@@ -1356,84 +1383,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
-[38]
+[42]
 
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
-[39]
+[43]
 
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
-[40]) (./InvertedIndex_8cpp_source.tex
+[44]) (./InvertedIndex_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
-[41]) (./InvertedIndex_8hpp.tex
+ []
+
+) (./InvertedIndex_8cpp_source.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[45]) (./InvertedIndex_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-) (./InvertedIndex_8hpp_source.tex
 
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
-[42]) (./IndexEntry_8hpp.tex
+
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
+[46]) (./InvertedIndex_8hpp_source.tex) (./IndexEntry_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+) (./IndexEntry_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-) (./IndexEntry_8hpp_source.tex
 
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
-[43]) (./Table_8cpp.tex
+
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+[47]) (./IndexEntry_8hpp_source.tex) (./Table_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
 ) (./Table_8cpp_source.tex
 
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
-[44]
+LaTeX Info: Redefining \. on input line 5.
+LaTeX Info: Redefining \% on input line 5.
+[48]
 
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
-[45]
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+[49]
 
-LaTeX Info: Redefining \. on input line 198.
-LaTeX Info: Redefining \% on input line 198.
-[46]) (./Table_8hpp.tex
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+[50]) (./Table_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-) (./Table_8hpp_source.tex
 
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-[47])
 
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
-[48] (./refman.ind
+LaTeX Info: Redefining \. on input line 20.
+LaTeX Info: Redefining \% on input line 20.
+[51]) (./Table_8hpp_source.tex
+
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+[52])
+
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
+[53]
+
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
+[54
+
+] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
 
 
 
-[49
-
+[55
 
 
 ]
 
 
 
-LaTeX Info: Redefining \. on input line 211.
-LaTeX Info: Redefining \% on input line 211.
-[50]) (./refman.aux
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+[56]) (./refman.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1442,14 +1488,14 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 48A333ED6B73051BA258E9685E95BB5C;22656.
+(rerunfilecheck)             Checksum: 90919285C5A986B9163ED0D93BF88E14;25387.
  ) 
 Here is how much of TeX's memory you used:
- 20081 strings out of 473201
- 342613 string characters out of 5689025
- 776533 words of memory out of 5000000
- 42606 multiletter control sequences out of 15000+600000
- 619706 words of font info for 111 fonts, out of 8000000 for 9000
+ 20207 strings out of 473201
+ 344935 string characters out of 5689025
+ 779935 words of memory out of 5000000
+ 42683 multiletter control sequences out of 15000+600000
+ 620019 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,560b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </nix/store/i5n783l27h2wn35mp7y39vlmidai2p3i-texlive-combined-full-2024-final
@@ -1473,10 +1519,10 @@ ll-2024-final-texmfdist/fonts/type1/urw/helvetic/uhvb8ac.pfb></nix/store/i5n783
 l27h2wn35mp7y39vlmidai2p3i-texlive-combined-full-2024-final-texmfdist/fonts/typ
 e1/urw/helvetic/uhvr8a.pfb></nix/store/i5n783l27h2wn35mp7y39vlmidai2p3i-texlive
 -combined-full-2024-final-texmfdist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (56 pages, 278500 bytes).
+Output written on refman.pdf (62 pages, 286706 bytes).
 PDF statistics:
- 2329 PDF objects out of 2487 (max. 8388607)
- 2222 compressed objects within 23 object streams
- 340 named destinations out of 1000 (max. 500000)
- 857 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2456 PDF objects out of 2487 (max. 8388607)
+ 2342 compressed objects within 24 object streams
+ 375 named destinations out of 1000 (max. 500000)
+ 945 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,10 @@
 #include <stdexcept>
 #include <string>
 
+/** \file IndexEntry.cpp
+ * Implementación de la estructura IndexEntry.
+ */
+
 bool IndexEntry::operator<(const IndexEntry &other) const {
   if (key.index() != other.key.index()) {
     throw std::runtime_error("IndexEntry::operator<: type mismatch");

@@ -9,215 +9,215 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \mbox{\hyperlink{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9}{Table::Table}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ DataType>>\ \&cols,}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hashCapacity)}
-\DoxyCodeLine{00018\ \ \ \ \ :\ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}(hashCapacity),\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}(hashCapacity),}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}(hashCapacity)\ \{}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cols.size();\ ++i)\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&[colName,\ colType]\ =\ cols[i];}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}\ (colName.empty())\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Column\ name\ cannot\ be\ empty"{}});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \mbox{\hyperlink{classTable_a8d615aee2793ad84cd5d34a686264564}{Table::Table}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ DataType>>\ \&cols,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hashCapacity)}
+\DoxyCodeLine{00014\ \ \ \ \ :\ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}(hashCapacity),\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}(hashCapacity),}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}(hashCapacity)\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cols.size();\ ++i)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&[colName,\ colType]\ =\ cols[i];}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (colName.empty())\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Column\ name\ cannot\ be\ empty"{}});}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Duplicate\ column\ name:\ "{}}\ +\ colName);}
 \DoxyCodeLine{00025\ \ \ \ \ \}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Duplicate\ column\ name:\ "{}}\ +\ colName);}
-\DoxyCodeLine{00029\ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.push\_back(\{colName,\ colType\});}
-\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.insert(colName,\ i);}
-\DoxyCodeLine{00032\ \ \ \}}
-\DoxyCodeLine{00033\ \}}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{Table::\string~Table}}()\ \{}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.getSize();\ ++i)\ \{}
-\DoxyCodeLine{00038\ \ \ \}}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ treePtr;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.push\_back(\{colName,\ colType\});}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.insert(colName,\ i);}
+\DoxyCodeLine{00028\ \ \ \}}
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{Table::\string~Table}}()\ \{}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.getSize();\ ++i)\ \{}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ treePtr;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *idxPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ idxPtr;}
 \DoxyCodeLine{00045\ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *idxPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ idxPtr;}
-\DoxyCodeLine{00049\ \ \ \ \ \}}
-\DoxyCodeLine{00050\ \ \ \}}
-\DoxyCodeLine{00051\ \}}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00056\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{Table::cellMatchesType}}(\textcolor{keyword}{const}\ Cell\ \&cell,\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt)\ \{}
-\DoxyCodeLine{00057\ \ \ \textcolor{keywordflow}{switch}\ (dt)\ \{}
-\DoxyCodeLine{00058\ \ \ \textcolor{keywordflow}{case}\ DataType::INT:}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<int>(cell);}
-\DoxyCodeLine{00060\ \ \ \textcolor{keywordflow}{case}\ DataType::DOUBLE:}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<double>(cell);}
-\DoxyCodeLine{00062\ \ \ \textcolor{keywordflow}{case}\ DataType::STRING:}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<std::string>(cell);}
-\DoxyCodeLine{00064\ \ \ \}}
-\DoxyCodeLine{00065\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00066\ \}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ std::string\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{Table::dataTypeToString}}(\mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt)\ \{}
-\DoxyCodeLine{00069\ \ \ \textcolor{keywordflow}{switch}\ (dt)\ \{}
-\DoxyCodeLine{00070\ \ \ \textcolor{keywordflow}{case}\ DataType::INT:}
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}INT"{}};}
-\DoxyCodeLine{00072\ \ \ \textcolor{keywordflow}{case}\ DataType::DOUBLE:}
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}DOUBLE"{}};}
-\DoxyCodeLine{00074\ \ \ \textcolor{keywordflow}{case}\ DataType::STRING:}
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}STRING"{}};}
+\DoxyCodeLine{00046\ \ \ \}}
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{Table::cellMatchesType}}(\textcolor{keyword}{const}\ Cell\ \&cell,\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt)\ \{}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordflow}{switch}\ (dt)\ \{}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordflow}{case}\ DataType::INT:}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<int>(cell);}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordflow}{case}\ DataType::DOUBLE:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<double>(cell);}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordflow}{case}\ DataType::STRING:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<std::string>(cell);}
+\DoxyCodeLine{00057\ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ std::string\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{Table::dataTypeToString}}(\mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt)\ \{}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordflow}{switch}\ (dt)\ \{}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordflow}{case}\ DataType::INT:}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}INT"{}};}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordflow}{case}\ DataType::DOUBLE:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}DOUBLE"{}};}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordflow}{case}\ DataType::STRING:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}STRING"{}};}
+\DoxyCodeLine{00069\ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{Table::columnIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Unknown\ column\ '"{}}\ +\ colName\ +\ \textcolor{stringliteral}{"{}'"{}});}
 \DoxyCodeLine{00076\ \ \ \}}
-\DoxyCodeLine{00077\ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.get(colName).value();}
 \DoxyCodeLine{00078\ \}}
 \DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{Table::columnIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
-\DoxyCodeLine{00081\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Unknown\ column\ '"{}}\ +\ colName\ +\ \textcolor{stringliteral}{"{}'"{}});}
-\DoxyCodeLine{00083\ \ \ \}}
-\DoxyCodeLine{00084\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}}.get(colName).value();}
-\DoxyCodeLine{00085\ \}}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_abd152e8049a267da5f0d881859a90c52}{Table::printSchema}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00088\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Schema:\(\backslash\)n"{}};}
-\DoxyCodeLine{00089\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&col\ :\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}})\ \{}
-\DoxyCodeLine{00090\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ col.name\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{dataTypeToString}}(col.type)}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_abd152e8049a267da5f0d881859a90c52}{Table::printSchema}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00081\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Schema:\(\backslash\)n"{}};}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&col\ :\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}})\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ col.name\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{dataTypeToString}}(col.type)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00085\ \ \ \}}
+\DoxyCodeLine{00086\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_aa5fb3145287d62fde91cb8cbb17ccdc1}{Table::printAllRows}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&col\ :\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}})\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ std::cout\ <<\ col.name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
 \DoxyCodeLine{00092\ \ \ \}}
-\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00093\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
 \DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_aa5fb3145287d62fde91cb8cbb17ccdc1}{Table::printAllRows}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&col\ :\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}})\ \{}
-\DoxyCodeLine{00098\ \ \ \ \ std::cout\ <<\ col.name\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
-\DoxyCodeLine{00099\ \ \ \}}
-\DoxyCodeLine{00100\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++r)\ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&row\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[r];}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ row.size();\ ++c)\ \{}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ std::visit([](\textcolor{keyword}{auto}\ \&\&val)\ \{\ std::cout\ <<\ val\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};\ \},\ row[c]);}
-\DoxyCodeLine{00106\ \ \ \ \ \}}
-\DoxyCodeLine{00107\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r\ =\ 0;\ r\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++r)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&row\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[r];}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ row.size();\ ++c)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ std::visit([](\textcolor{keyword}{auto}\ \&\&val)\ \{\ std::cout\ <<\ val\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};\ \},\ row[c]);}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00101\ \ \ \}}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ Cell\ \mbox{\hyperlink{classTable_a760ad456a26f7cecf258085134d3c838}{Table::getCell}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordflow}{if}\ (rowIndex\ >=\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size())\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Row\ index\ out\ of\ range"{}});}
 \DoxyCodeLine{00108\ \ \ \}}
-\DoxyCodeLine{00109\ \}}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ Cell\ \mbox{\hyperlink{classTable_a760ad456a26f7cecf258085134d3c838}{Table::getCell}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
-\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
-\DoxyCodeLine{00113\ \ \ \textcolor{keywordflow}{if}\ (rowIndex\ >=\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size())\ \{}
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Row\ index\ out\ of\ range"{}});}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rowIndex][cidx];}
+\DoxyCodeLine{00110\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_ac646bf81aa6df157a606c7267c5eafd5}{Table::insertRow}}(\textcolor{keyword}{const}\ std::vector<Cell>\ \&row)\ \{}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordflow}{if}\ (row.size()\ !=\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size())\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Row\ size\ does\ not\ match\ schema\ size"{}});}
 \DoxyCodeLine{00115\ \ \ \}}
-\DoxyCodeLine{00116\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rowIndex][cidx];}
-\DoxyCodeLine{00117\ \}}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_ac646bf81aa6df157a606c7267c5eafd5}{Table::insertRow}}(\textcolor{keyword}{const}\ std::vector<Cell>\ \&row)\ \{}
-\DoxyCodeLine{00120\ \ \ \textcolor{keywordflow}{if}\ (row.size()\ !=\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size())\ \{}
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Row\ size\ does\ not\ match\ schema\ size"{}});}
-\DoxyCodeLine{00122\ \ \ \}}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00124\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ row.size();\ ++i)\ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{cellMatchesType}}(row[i],\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].type))\ \{}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ std::ostringstream\ oss;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}Type\ mismatch\ for\ column\ '"{}}\ <<\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name\ <<\ \textcolor{stringliteral}{"{}'\ at\ index\ "{}}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ <<\ i;}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(oss.str());}
-\DoxyCodeLine{00130\ \ \ \ \ \}}
-\DoxyCodeLine{00131\ \ \ \}}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{int}\ newRowId\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();}
-\DoxyCodeLine{00134\ \ \ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.push\_back(row);}
-\DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ ie\{row[i],\ newRowId\};}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ treePtr-\/>\mbox{\hyperlink{classBPlusTree_a4966e3487f49cb393d329446306cad62}{insert}}(ie);}
-\DoxyCodeLine{00142\ \ \ \ \ \}}
-\DoxyCodeLine{00143\ \ \ \}}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
-\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].type\ ==\ DataType::STRING)\ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&keyStr\ =\ std::get<std::string>(row[i]);}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{add}}(keyStr,\ newRowId);}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00153\ \ \ \ \ \}}
-\DoxyCodeLine{00154\ \ \ \}}
-\DoxyCodeLine{00155\ \}}
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a67ffe5e0243e705ab013e5f4646e79fd}{Table::createBPlusTreeIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keywordtype}{int}\ degree)\ \{}
-\DoxyCodeLine{00158\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
-\DoxyCodeLine{00159\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type;}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}(degree);}
-\DoxyCodeLine{00162\ }
-\DoxyCodeLine{00163\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ rid\ =\ 0;\ rid\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++rid)\ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{const}\ Cell\ \&cell\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rid][cidx];}
-\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ ie\{cell,\ rid\};}
-\DoxyCodeLine{00166\ \ \ \ \ treePtr-\/>\mbox{\hyperlink{classBPlusTree_a4966e3487f49cb393d329446306cad62}{insert}}(ie);}
-\DoxyCodeLine{00167\ \ \ \}}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00171\ \ \ \}}
-\DoxyCodeLine{00172\ \ \ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.insert(colName,\ treePtr);}
-\DoxyCodeLine{00173\ \}}
-\DoxyCodeLine{00174\ }
-\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a735116cd947dd67d36923781a15cffa4}{Table::createInvertedIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
-\DoxyCodeLine{00176\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
-\DoxyCodeLine{00177\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type\ !=\ DataType::STRING)\ \{}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Inverted\ index\ only\ valid\ on\ STRING\ columns"{}});}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ row.size();\ ++i)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{cellMatchesType}}(row[i],\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].type))\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ std::ostringstream\ oss;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}Type\ mismatch\ for\ column\ '"{}}\ <<\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name\ <<\ \textcolor{stringliteral}{"{}'\ at\ index\ "{}}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ <<\ i;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(oss.str());}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordtype}{int}\ newRowId\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();}
+\DoxyCodeLine{00127\ \ \ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.push\_back(row);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ ie\{row[i],\ newRowId\};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ treePtr-\/>\mbox{\hyperlink{classBPlusTree_a4966e3487f49cb393d329446306cad62}{insert}}(ie);}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].type\ ==\ DataType::STRING)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&colName\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[i].name;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&keyStr\ =\ std::get<std::string>(row[i]);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{add}}(keyStr,\ newRowId);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \}}
+\DoxyCodeLine{00148\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a67ffe5e0243e705ab013e5f4646e79fd}{Table::createBPlusTreeIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keywordtype}{int}\ degree)\ \{}
+\DoxyCodeLine{00151\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
+\DoxyCodeLine{00152\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type;}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}(degree);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ rid\ =\ 0;\ rid\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++rid)\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{const}\ Cell\ \&cell\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rid][cidx];}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ ie\{cell,\ rid\};}
+\DoxyCodeLine{00159\ \ \ \ \ treePtr-\/>\mbox{\hyperlink{classBPlusTree_a4966e3487f49cb393d329446306cad62}{insert}}(ie);}
+\DoxyCodeLine{00160\ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00164\ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.insert(colName,\ treePtr);}
+\DoxyCodeLine{00166\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a735116cd947dd67d36923781a15cffa4}{Table::createInvertedIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName)\ \{}
+\DoxyCodeLine{00169\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
+\DoxyCodeLine{00170\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type\ !=\ DataType::STRING)\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Inverted\ index\ only\ valid\ on\ STRING\ columns"{}});}
+\DoxyCodeLine{00172\ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ rid\ =\ 0;\ rid\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++rid)\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&val\ =\ std::get<std::string>(\mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rid][cidx]);}
+\DoxyCodeLine{00178\ \ \ \ \ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{add}}(val,\ rid);}
 \DoxyCodeLine{00179\ \ \ \}}
 \DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}(\textcolor{comment}{/*initialCapacity=*/}101);}
-\DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ rid\ =\ 0;\ rid\ <\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();\ ++rid)\ \{}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&val\ =\ std::get<std::string>(\mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}[rid][cidx]);}
-\DoxyCodeLine{00185\ \ \ \ \ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4e715fd3b4dc418c17b303e432248e80}{add}}(val,\ rid);}
-\DoxyCodeLine{00186\ \ \ \}}
-\DoxyCodeLine{00187\ }
-\DoxyCodeLine{00188\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00190\ \ \ \}}
-\DoxyCodeLine{00191\ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.insert(colName,\ invPtr);}
-\DoxyCodeLine{00192\ \}}
-\DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ std::vector<int>\ \mbox{\hyperlink{classTable_abf82e6e0a16eeb9024209b8eafaf71e5}{Table::searchByIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Cell\ \&key)\ \{}
-\DoxyCodeLine{00196\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
-\DoxyCodeLine{00197\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type;}
-\DoxyCodeLine{00198\ }
-\DoxyCodeLine{00199\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00200\ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00201\ }
-\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{int}\ maxPossible\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();}
-\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ *buffer\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}[maxPossible];}
-\DoxyCodeLine{00204\ }
-\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ start\{key,\ 0\};}
-\DoxyCodeLine{00206\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ end\{key,\ INT\_MAX\};}
-\DoxyCodeLine{00207\ }
-\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{int}\ foundCount\ =\ treePtr-\/>\mbox{\hyperlink{classBPlusTree_aa36392ade55454111f2242146c78145a}{searchRange}}(start,\ end,\ buffer,\ (\textcolor{keywordtype}{int})maxPossible);}
-\DoxyCodeLine{00209\ }
-\DoxyCodeLine{00210\ \ \ \ \ std::vector<int>\ result;}
-\DoxyCodeLine{00211\ \ \ \ \ result.reserve(foundCount);}
-\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ foundCount;\ ++i)\ \{}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ result.push\_back(buffer[i].rowId);}
-\DoxyCodeLine{00214\ \ \ \ \ \}}
-\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{delete}[]\ buffer;}
-\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00181\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00183\ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.insert(colName,\ invPtr);}
+\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ std::vector<int>\ \mbox{\hyperlink{classTable_abf82e6e0a16eeb9024209b8eafaf71e5}{Table::searchByIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Cell\ \&key)\ \{}
+\DoxyCodeLine{00189\ \ \ \textcolor{keywordtype}{int}\ cidx\ =\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(colName);}
+\DoxyCodeLine{00190\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt\ =\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \mbox{\hyperlink{classBPlusTree}{BPlusTree<IndexEntry>}}\ *treePtr\ =\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{int}\ maxPossible\ =\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}}.size();}
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ *buffer\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}[maxPossible];}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ start\{key,\ 0\};}
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{structIndexEntry}{IndexEntry}}\ end\{key,\ INT\_MAX\};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{int}\ foundCount\ =\ treePtr-\/>\mbox{\hyperlink{classBPlusTree_aa36392ade55454111f2242146c78145a}{searchRange}}(start,\ end,\ buffer,\ (\textcolor{keywordtype}{int})maxPossible);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ std::vector<int>\ result;}
+\DoxyCodeLine{00204\ \ \ \ \ result.reserve(foundCount);}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ foundCount;\ ++i)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ result.push\_back(buffer[i].rowId);}
+\DoxyCodeLine{00207\ \ \ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{delete}[]\ buffer;}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00210\ \ \ \}}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type\ ==\ DataType::STRING\ \&\&}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&keyStr\ =\ std::get<std::string>(key);}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{return}\ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf}{get}}(keyStr);}
 \DoxyCodeLine{00217\ \ \ \}}
 \DoxyCodeLine{00218\ }
-\DoxyCodeLine{00219\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}}[cidx].type\ ==\ DataType::STRING\ \&\&}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.containsKey(colName))\ \{}
-\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{classInvertedIndex}{InvertedIndex}}\ *invPtr\ =\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}}.get(colName).value();}
-\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&keyStr\ =\ std::get<std::string>(key);}
-\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{return}\ invPtr-\/>\mbox{\hyperlink{classInvertedIndex_a4c0399574d289fb9a5570c6328e62dbf}{get}}(keyStr);}
-\DoxyCodeLine{00224\ \ \ \}}
-\DoxyCodeLine{00225\ }
-\DoxyCodeLine{00226\ \ \ \textcolor{keywordflow}{return}\ \{\};}
-\DoxyCodeLine{00227\ \}}
+\DoxyCodeLine{00219\ \ \ \textcolor{keywordflow}{return}\ \{\};}
+\DoxyCodeLine{00220\ \}}
 
 \end{DoxyCode}

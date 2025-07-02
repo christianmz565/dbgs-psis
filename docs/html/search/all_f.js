@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['table_0',['Table',['../classTable.html',1,'Table'],['../classTable.html#a1ad00dd60ecd0922ffa896cc5cb7e1d9',1,'Table::Table()']]],
-  ['table_1',['table',['../classHashMap.html#ab3df17f25e77307906ce5a12b536a59b',1,'HashMap']]],
-  ['table_2ecpp_2',['Table.cpp',['../Table_8cpp.html',1,'']]],
-  ['table_2ehpp_3',['Table.hpp',['../Table_8hpp.html',1,'']]],
-  ['tolist_4',['toList',['../classHashMap.html#a6a2a2c30924188a331a900effb4f5707',1,'HashMap']]],
-  ['type_5',['type',['../structColumn.html#a6b8431b7140b986758dd2debe909aec7',1,'Column']]]
+  ['remove_0',['remove',['../classBPlusTree.html#a7218a3c667fd0a8e64884f196b9809ea',1,'BPlusTree::remove()'],['../classHashMap.html#a05c7dab0f793c9ecb6e412ff00cff29c',1,'HashMap::remove()'],['../classInvertedIndex.html#a145dd5fd7cc1da4d6d191955a07c0930',1,'InvertedIndex::remove()']]],
+  ['root_1',['root',['../classBPlusTree.html#a80a12d75b32fd3f2d3da1429f0ecb338',1,'BPlusTree']]],
+  ['rowid_2',['rowId',['../structIndexEntry.html#a4b133104dc3f3bacddb3f8c7daf2ca99',1,'IndexEntry']]]
 ];

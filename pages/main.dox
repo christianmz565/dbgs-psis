@@ -1,0 +1,4 @@
+/**
+* \mainpage
+* DBGS es un sistema gestor de bases de datos extremadamente simple, limitado en funcionalidad y un prototipo experimental. Además que funciona completamente en memoria.
+*/

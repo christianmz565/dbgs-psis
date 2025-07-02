@@ -1,211 +1,214 @@
 \begin{theindex}
 
   \item {\_findIndex}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{7}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
   \item {\_findKey}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{7}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
   \item {\_findRange}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{7}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
   \item {\_getLoadFactor}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{19}
   \item {\_getPows}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{19}
   \item {\_hashCode}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{19}
   \item {\_innerInsert}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{8}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{12}
   \item {\_insert}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{16}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{20}
   \item {\_insertInChild}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{8}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{12}
   \item {\_insertInParent}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{8}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{12}
   \item {\_insertItem}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{9}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{13}
   \item {\_print}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{9}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{13}
   \item {\_removeFromParent}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{9}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{13}
   \item {\_toStringGeneric}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{16}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{20}
   \item {\_wrap}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{16}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{20}
   \item {\texorpdfstring{$\sim$}{\string~}BPlusTree}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{6}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{10}
   \item {\texorpdfstring{$\sim$}{\string~}HashMap}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{19}
   \item {\texorpdfstring{$\sim$}{\string~}InvertedIndex}
-    \subitem {InvertedIndex}, \hyperpage{22}
+    \subitem {InvertedIndex}, \hyperpage{26}
   \item {\texorpdfstring{$\sim$}{\string~}Table}
-    \subitem {Table}, \hyperpage{26}
+    \subitem {Table}, \hyperpage{30}
 
   \indexspace
 
   \item {add}
-    \subitem {InvertedIndex}, \hyperpage{22}
+    \subitem {InvertedIndex}, \hyperpage{26}
 
   \indexspace
 
   \item {BPlusTree}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{6}
-  \item {BPlusTree$<$ T $>$}, \hyperpage{5}
-    \subitem {\_findIndex}, \hyperpage{7}
-    \subitem {\_findKey}, \hyperpage{7}
-    \subitem {\_findRange}, \hyperpage{7}
-    \subitem {\_innerInsert}, \hyperpage{8}
-    \subitem {\_insertInChild}, \hyperpage{8}
-    \subitem {\_insertInParent}, \hyperpage{8}
-    \subitem {\_insertItem}, \hyperpage{9}
-    \subitem {\_print}, \hyperpage{9}
-    \subitem {\_removeFromParent}, \hyperpage{9}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{10}
+  \item {BPlusTree$<$ T $>$}, \hyperpage{9}
+    \subitem {\_findIndex}, \hyperpage{11}
+    \subitem {\_findKey}, \hyperpage{11}
+    \subitem {\_findRange}, \hyperpage{11}
+    \subitem {\_innerInsert}, \hyperpage{12}
+    \subitem {\_insertInChild}, \hyperpage{12}
+    \subitem {\_insertInParent}, \hyperpage{12}
+    \subitem {\_insertItem}, \hyperpage{13}
+    \subitem {\_print}, \hyperpage{13}
+    \subitem {\_removeFromParent}, \hyperpage{13}
     \subitem {\texorpdfstring{$\sim$}{\string~}BPlusTree}, 
-		\hyperpage{6}
-    \subitem {BPlusTree}, \hyperpage{6}
-    \subitem {clear}, \hyperpage{11}
-    \subitem {getRoot}, \hyperpage{11}
-    \subitem {insert}, \hyperpage{11}
-    \subitem {remove}, \hyperpage{11}
-    \subitem {search}, \hyperpage{12}
-    \subitem {searchRange}, \hyperpage{12}
+		\hyperpage{10}
+    \subitem {BPlusTree}, \hyperpage{10}
+    \subitem {clear}, \hyperpage{15}
+    \subitem {getRoot}, \hyperpage{15}
+    \subitem {insert}, \hyperpage{15}
+    \subitem {remove}, \hyperpage{15}
+    \subitem {search}, \hyperpage{16}
+    \subitem {searchRange}, \hyperpage{16}
 
   \indexspace
 
   \item {cellMatchesType}
-    \subitem {Table}, \hyperpage{26}
+    \subitem {Table}, \hyperpage{30}
   \item {clear}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
-  \item {Column}, \hyperpage{13}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{15}
+  \item {Column}, \hyperpage{17}
   \item {columnIndex}
-    \subitem {Table}, \hyperpage{26}
+    \subitem {Table}, \hyperpage{30}
   \item {containsKey}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{17}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{21}
   \item {createBPlusTreeIndex}
-    \subitem {Table}, \hyperpage{27}
+    \subitem {Table}, \hyperpage{31}
   \item {createInvertedIndex}
-    \subitem {Table}, \hyperpage{27}
+    \subitem {Table}, \hyperpage{31}
 
   \indexspace
 
   \item {dataTypeToString}
-    \subitem {Table}, \hyperpage{27}
+    \subitem {Table}, \hyperpage{31}
+  \item {DBGS -\/ PSIS}, \hyperpage{1}
 
   \indexspace
 
   \item {get}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{17}
-    \subitem {InvertedIndex}, \hyperpage{22}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{21}
+    \subitem {InvertedIndex}, \hyperpage{26}
   \item {getCell}
-    \subitem {Table}, \hyperpage{27}
+    \subitem {Table}, \hyperpage{31}
   \item {getRoot}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{15}
   \item {getSize}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{17}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{21}
 
   \indexspace
 
   \item {HashMap}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{14}
-  \item {HashMap$<$ K, V $>$}, \hyperpage{13}
-    \subitem {\_getLoadFactor}, \hyperpage{15}
-    \subitem {\_getPows}, \hyperpage{15}
-    \subitem {\_hashCode}, \hyperpage{15}
-    \subitem {\_insert}, \hyperpage{16}
-    \subitem {\_toStringGeneric}, \hyperpage{16}
-    \subitem {\_wrap}, \hyperpage{16}
-    \subitem {\texorpdfstring{$\sim$}{\string~}HashMap}, \hyperpage{15}
-    \subitem {containsKey}, \hyperpage{17}
-    \subitem {get}, \hyperpage{17}
-    \subitem {getSize}, \hyperpage{17}
-    \subitem {HashMap}, \hyperpage{14}
-    \subitem {insert}, \hyperpage{17}
-    \subitem {isEmpty}, \hyperpage{18}
-    \subitem {remove}, \hyperpage{18}
-    \subitem {toList}, \hyperpage{18}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{18}
+  \item {HashMap$<$ K, V $>$}, \hyperpage{17}
+    \subitem {\_getLoadFactor}, \hyperpage{19}
+    \subitem {\_getPows}, \hyperpage{19}
+    \subitem {\_hashCode}, \hyperpage{19}
+    \subitem {\_insert}, \hyperpage{20}
+    \subitem {\_toStringGeneric}, \hyperpage{20}
+    \subitem {\_wrap}, \hyperpage{20}
+    \subitem {\texorpdfstring{$\sim$}{\string~}HashMap}, \hyperpage{19}
+    \subitem {containsKey}, \hyperpage{21}
+    \subitem {get}, \hyperpage{21}
+    \subitem {getSize}, \hyperpage{21}
+    \subitem {HashMap}, \hyperpage{18}
+    \subitem {insert}, \hyperpage{21}
+    \subitem {isEmpty}, \hyperpage{22}
+    \subitem {remove}, \hyperpage{22}
+    \subitem {toList}, \hyperpage{22}
   \item {HashNode}
-    \subitem {HashNode$<$ K, V $>$}, \hyperpage{19}
-  \item {HashNode$<$ K, V $>$}, \hyperpage{19}
-    \subitem {HashNode}, \hyperpage{19}
+    \subitem {HashNode$<$ K, V $>$}, \hyperpage{23}
+  \item {HashNode$<$ K, V $>$}, \hyperpage{23}
+    \subitem {HashNode}, \hyperpage{23}
 
   \indexspace
 
-  \item {IndexEntry}, \hyperpage{20}
-    \subitem {operator$<$}, \hyperpage{20}
-    \subitem {operator$<$=}, \hyperpage{20}
-    \subitem {operator$>$}, \hyperpage{21}
-    \subitem {operator$>$=}, \hyperpage{21}
-    \subitem {operator==}, \hyperpage{20}
+  \item {IndexEntry}, \hyperpage{24}
+    \subitem {operator$<$}, \hyperpage{24}
+    \subitem {operator$<$=}, \hyperpage{24}
+    \subitem {operator$>$}, \hyperpage{25}
+    \subitem {operator$>$=}, \hyperpage{25}
+    \subitem {operator==}, \hyperpage{24}
   \item {insert}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{17}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{21}
   \item {insertRow}
-    \subitem {Table}, \hyperpage{28}
-  \item {InvertedIndex}, \hyperpage{21}
+    \subitem {Table}, \hyperpage{32}
+  \item {Instalación y Desarrollo}, \hyperpage{3}
+  \item {InvertedIndex}, \hyperpage{25}
     \subitem {\texorpdfstring{$\sim$}{\string~}InvertedIndex}, 
-		\hyperpage{22}
-    \subitem {add}, \hyperpage{22}
-    \subitem {get}, \hyperpage{22}
-    \subitem {InvertedIndex}, \hyperpage{22}
-    \subitem {remove}, \hyperpage{23}
+		\hyperpage{26}
+    \subitem {add}, \hyperpage{26}
+    \subitem {get}, \hyperpage{26}
+    \subitem {InvertedIndex}, \hyperpage{26}
+    \subitem {remove}, \hyperpage{27}
   \item {isEmpty}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{18}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{22}
 
   \indexspace
 
   \item {Node}
-    \subitem {Node$<$ T $>$}, \hyperpage{24}
-  \item {Node$<$ T $>$}, \hyperpage{23}
-    \subitem {Node}, \hyperpage{24}
+    \subitem {Node$<$ T $>$}, \hyperpage{28}
+  \item {Node$<$ T $>$}, \hyperpage{27}
+    \subitem {Node}, \hyperpage{28}
 
   \indexspace
 
   \item {operator$<$}
-    \subitem {IndexEntry}, \hyperpage{20}
+    \subitem {IndexEntry}, \hyperpage{24}
   \item {operator$<$=}
-    \subitem {IndexEntry}, \hyperpage{20}
+    \subitem {IndexEntry}, \hyperpage{24}
   \item {operator$>$}
-    \subitem {IndexEntry}, \hyperpage{21}
+    \subitem {IndexEntry}, \hyperpage{25}
   \item {operator$>$=}
-    \subitem {IndexEntry}, \hyperpage{21}
+    \subitem {IndexEntry}, \hyperpage{25}
   \item {operator==}
-    \subitem {IndexEntry}, \hyperpage{20}
+    \subitem {IndexEntry}, \hyperpage{24}
 
   \indexspace
 
   \item {remove}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{11}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{18}
-    \subitem {InvertedIndex}, \hyperpage{23}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{15}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{22}
+    \subitem {InvertedIndex}, \hyperpage{27}
 
   \indexspace
 
   \item {search}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{12}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{16}
   \item {searchByIndex}
-    \subitem {Table}, \hyperpage{28}
+    \subitem {Table}, \hyperpage{32}
   \item {searchRange}
-    \subitem {BPlusTree$<$ T $>$}, \hyperpage{12}
-  \item {src/structures/BPlusTree.hpp}, \hyperpage{29}
-  \item {src/structures/HashMap.hpp}, \hyperpage{38, 39}
-  \item {src/structures/InvertedIndex.cpp}, \hyperpage{41}
-  \item {src/structures/InvertedIndex.hpp}, \hyperpage{42, 43}
-  \item {src/system/IndexEntry.hpp}, \hyperpage{43, 44}
-  \item {src/system/Table.cpp}, \hyperpage{44}
-  \item {src/system/Table.hpp}, \hyperpage{47, 48}
+    \subitem {BPlusTree$<$ T $>$}, \hyperpage{16}
+  \item {src/structures/BPlusTree.hpp}, \hyperpage{33}
+  \item {src/structures/HashMap.hpp}, \hyperpage{42, 43}
+  \item {src/structures/InvertedIndex.cpp}, \hyperpage{45, 46}
+  \item {src/structures/InvertedIndex.hpp}, \hyperpage{46, 47}
+  \item {src/system/IndexEntry.cpp}, \hyperpage{47}
+  \item {src/system/IndexEntry.hpp}, \hyperpage{48}
+  \item {src/system/Table.cpp}, \hyperpage{48, 49}
+  \item {src/system/Table.hpp}, \hyperpage{51, 52}
 
   \indexspace
 
-  \item {Table}, \hyperpage{24}
-    \subitem {\texorpdfstring{$\sim$}{\string~}Table}, \hyperpage{26}
-    \subitem {cellMatchesType}, \hyperpage{26}
-    \subitem {columnIndex}, \hyperpage{26}
-    \subitem {createBPlusTreeIndex}, \hyperpage{27}
-    \subitem {createInvertedIndex}, \hyperpage{27}
-    \subitem {dataTypeToString}, \hyperpage{27}
-    \subitem {getCell}, \hyperpage{27}
-    \subitem {insertRow}, \hyperpage{28}
-    \subitem {searchByIndex}, \hyperpage{28}
-    \subitem {Table}, \hyperpage{26}
+  \item {Table}, \hyperpage{28}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Table}, \hyperpage{30}
+    \subitem {cellMatchesType}, \hyperpage{30}
+    \subitem {columnIndex}, \hyperpage{30}
+    \subitem {createBPlusTreeIndex}, \hyperpage{31}
+    \subitem {createInvertedIndex}, \hyperpage{31}
+    \subitem {dataTypeToString}, \hyperpage{31}
+    \subitem {getCell}, \hyperpage{31}
+    \subitem {insertRow}, \hyperpage{32}
+    \subitem {searchByIndex}, \hyperpage{32}
+    \subitem {Table}, \hyperpage{30}
   \item {toList}
-    \subitem {HashMap$<$ K, V $>$}, \hyperpage{18}
+    \subitem {HashMap$<$ K, V $>$}, \hyperpage{22}
 
 \end{theindex}

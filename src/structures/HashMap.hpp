@@ -55,6 +55,11 @@ public:
   /**
    * @brief Constructor de HashMap.
    * @param cap Capacidad inicial de la tabla hash.
+   * @note La capacidad debe ser un número potencia de 2 para evitar escenarios
+   * donde el redireccionamiento no encuentre un espacio libre. Se recomienda
+   * usar un valor mayor a 16 para evitar colisiones frecuentes.
+   * @tparam K Tipo de la clave.
+   * @tparam V Tipo del valor.
    */
   HashMap(int cap);
 

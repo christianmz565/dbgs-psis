@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['remove_0',['remove',['../classBPlusTree.html#a7218a3c667fd0a8e64884f196b9809ea',1,'BPlusTree::remove()'],['../classHashMap.html#a05c7dab0f793c9ecb6e412ff00cff29c',1,'HashMap::remove()'],['../classInvertedIndex.html#a145dd5fd7cc1da4d6d191955a07c0930',1,'InvertedIndex::remove()']]],
-  ['root_1',['root',['../classBPlusTree.html#a80a12d75b32fd3f2d3da1429f0ecb338',1,'BPlusTree']]],
-  ['rowid_2',['rowId',['../structIndexEntry.html#a4b133104dc3f3bacddb3f8c7daf2ca99',1,'IndexEntry']]]
+  ['operator_3c_0',['operator&lt;',['../structIndexEntry.html#a25ec8a9e8106469944475966c45448ce',1,'IndexEntry']]],
+  ['operator_3c_3d_1',['operator&lt;=',['../structIndexEntry.html#a8586b1a9d155e1da5ef31a327f93a96d',1,'IndexEntry']]],
+  ['operator_3d_3d_2',['operator==',['../structIndexEntry.html#a7dd7d34f26d0f124bc4554faa7176737',1,'IndexEntry']]],
+  ['operator_3e_3',['operator&gt;',['../structIndexEntry.html#a223c0a89bb9343990c50b9c5f1fdcb5c',1,'IndexEntry']]],
+  ['operator_3e_3d_4',['operator&gt;=',['../structIndexEntry.html#af92057fc441882755cb7583e4dd4605a',1,'IndexEntry']]]
 ];

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['parent_0',['parent',['../structNode.html#a6eb3b661ef0b58d46dfe228c6ea2e20b',1,'Node']]],
-  ['pows_1',['pows',['../classHashMap.html#a87ac98d5c5551a0ee79a86a857ca0c6d',1,'HashMap']]],
-  ['print_2',['print',['../classBPlusTree.html#aeb1f65d74183e073938cacffafc25711',1,'BPlusTree']]],
-  ['printallrows_3',['printAllRows',['../classTable.html#aa5fb3145287d62fde91cb8cbb17ccdc1',1,'Table']]],
-  ['printschema_4',['printSchema',['../classTable.html#abd152e8049a267da5f0d881859a90c52',1,'Table']]]
+  ['name_0',['name',['../structColumn.html#a595ac5954328e5b63465bcade99ca1a3',1,'Column']]],
+  ['nametoindex_5f_1',['nameToIndex_',['../classTable.html#a3e1acfdf54853312829ff499026f375c',1,'Table']]],
+  ['node_2',['Node',['../structNode.html',1,'Node&lt; T &gt;'],['../structNode.html#ad9d51d8a9158789e55a9696a2244b1ab',1,'Node::Node()']]],
+  ['node_3c_20indexentry_20_3e_3',['Node&lt; IndexEntry &gt;',['../structNode.html',1,'']]]
 ];

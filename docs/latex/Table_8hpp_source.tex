@@ -3,57 +3,60 @@
 \mbox{\hyperlink{Table_8hpp}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IndexEntry_8hpp}{IndexEntry.hpp}}"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BPlusTree_8hpp}{../structures/BPlusTree.hpp}}"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../structures/InvertedIndex.cpp"{}}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <variant>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ \{\ INT,\ DOUBLE,\ STRING\ \};}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }\mbox{\hyperlink{IndexEntry_8hpp_a4a2c946b68dab4a12f893c96df6312ee}{Cell}}\ =\ std::variant<int,\ double,\ std::string>;}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structColumn}{Column}}\ \{}
-\DoxyCodeLine{00033\ \ \ std::string\ \mbox{\hyperlink{structColumn_a595ac5954328e5b63465bcade99ca1a3}{name}};\ }
-\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ \mbox{\hyperlink{structColumn_a6b8431b7140b986758dd2debe909aec7}{type}};\ \ \ \ }
-\DoxyCodeLine{00035\ \};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9}{Table}}\ \{}
-\DoxyCodeLine{00045\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9}{Table}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ DataType>>\ \&cols,}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hashCapacity\ =\ 101);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{\string~Table}}();}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BPlusTree_8hpp}{../structures/BPlusTree.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{InvertedIndex_8cpp}{../structures/InvertedIndex.cpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IndexEntry_8hpp}{IndexEntry.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ \{\ INT,\ DOUBLE,\ STRING\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }\mbox{\hyperlink{IndexEntry_8hpp_a4a2c946b68dab4a12f893c96df6312ee}{Cell}}\ =\ std::variant<int,\ double,\ std::string>;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structColumn}{Column}}\ \{}
+\DoxyCodeLine{00035\ \ \ std::string\ \mbox{\hyperlink{structColumn_a595ac5954328e5b63465bcade99ca1a3}{name}};\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ \mbox{\hyperlink{structColumn_a6b8431b7140b986758dd2debe909aec7}{type}};\ \ \ \ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTable_a8d615aee2793ad84cd5d34a686264564}{Table}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{classTable_a8d615aee2793ad84cd5d34a686264564}{Table}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ DataType>>\ \&cols,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hashCapacity\ =\ 128);}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_ac646bf81aa6df157a606c7267c5eafd5}{insertRow}}(\textcolor{keyword}{const}\ std::vector<Cell>\ \&row);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_abd152e8049a267da5f0d881859a90c52}{printSchema}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{\string~Table}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_ac646bf81aa6df157a606c7267c5eafd5}{insertRow}}(\textcolor{keyword}{const}\ std::vector<Cell>\ \&row);}
 \DoxyCodeLine{00069\ }
-\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_aa5fb3145287d62fde91cb8cbb17ccdc1}{printAllRows}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_abd152e8049a267da5f0d881859a90c52}{printSchema}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00081\ \ \ Cell\ \mbox{\hyperlink{classTable_a760ad456a26f7cecf258085134d3c838}{getCell}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ std::string\ \&colName);}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a67ffe5e0243e705ab013e5f4646e79fd}{createBPlusTreeIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keywordtype}{int}\ degree);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a735116cd947dd67d36923781a15cffa4}{createInvertedIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName);}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_aa5fb3145287d62fde91cb8cbb17ccdc1}{printAllRows}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ \ \ Cell\ \mbox{\hyperlink{classTable_a760ad456a26f7cecf258085134d3c838}{getCell}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ std::string\ \&colName);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a67ffe5e0243e705ab013e5f4646e79fd}{createBPlusTreeIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keywordtype}{int}\ degree);}
 \DoxyCodeLine{00095\ }
-\DoxyCodeLine{00102\ \ \ std::vector<int>\ \mbox{\hyperlink{classTable_abf82e6e0a16eeb9024209b8eafaf71e5}{searchByIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keyword}{const}\ Cell\ \&key);}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00105\ \ \ std::vector<Column>\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}};\ }
-\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ int>}}\ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}};\ }
-\DoxyCodeLine{00107\ \ \ std::vector<std::vector<Cell>>\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}};\ }
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ BPlusTree<IndexEntry>}}\ *>\ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}};\ }
-\DoxyCodeLine{00110\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ InvertedIndex\ *>}}\ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00118\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{cellMatchesType}}(\textcolor{keyword}{const}\ Cell\ \&cell,\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt);}
-\DoxyCodeLine{00119\ }
-\DoxyCodeLine{00125\ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{dataTypeToString}}(\mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt);}
-\DoxyCodeLine{00126\ }
-\DoxyCodeLine{00132\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName);}
-\DoxyCodeLine{00133\ \};}
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTable_a735116cd947dd67d36923781a15cffa4}{createInvertedIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ std::vector<int>\ \mbox{\hyperlink{classTable_abf82e6e0a16eeb9024209b8eafaf71e5}{searchByIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName,\ \textcolor{keyword}{const}\ Cell\ \&key);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00111\ \ \ std::vector<Column>\ \mbox{\hyperlink{classTable_abe8ebfff3a0d5f7b6ffa217d1fc2136b}{schema\_}};\ }
+\DoxyCodeLine{00112\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ int>}}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_a3e1acfdf54853312829ff499026f375c}{nameToIndex\_}};\ }
+\DoxyCodeLine{00114\ \ \ std::vector<std::vector<Cell>>\ \mbox{\hyperlink{classTable_a6ca62a00f831612732c53991e6a14ca3}{data\_}};\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ BPlusTree<IndexEntry>}}\ *>}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_a35ca3e147a33ce493da10dceed8b79c9}{bptIndices\_}};\ }
+\DoxyCodeLine{00118\ \ \ \mbox{\hyperlink{classHashMap}{HashMap<std::string,\ InvertedIndex\ *>}}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \mbox{\hyperlink{classTable_aa3666985fc68547ef531137e485d9abd}{invIndices\_}};\ }
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00127\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTable_afae433049cb2cc703680be5111bbe0bf}{cellMatchesType}}(\textcolor{keyword}{const}\ Cell\ \&cell,\ \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00134\ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classTable_a373d261e6ed95e4c3da61a38841359af}{dataTypeToString}}(\mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{DataType}}\ dt);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTable_adfc9244a1dabf6fa093b6e312188351a}{columnIndex}}(\textcolor{keyword}{const}\ std::string\ \&colName);}
+\DoxyCodeLine{00142\ \};}
 
 \end{DoxyCode}

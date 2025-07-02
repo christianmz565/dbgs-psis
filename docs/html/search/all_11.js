@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['_7ebplustree_0',['~BPlusTree',['../classBPlusTree.html#a752124f662e468d2b64192b0e719416f',1,'BPlusTree']]],
-  ['_7ehashmap_1',['~HashMap',['../classHashMap.html#a43fdcb498d0e4f3fae604f3db66d1f4c',1,'HashMap']]],
-  ['_7einvertedindex_2',['~InvertedIndex',['../classInvertedIndex.html#a1bcfe1a8675d674d947aada3c34f7420',1,'InvertedIndex']]],
-  ['_7etable_3',['~Table',['../classTable.html#a9a559f2e7beb37b511ee9f88873164f8',1,'Table']]]
+  ['table_0',['Table',['../classTable.html',1,'Table'],['../classTable.html#a8d615aee2793ad84cd5d34a686264564',1,'Table::Table()']]],
+  ['table_1',['table',['../classHashMap.html#ab3df17f25e77307906ce5a12b536a59b',1,'HashMap']]],
+  ['table_2ecpp_2',['Table.cpp',['../Table_8cpp.html',1,'']]],
+  ['table_2ehpp_3',['Table.hpp',['../Table_8hpp.html',1,'']]],
+  ['tolist_4',['toList',['../classHashMap.html#a6a2a2c30924188a331a900effb4f5707',1,'HashMap']]],
+  ['type_5',['type',['../structColumn.html#a6b8431b7140b986758dd2debe909aec7',1,'Column']]]
 ];

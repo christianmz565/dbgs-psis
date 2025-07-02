@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['hashmap_0',['HashMap',['../classHashMap.html',1,'HashMap&lt; K, V &gt;'],['../classHashMap.html#af9036b0e59feb210f34bb8ac72157987',1,'HashMap::HashMap()']]],
-  ['hashmap_2ehpp_1',['HashMap.hpp',['../HashMap_8hpp.html',1,'']]],
-  ['hashmap_3c_20std_3a_3astring_2c_20bplustree_3c_20indexentry_20_3e_20_2a_20_3e_2',['HashMap&lt; std::string, BPlusTree&lt; IndexEntry &gt; * &gt;',['../classHashMap.html',1,'']]],
-  ['hashmap_3c_20std_3a_3astring_2c_20int_20_3e_3',['HashMap&lt; std::string, int &gt;',['../classHashMap.html',1,'']]],
-  ['hashmap_3c_20std_3a_3astring_2c_20invertedindex_20_2a_20_3e_4',['HashMap&lt; std::string, InvertedIndex * &gt;',['../classHashMap.html',1,'']]],
-  ['hashmap_3c_20std_3a_3astring_2c_20std_3a_3avector_3c_20int_20_3e_20_3e_5',['HashMap&lt; std::string, std::vector&lt; int &gt; &gt;',['../classHashMap.html',1,'']]],
-  ['hashnode_6',['HashNode',['../classHashNode.html',1,'HashNode&lt; K, V &gt;'],['../classHashNode.html#aee3bb6aa157f504e5937cf69c215b5cb',1,'HashNode::HashNode()']]],
-  ['hashnode_3c_20std_3a_3astring_2c_20bplustree_3c_20indexentry_20_3e_20_2a_20_3e_7',['HashNode&lt; std::string, BPlusTree&lt; IndexEntry &gt; * &gt;',['../classHashNode.html',1,'']]],
-  ['hashnode_3c_20std_3a_3astring_2c_20int_20_3e_8',['HashNode&lt; std::string, int &gt;',['../classHashNode.html',1,'']]],
-  ['hashnode_3c_20std_3a_3astring_2c_20invertedindex_20_2a_20_3e_9',['HashNode&lt; std::string, InvertedIndex * &gt;',['../classHashNode.html',1,'']]],
-  ['hashnode_3c_20std_3a_3astring_2c_20std_3a_3avector_3c_20int_20_3e_20_3e_10',['HashNode&lt; std::string, std::vector&lt; int &gt; &gt;',['../classHashNode.html',1,'']]]
+  ['get_0',['get',['../classHashMap.html#aa2026e5e856de63a45b2fa8fddfd6f74',1,'HashMap::get()'],['../classInvertedIndex.html#a4c0399574d289fb9a5570c6328e62dbf',1,'InvertedIndex::get()']]],
+  ['getcell_1',['getCell',['../classTable.html#a760ad456a26f7cecf258085134d3c838',1,'Table']]],
+  ['getroot_2',['getRoot',['../classBPlusTree.html#acddcb2b47c5e32aefe3e2f396c1d8c7d',1,'BPlusTree']]],
+  ['getsize_3',['getSize',['../classHashMap.html#a173d51ca77a2c814b2c0291680e58633',1,'HashMap']]]
 ];

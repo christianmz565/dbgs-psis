@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['indexentry_0',['IndexEntry',['../structIndexEntry.html',1,'']]],
-  ['indexentry_2ehpp_1',['IndexEntry.hpp',['../IndexEntry_8hpp.html',1,'']]],
-  ['insert_2',['insert',['../classBPlusTree.html#a4966e3487f49cb393d329446306cad62',1,'BPlusTree::insert()'],['../classHashMap.html#ae3982a325b62431f28788f3aeee0da98',1,'HashMap::insert()']]],
-  ['insertrow_3',['insertRow',['../classTable.html#ac646bf81aa6df157a606c7267c5eafd5',1,'Table']]],
-  ['invertedindex_4',['InvertedIndex',['../classInvertedIndex.html',1,'InvertedIndex'],['../classInvertedIndex.html#a4affd96a535ab2286a48d9dcacfe3714',1,'InvertedIndex::InvertedIndex()']]],
-  ['invertedindex_2ehpp_5',['InvertedIndex.hpp',['../InvertedIndex_8hpp.html',1,'']]],
-  ['invindices_5f_6',['invIndices_',['../classTable.html#aa3666985fc68547ef531137e485d9abd',1,'Table']]],
-  ['is_5fleaf_7',['is_leaf',['../structNode.html#aee2cd2962f8bb4a6d492540ec4e9fe9b',1,'Node']]],
-  ['isempty_8',['isEmpty',['../classHashMap.html#adc6660e06fc662593e11d4f4247a9b04',1,'HashMap']]],
-  ['item_9',['item',['../structNode.html#abbc9d535c678aa0f180d6f906448dbc0',1,'Node']]]
+  ['hashmap_0',['HashMap',['../classHashMap.html',1,'HashMap&lt; K, V &gt;'],['../classHashMap.html#af9036b0e59feb210f34bb8ac72157987',1,'HashMap::HashMap()']]],
+  ['hashmap_2ehpp_1',['HashMap.hpp',['../HashMap_8hpp.html',1,'']]],
+  ['hashmap_3c_20std_3a_3astring_2c_20bplustree_3c_20indexentry_20_3e_20_2a_20_3e_2',['HashMap&lt; std::string, BPlusTree&lt; IndexEntry &gt; * &gt;',['../classHashMap.html',1,'']]],
+  ['hashmap_3c_20std_3a_3astring_2c_20int_20_3e_3',['HashMap&lt; std::string, int &gt;',['../classHashMap.html',1,'']]],
+  ['hashmap_3c_20std_3a_3astring_2c_20invertedindex_20_2a_20_3e_4',['HashMap&lt; std::string, InvertedIndex * &gt;',['../classHashMap.html',1,'']]],
+  ['hashmap_3c_20std_3a_3astring_2c_20std_3a_3avector_3c_20int_20_3e_20_3e_5',['HashMap&lt; std::string, std::vector&lt; int &gt; &gt;',['../classHashMap.html',1,'']]],
+  ['hashnode_6',['HashNode',['../classHashNode.html',1,'HashNode&lt; K, V &gt;'],['../classHashNode.html#aee3bb6aa157f504e5937cf69c215b5cb',1,'HashNode::HashNode()']]],
+  ['hashnode_3c_20std_3a_3astring_2c_20bplustree_3c_20indexentry_20_3e_20_2a_20_3e_7',['HashNode&lt; std::string, BPlusTree&lt; IndexEntry &gt; * &gt;',['../classHashNode.html',1,'']]],
+  ['hashnode_3c_20std_3a_3astring_2c_20int_20_3e_8',['HashNode&lt; std::string, int &gt;',['../classHashNode.html',1,'']]],
+  ['hashnode_3c_20std_3a_3astring_2c_20invertedindex_20_2a_20_3e_9',['HashNode&lt; std::string, InvertedIndex * &gt;',['../classHashNode.html',1,'']]],
+  ['hashnode_3c_20std_3a_3astring_2c_20std_3a_3avector_3c_20int_20_3e_20_3e_10',['HashNode&lt; std::string, std::vector&lt; int &gt; &gt;',['../classHashNode.html',1,'']]]
 ];

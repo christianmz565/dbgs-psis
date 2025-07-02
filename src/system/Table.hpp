@@ -1,14 +1,16 @@
 /**
  * @file Table.hpp
- * @brief Definición de la clase Table y estructuras auxiliares para la gestión de tablas de datos.
+ * @brief Definición de la clase Table y estructuras auxiliares para la gestión
+ * de tablas de datos.
  *
- * Proporciona una estructura de tabla relacional con soporte para índices B+ y de índice invertido,
- * permitiendo operaciones de inserción, búsqueda e impresión de datos.
+ * Proporciona una estructura de tabla relacional con soporte para índices B+ y
+ * de índice invertido, permitiendo operaciones de inserción, búsqueda e
+ * impresión de datos.
  */
 
-#include "IndexEntry.hpp"
 #include "../structures/BPlusTree.hpp"
 #include "../structures/InvertedIndex.cpp"
+#include "IndexEntry.hpp"
 #include <string>
 #include <variant>
 #include <vector>
@@ -36,20 +38,23 @@ struct Column {
 
 /**
  * @class Table
- * @brief Representa una tabla de datos con soporte para índices y operaciones básicas.
+ * @brief Representa una tabla de datos con soporte para índices y operaciones
+ * básicas.
  *
- * Permite definir un esquema de columnas, insertar filas, crear índices B+ e invertidos,
- * y realizar búsquedas eficientes por índice.
+ * Permite definir un esquema de columnas, insertar filas, crear índices B+ e
+ * invertidos, y realizar búsquedas eficientes por índice.
  */
 class Table {
 public:
   /**
    * @brief Constructor de Table.
-   * @param cols Vector de pares (nombre, tipo) que define el esquema de la tabla.
-   * @param hashCapacity Capacidad inicial para los mapas hash internos (por defecto 101).
+   * @param cols Vector de pares (nombre, tipo) que define el esquema de la
+   * tabla.
+   * @param hashCapacity Capacidad inicial para los mapas hash internos (por
+   * defecto 128).
    */
   Table(const std::vector<std::pair<std::string, DataType>> &cols,
-        int hashCapacity = 101);
+        int hashCapacity = 128);
 
   /**
    * @brief Destructor de Table. Libera la memoria utilizada por los índices.
@@ -73,7 +78,8 @@ public:
   void printAllRows() const;
 
   /**
-   * @brief Obtiene el valor de una celda dado el índice de fila y el nombre de columna.
+   * @brief Obtiene el valor de una celda dado el índice de fila y el nombre de
+   * columna.
    * @param rowIndex Índice de la fila.
    * @param colName Nombre de la columna.
    * @return Valor de la celda correspondiente.
@@ -103,11 +109,14 @@ public:
 
 private:
   std::vector<Column> schema_; /**< Esquema de columnas de la tabla. */
-  HashMap<std::string, int> nameToIndex_; /**< Mapa de nombre de columna a índice. */
+  HashMap<std::string, int>
+      nameToIndex_; /**< Mapa de nombre de columna a índice. */
   std::vector<std::vector<Cell>> data_; /**< Datos almacenados en la tabla. */
 
-  HashMap<std::string, BPlusTree<IndexEntry> *> bptIndices_; /**< Índices B+ por columna. */
-  HashMap<std::string, InvertedIndex *> invIndices_;         /**< Índices invertidos por columna. */
+  HashMap<std::string, BPlusTree<IndexEntry> *>
+      bptIndices_; /**< Índices B+ por columna. */
+  HashMap<std::string, InvertedIndex *>
+      invIndices_; /**< Índices invertidos por columna. */
 
   /**
    * @brief Verifica si una celda coincide con un tipo de dato.

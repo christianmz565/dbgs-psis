@@ -24,9 +24,9 @@ public:
   /**
    * @brief Constructor de InvertedIndex.
    * @param initialCapacity Capacidad inicial del mapa hash subyacente (por
-   * defecto 101).
+   * defecto 128).
    */
-  InvertedIndex(int initialCapacity = 101);
+  InvertedIndex(int initialCapacity = 128);
 
   /**
    * @brief Destructor de InvertedIndex. Libera la memoria utilizada.

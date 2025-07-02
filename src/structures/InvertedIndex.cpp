@@ -1,5 +1,10 @@
 #include "InvertedIndex.hpp"
 
+/** \file InvertedIndex.cpp
+ * Implementación de la clase InvertedIndex.
+ */
+
+
 InvertedIndex::InvertedIndex(int initialCapacity) : map_(initialCapacity) {}
 
 InvertedIndex::~InvertedIndex() { clear(); }

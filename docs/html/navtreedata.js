@@ -25,6 +25,15 @@
 var NAVTREE =
 [
   [ "DBGS - PSIS", "index.html", [
+    [ "Instalación y Desarrollo", "development.html", [
+      [ "Proceso de Instalación del Entorno de Desarrollo y la Aplicación", "development.html#autotoc_md0", [
+        [ "Instrucciones de Instalación", "development.html#autotoc_md1", [
+          [ "En Linux (Debian/Ubuntu)", "development.html#autotoc_md2", null ],
+          [ "En Windows", "development.html#autotoc_md3", null ]
+        ] ],
+        [ "Proceso de Desarrollo", "development.html#autotoc_md4", null ]
+      ] ]
+    ] ],
     [ "Clases", "annotated.html", [
       [ "Lista de clases", "annotated.html", "annotated_dup" ],
       [ "Índice de clases", "classes.html", null ],

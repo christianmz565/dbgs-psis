@@ -1,0 +1,55 @@
+/** \page development Instalación y Desarrollo
+
+# Proceso de Instalación del Entorno de Desarrollo y la Aplicación
+
+Este proyecto requiere la instalación de las siguientes herramientas:
+
+- **GCC**: Compilador de C++.
+- **CMake**: Herramienta de construcción multiplataforma.
+- **Doxygen**: Generador de documentación.
+- **TeX Live**: Distribución de LaTeX para generar documentación en PDF.
+
+## Instrucciones de Instalación
+
+### En Linux (Debian/Ubuntu)
+
+```sh
+sudo apt update
+sudo apt install build-essential cmake doxygen texlive-full
+```
+
+### En Windows
+
+1. **GCC**: Instalar [MinGW-w64](https://www.mingw-w64.org/) o [MSYS2](https://www.msys2.org/).
+2. **CMake**: Descargar desde [cmake.org](https://cmake.org/download/).
+3. **Doxygen**: Descargar desde [doxygen.nl](https://www.doxygen.nl/download.html).
+4. **TeX Live**: Descargar desde [tug.org/texlive](https://www.tug.org/texlive/acquire-netinstall.html).
+
+Asegúrese de agregar las herramientas al `PATH` del sistema.
+
+## Proceso de Desarrollo
+
+1. Clonar el repositorio desde [https://github.com/christianmz565/dbgs-psis.git](https://github.com/christianmz565/dbgs-psis.git)
+2. Realizar las modificaciones necesarias en el código fuente.
+3. Para compilar el proyecto, puede ejecutar el script `build.sh`:
+
+   ```sh
+   ./build.sh
+   ```
+
+   Alternativamente, puede utilizar el archivo `CMakeLists.txt` ubicado en `src/` para configurar y compilar manualmente con CMake.
+
+4. Para regenerar la documentación HTML, ejecute:
+
+   ```sh
+   doxygen Doxyfile
+   ```
+
+5. Si requiere el informe en PDF, diríjase a `docs/latex/` y ejecute:
+
+   ```sh
+   make
+   ```
+
+Esto generará el archivo PDF de la documentación.
+*/

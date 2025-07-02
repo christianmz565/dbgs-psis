@@ -12,7 +12,7 @@ Representa una tabla de datos con soporte para índices y operaciones básicas.
 \doxysubsubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9}{Table}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}} $>$ $>$ \&cols, int hash\+Capacity=101)
+\mbox{\hyperlink{classTable_a8d615aee2793ad84cd5d34a686264564}{Table}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}} $>$ $>$ \&cols, int hash\+Capacity=128)
 \begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classTable}{Table}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{\texorpdfstring{$\sim$}{\string~}\+Table}} ()
 \begin{DoxyCompactList}\small\item\em Destructor de \doxylink{classTable}{Table}. \end{DoxyCompactList}\item 
@@ -70,11 +70,11 @@ Representa una tabla de datos con soporte para índices y operaciones básicas.
 Permite definir un esquema de columnas, insertar filas, crear índices B+ e invertidos, y realizar búsquedas eficientes por índice. 
 
 \doxysubsection{Documentación de constructores y destructores}
-\Hypertarget{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9}\index{Table@{Table}!Table@{Table}}
+\Hypertarget{classTable_a8d615aee2793ad84cd5d34a686264564}\index{Table@{Table}!Table@{Table}}
 \index{Table@{Table}!Table@{Table}}
 \doxysubsubsection{\texorpdfstring{Table()}{Table()}}
-{\footnotesize\ttfamily \label{classTable_a1ad00dd60ecd0922ffa896cc5cb7e1d9} 
-Table\+::\+Table (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}} $>$ $>$ \&}]{cols}{, }\item[{int}]{hash\+Capacity}{ = {\ttfamily 101}}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classTable_a8d615aee2793ad84cd5d34a686264564} 
+Table\+::\+Table (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, \mbox{\hyperlink{Table_8hpp_ad8ed01ff3ff33333d8e19db4d2818bb6}{Data\+Type}} $>$ $>$ \&}]{cols}{, }\item[{int}]{hash\+Capacity}{ = {\ttfamily 128}}\end{DoxyParamCaption})}
 
 
 
@@ -84,7 +84,7 @@ Constructor de \doxylink{classTable}{Table}.
 \begin{DoxyParams}{Parámetros}
 {\em cols} & Vector de pares (nombre, tipo) que define el esquema de la tabla. \\
 \hline
-{\em hash\+Capacity} & Capacidad inicial para los mapas hash internos (por defecto 101). \\
+{\em hash\+Capacity} & Capacidad inicial para los mapas hash internos (por defecto 128). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classTable_a9a559f2e7beb37b511ee9f88873164f8}\index{Table@{Table}!````~Table@{\texorpdfstring{$\sim$}{\string~}Table}}
@@ -109,8 +109,6 @@ bool Table\+::cell\+Matches\+Type (\begin{DoxyParamCaption}\item[{const Cell \&}
 
 
 Verifica si una celda coincide con un tipo de dato. 
-
-Verifica si una celda coincide con un tipo de dato específico.
 
 
 \begin{DoxyParams}{Parámetros}

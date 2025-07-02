@@ -84,7 +84,21 @@ public:
    * @param colName Nombre de la columna.
    * @return Valor de la celda correspondiente.
    */
-  Cell getCell(int rowIndex, const std::string &colName);
+  Cell &getCell(int rowIndex, const std::string &colName);
+
+  /**
+   * @brief Obtiene una fila completa dado su índice.
+   * @param rowIndex Índice de la fila.
+   * @return Vector de celdas que representa la fila.
+   */
+  std::vector<Cell> &getRow(int rowIndex);
+
+  /**
+   * @brief Elimina una fila dada su índice.
+   * @param rowIndex Índice de la fila a eliminar.
+   * @return Vector de celdas que representaba la fila eliminada.
+   */
+  std::vector<Cell> &deleteRow(int rowIndex);
 
   /**
    * @brief Crea un índice B+ sobre una columna específica.

@@ -24,6 +24,19 @@ struct IndexEntry {
   int rowId; /**< Identificador de la fila. */
 
   /**
+   * @brief Constructor por defecto.
+   * Crea una entrada de índice vacía con valores por defecto.
+   */
+  IndexEntry() : key(0), rowId(-1) {}
+
+  /**
+   * @brief Constructor con parámetros.
+   * @param k Clave del índice
+   * @param r Identificador de fila
+   */
+  IndexEntry(const Cell& k, int r) : key(k), rowId(r) {}
+
+  /**
    * @brief Operador de comparación menor que.
    * Compara dos IndexEntry basándose en su clave.
    */

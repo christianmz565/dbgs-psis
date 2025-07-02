@@ -101,7 +101,45 @@ void Table::printAllRows() const {
   }
 }
 
-Cell Table::getCell(int rowIndex, const std::string &colName) {
+std::vector<Cell> &Table::getRow(int rowIndex) {
+  if (rowIndex < 0 || rowIndex >= data_.size()) {
+    throw std::out_of_range("Row index out of range");
+  }
+  return data_[rowIndex];
+}
+
+std::vector<Cell> &Table::deleteRow(int rowIndex) {
+  if (rowIndex < 0 || rowIndex >= data_.size()) {
+    throw std::out_of_range("Row index out of range");
+  }
+
+  std::vector<Cell> &deletedRow = data_[rowIndex];
+
+  for (int i = 0; i < schema_.size(); ++i) {
+    const std::string &colName = schema_[i].name;
+    if (bptIndices_.containsKey(colName)) {
+      BPlusTree<IndexEntry> *treePtr = bptIndices_.get(colName).value();
+      IndexEntry ie{deletedRow[i], rowIndex};
+      treePtr->remove(ie);
+    }
+  }
+
+  for (int i = 0; i < schema_.size(); ++i) {
+    if (schema_[i].type == DataType::STRING) {
+      const std::string &colName = schema_[i].name;
+      if (invIndices_.containsKey(colName)) {
+        InvertedIndex *invPtr = invIndices_.get(colName).value();
+        const std::string &keyStr = std::get<std::string>(deletedRow[i]);
+        invPtr->remove(keyStr, rowIndex);
+      }
+    }
+  }
+
+  data_.erase(data_.begin() + rowIndex);
+  return deletedRow;
+}
+
+Cell &Table::getCell(int rowIndex, const std::string &colName) {
   int cidx = columnIndex(colName);
   if (rowIndex >= data_.size()) {
     throw std::out_of_range("Row index out of range");

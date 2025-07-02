@@ -544,7 +544,7 @@ template <typename T> void BPlusTree<T>::remove(T data) {
   for (int i = del_index; i < cursor->size - 1; i++) {
     cursor->item[i] = cursor->item[i + 1];
   }
-  cursor->item[cursor->size - 1] = 0;
+  cursor->item[cursor->size - 1] = T{};
   cursor->size--;
 
   if (cursor == this->root && cursor->size == 0) {
@@ -581,7 +581,7 @@ template <typename T> void BPlusTree<T>::remove(T data) {
         cursor->children[cursor->size] = cursor->children[cursor->size - 1];
         cursor->children[cursor->size - 1] = nullptr;
 
-        leftsibling->item[leftsibling->size - 1] = 0;
+        leftsibling->item[leftsibling->size - 1] = T{};
         leftsibling->size--;
         leftsibling->children[leftsibling->size] =
             leftsibling->children[leftsibling->size + 1];
@@ -615,7 +615,7 @@ template <typename T> void BPlusTree<T>::remove(T data) {
         for (int i = 0; i < rightsibling->size - 1; i++) {
           rightsibling->item[i] = rightsibling->item[i + 1];
         }
-        rightsibling->item[rightsibling->size - 1] = 0;
+        rightsibling->item[rightsibling->size - 1] = T{};
         rightsibling->size--;
         rightsibling->children[rightsibling->size] =
             rightsibling->children[rightsibling->size + 1];
@@ -640,7 +640,7 @@ template <typename T> void BPlusTree<T>::remove(T data) {
 
       _removeFromParent(cursor, left, cursor->parent);
       for (int i = 0; i < cursor->size; i++) {
-        cursor->item[i] = 0;
+        cursor->item[i] = T{};
         cursor->children[i] = nullptr;
       }
       cursor->children[cursor->size] = nullptr;
@@ -666,7 +666,7 @@ template <typename T> void BPlusTree<T>::remove(T data) {
       _removeFromParent(rightsibling, right - 1, cursor->parent);
 
       for (int i = 0; i < rightsibling->size; i++) {
-        rightsibling->item[i] = 0;
+        rightsibling->item[i] = T{};
         rightsibling->children[i] = nullptr;
       }
       rightsibling->children[rightsibling->size] = nullptr;
@@ -714,7 +714,7 @@ void BPlusTree<T>::_removeFromParent(Node<T> *node, int index, Node<T> *par) {
   for (int i = index; i < cursor->size - 1; i++) {
     cursor->item[i] = cursor->item[i + 1];
   }
-  cursor->item[cursor->size - 1] = 0;
+  cursor->item[cursor->size - 1] = T{};
 
   int rem_index = -1;
   for (int i = 0; i < cursor->size + 1; i++) {

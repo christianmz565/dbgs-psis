@@ -1,5 +1,4 @@
 #include "Table.hpp"
-#include "IndexEntry.hpp"
 #include <climits>
 #include <iostream>
 #include <sstream>

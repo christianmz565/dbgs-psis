@@ -10,7 +10,7 @@
 
 #include "../structures/BPlusTree.hpp"
 #include "../structures/InvertedIndex.cpp"
-#include "IndexEntry.hpp"
+#include "IndexEntry.cpp"
 #include <string>
 #include <variant>
 #include <vector>

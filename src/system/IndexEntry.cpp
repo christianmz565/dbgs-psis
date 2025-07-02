@@ -1,6 +1,11 @@
 #include "IndexEntry.hpp"
 #include <stdexcept>
 
+/**
+ * @file IndexEntry.cpp
+ * @brief Implementación de la estructura IndexEntry para índices de tablas.
+ */
+
 bool IndexEntry::operator<(const IndexEntry &other) const {
   if (key.index() != other.key.index()) {
     throw std::runtime_error("IndexEntry::operator<: type mismatch");

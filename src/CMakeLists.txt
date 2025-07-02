@@ -4,12 +4,24 @@ project(DBGS CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-add_executable(DBGS Main.cpp)
+add_executable(TableTest TableTest.cpp)
+add_executable(ParsingTest ParsingTest.cpp)
 
-target_include_directories(DBGS PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(TableTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(ParsingTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    target_compile_options(DBGS PRIVATE
+    target_compile_options(TableTest PRIVATE
+        #-Wall
+        #-Wextra
+        #-pedantic
+        -g
+        -O2
+    )
+endif()
+
+if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(ParsingTest PRIVATE
         #-Wall
         #-Wextra
         #-pedantic

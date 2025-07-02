@@ -166,12 +166,22 @@ private:
   Cell parseValue(const std::string &valueStr, DataType dataType);
 
   /**
+   * @brief Parsea un valor de cadena a un Cell según el tipo de dato.
+   * @param type Tipo de dato destino.
+   * @param value Valor de cadena a convertir.
+   * @return Cell con el valor convertido al tipo adecuado.
+   */
+  Cell parseCellByType(DataType type, const std::string &value);
+
+  /**
    * @brief Divide una cadena por un delimitador.
    * @param str Cadena a dividir.
    * @param delimiter Carácter delimitador.
+   * @param escapeChar Carácter de escape.
    * @return Vector de cadenas resultantes.
    */
-  std::vector<std::string> split(const std::string &str, char delimiter, char escapeChar = '\'');
+  std::vector<std::string> split(const std::string &str, char delimiter,
+                                 char escapeChar = '\0');
 
   /**
    * @brief Elimina espacios en blanco de una cadena.

@@ -85,7 +85,7 @@ ParsedCommand Parser::parseCommand(const std::string &command) {
     }
 
     if (parts.size() > 1) {
-      std::vector<std::string> values = split(parts[1], ' ');
+      std::vector<std::string> values = split(trim(parts[1]), ' ', '\'');
 
       for (const std::string &value : values) {
         std::string trimmedValue = trim(value);
@@ -262,25 +262,16 @@ bool Parser::executeInsert(const ParsedCommand &cmd) {
   }
 
   std::vector<Cell> row;
+  const std::vector<DataType> &schema = table->getSchema();
+  if (cmd.values.size() != schema.size()) {
+    std::cout << "Error: Value count does not match table schema" << std::endl;
+    return false;
+  }
 
-  for (const std::string &value : cmd.values) {
-
-    Cell cell;
-
-    try {
-      int intVal = std::stoi(value);
-      cell = intVal;
-    } catch (...) {
-
-      try {
-        double doubleVal = std::stod(value);
-        cell = doubleVal;
-      } catch (...) {
-
-        cell = value;
-      }
-    }
-
+  for (size_t i = 0; i < cmd.values.size(); ++i) {
+    const std::string &value = cmd.values[i];
+    DataType type = schema[i];
+    Cell cell = parseCellByType(type, value);
     row.push_back(cell);
   }
 
@@ -291,6 +282,22 @@ bool Parser::executeInsert(const ParsedCommand &cmd) {
   } catch (const std::exception &e) {
     std::cout << "Error inserting row: " << e.what() << std::endl;
     return false;
+  }
+}
+
+Cell Parser::parseCellByType(DataType type, const std::string &value) {
+  try {
+    switch (type) {
+    case DataType::INT:
+      return std::stoi(value);
+    case DataType::DOUBLE:
+      return std::stod(value);
+    case DataType::STRING:
+    default:
+      return value;
+    }
+  } catch (...) {
+    return value;
   }
 }
 
@@ -472,6 +479,20 @@ std::vector<std::string> Parser::split(const std::string &str, char delimiter,
   std::vector<std::string> tokens;
   std::string token;
   bool inEscape = false;
+
+  if (escapeChar == '\0') {
+    for (size_t i = 0; i < str.size(); ++i) {
+      char c = str[i];
+      if (c == delimiter) {
+        tokens.push_back(token);
+        token.clear();
+      } else {
+        token += c;
+      }
+    }
+    tokens.push_back(token);
+    return tokens;
+  }
 
   for (size_t i = 0; i < str.size(); ++i) {
     char c = str[i];

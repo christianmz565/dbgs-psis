@@ -107,6 +107,14 @@ std::vector<Cell> &Table::getRow(int rowIndex) {
   return data_[rowIndex];
 }
 
+std::vector<DataType> Table::getSchema() const {
+  std::vector<DataType> schemaTypes;
+  for (const auto &col : schema_) {
+    schemaTypes.push_back(col.type);
+  }
+  return schemaTypes;
+}
+
 std::vector<Cell> &Table::deleteRow(int rowIndex) {
   if (rowIndex < 0 || rowIndex >= data_.size()) {
     throw std::out_of_range("Row index out of range");

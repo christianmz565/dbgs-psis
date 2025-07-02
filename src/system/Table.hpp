@@ -94,6 +94,12 @@ public:
   std::vector<Cell> &getRow(int rowIndex);
 
   /**
+   * @brief Obtiene el esquema de la tabla como un vector de tipos de datos.
+   * @return Vector de DataType representando el esquema.
+   */
+  std::vector<DataType> getSchema() const;
+
+  /**
    * @brief Elimina una fila dada su índice.
    * @param rowIndex Índice de la fila a eliminar.
    * @return Vector de celdas que representaba la fila eliminada.

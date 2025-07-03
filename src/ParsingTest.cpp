@@ -12,7 +12,7 @@ int main() {
       "INSERT INTO students | 1 Alice 3.9 'CS major'",
       "INSERT INTO students | 2 Bob 3.4 'Math minor'",
       "INSERT INTO students | 3 Carol 3.8 Physics",
-      "INSERT INTO students | 4 Dave 3.4 'Math minor'",
+      "INSERT INTO students | 4 Dave 3.7 'Math minor'",
       // SHOW TABLES
       "SHOW TABLES",
       // SHOW SCHEMA
@@ -27,6 +27,8 @@ int main() {
       "SELECT * FROM students | WHERE gpa = 3.4",
       // SELECT with WHERE (Inverted index)
       "SELECT * FROM students | WHERE comment = 'Math minor'",
+      // SELECT with WHERE (no index)
+      "SELECT * FROM students | WHERE name = Bob",
       // DELETE with WHERE
       "DELETE FROM students | WHERE name = Bob",
       // SELECT after DELETE

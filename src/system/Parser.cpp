@@ -108,7 +108,7 @@ ParsedCommand Parser::parseCommand(const std::string &command) {
     if (parts.size() > 1) {
       std::string wherePart = trim(parts[1]);
       if (toUpper(wherePart).find("WHERE") == 0) {
-        std::vector<std::string> whereTokens = split(wherePart, ' ');
+        std::vector<std::string> whereTokens = split(wherePart, ' ', '\'');
         if (whereTokens.size() >= 4) {
           cmd.whereColumn = trim(whereTokens[1]);
           cmd.whereValue = trim(whereTokens[3]);
@@ -129,7 +129,7 @@ ParsedCommand Parser::parseCommand(const std::string &command) {
     if (parts.size() > 1) {
       std::string wherePart = trim(parts[1]);
       if (toUpper(wherePart).find("WHERE") == 0) {
-        std::vector<std::string> whereTokens = split(wherePart, ' ');
+        std::vector<std::string> whereTokens = split(wherePart, ' ', '\'');
         if (whereTokens.size() >= 4) {
           cmd.whereColumn = trim(whereTokens[1]);
           cmd.whereValue = trim(whereTokens[3]);
@@ -148,7 +148,7 @@ ParsedCommand Parser::parseCommand(const std::string &command) {
     }
 
     if (parts.size() > 1) {
-      std::vector<std::string> indexTokens = split(parts[1], ' ');
+      std::vector<std::string> indexTokens = split(trim(parts[1]), ' ');
       if (!indexTokens.empty()) {
         cmd.indexColumn = trim(indexTokens[0]);
         if (indexTokens.size() > 1) {
@@ -271,7 +271,7 @@ bool Parser::executeInsert(const ParsedCommand &cmd) {
   for (size_t i = 0; i < cmd.values.size(); ++i) {
     const std::string &value = cmd.values[i];
     DataType type = schema[i];
-    Cell cell = parseCellByType(type, value);
+    Cell cell = parseValue(value, type);
     row.push_back(cell);
   }
 
@@ -282,22 +282,6 @@ bool Parser::executeInsert(const ParsedCommand &cmd) {
   } catch (const std::exception &e) {
     std::cout << "Error inserting row: " << e.what() << std::endl;
     return false;
-  }
-}
-
-Cell Parser::parseCellByType(DataType type, const std::string &value) {
-  try {
-    switch (type) {
-    case DataType::INT:
-      return std::stoi(value);
-    case DataType::DOUBLE:
-      return std::stod(value);
-    case DataType::STRING:
-    default:
-      return value;
-    }
-  } catch (...) {
-    return value;
   }
 }
 
@@ -315,9 +299,10 @@ bool Parser::executeSelect(const ParsedCommand &cmd) {
   } else {
 
     try {
-      Cell searchValue = parseValue(cmd.whereValue, DataType::STRING);
+      DataType columnType = table->getColumnType(cmd.whereColumn);
+      Cell searchValue = parseValue(cmd.whereValue, columnType);
       std::vector<int> rowIndices =
-          table->searchByIndex(cmd.whereColumn, searchValue);
+          table->search(cmd.whereColumn, searchValue);
 
       if (rowIndices.empty()) {
         std::cout << "No rows found matching criteria" << std::endl;
@@ -354,9 +339,10 @@ bool Parser::executeDelete(const ParsedCommand &cmd) {
   }
 
   try {
-    Cell searchValue = parseValue(cmd.whereValue, DataType::STRING);
+    DataType columnType = table->getColumnType(cmd.whereColumn);
+    Cell searchValue = parseValue(cmd.whereValue, columnType);
     std::vector<int> rowIndices =
-        table->searchByIndex(cmd.whereColumn, searchValue);
+        table->search(cmd.whereColumn, searchValue);
 
     std::sort(rowIndices.rbegin(), rowIndices.rend());
 

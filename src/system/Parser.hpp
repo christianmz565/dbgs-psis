@@ -166,14 +166,6 @@ private:
   Cell parseValue(const std::string &valueStr, DataType dataType);
 
   /**
-   * @brief Parsea un valor de cadena a un Cell según el tipo de dato.
-   * @param type Tipo de dato destino.
-   * @param value Valor de cadena a convertir.
-   * @return Cell con el valor convertido al tipo adecuado.
-   */
-  Cell parseCellByType(DataType type, const std::string &value);
-
-  /**
    * @brief Divide una cadena por un delimitador.
    * @param str Cadena a dividir.
    * @param delimiter Carácter delimitador.

@@ -115,6 +115,11 @@ std::vector<DataType> Table::getSchema() const {
   return schemaTypes;
 }
 
+DataType &Table::getColumnType(const std::string &colName) {
+  int cidx = columnIndex(colName);
+  return schema_[cidx].type;
+}
+
 std::vector<Cell> &Table::deleteRow(int rowIndex) {
   if (rowIndex < 0 || rowIndex >= data_.size()) {
     throw std::out_of_range("Row index out of range");
@@ -262,4 +267,22 @@ std::vector<int> Table::searchByIndex(const std::string &colName,
   }
 
   return {};
+}
+
+std::vector<int> Table::search(const std::string &colName, const Cell &key) {
+  if (bptIndices_.containsKey(colName) ||
+      (columnIndex(colName) >= 0 &&
+       schema_[columnIndex(colName)].type == DataType::STRING &&
+       invIndices_.containsKey(colName))) {
+    return searchByIndex(colName, key);
+  }
+
+  int cidx = columnIndex(colName);
+  std::vector<int> result;
+  for (int i = 0; i < data_.size(); ++i) {
+    if (data_[i][cidx] == key) {
+      result.push_back(i);
+    }
+  }
+  return result;
 }

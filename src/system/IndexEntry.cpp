@@ -8,7 +8,7 @@
 
 bool IndexEntry::operator<(const IndexEntry &other) const {
   if (key.index() != other.key.index()) {
-    throw std::runtime_error("IndexEntry::operator<: type mismatch");
+    throw std::runtime_error("IndexEntry: type mismatch");
   }
   if (std::holds_alternative<int>(key)) {
     return std::get<int>(key) < std::get<int>(other.key);

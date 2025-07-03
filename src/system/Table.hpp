@@ -68,6 +68,13 @@ public:
   void insertRow(const std::vector<Cell> &row);
 
   /**
+   * @brief Obtiene el tipo de dato de una columna dado su nombre.
+   * @param colName Nombre de la columna.
+   * @return Tipo de dato de la columna.
+   */
+  DataType &getColumnType(const std::string &colName);
+
+  /**
    * @brief Imprime el esquema (columnas y tipos) de la tabla.
    */
   void printSchema() const;
@@ -126,6 +133,15 @@ public:
    * @return Vector de identificadores de filas que coinciden con la clave.
    */
   std::vector<int> searchByIndex(const std::string &colName, const Cell &key);
+
+  /**
+   * @brief Función de búsqueda general, si la columna tiene un índice, lo usa;
+   * de lo contrario, realiza una búsqueda lineal.
+   * @param colName El nombre de la columna a buscar.
+   * @param key El valor a buscar.
+   * @return Vector de índices de fila donde la columna coincide con la clave.
+   */
+  std::vector<int> search(const std::string &colName, const Cell &key);
 
 private:
   std::vector<Column> schema_; /**< Esquema de columnas de la tabla. */

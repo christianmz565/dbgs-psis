@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/cricro/projects/dbgs-psis/build",
+  "command": "/nix/store/f0m6caffiykyvsjim9376a3hx2yj2ghj-gcc-wrapper-14.2.1.20250322/bin/g++  -I/home/cricro/projects/dbgs-psis/src -std=gnu++17 -g -O2 -o CMakeFiles/TableTest.dir/TableTest.cpp.o -c /home/cricro/projects/dbgs-psis/src/TableTest.cpp",
+  "file": "/home/cricro/projects/dbgs-psis/src/TableTest.cpp",
+  "output": "CMakeFiles/TableTest.dir/TableTest.cpp.o"
+},
+{
+  "directory": "/home/cricro/projects/dbgs-psis/build",
+  "command": "/nix/store/f0m6caffiykyvsjim9376a3hx2yj2ghj-gcc-wrapper-14.2.1.20250322/bin/g++  -I/home/cricro/projects/dbgs-psis/src -std=gnu++17 -g -O2 -o CMakeFiles/ParsingTest.dir/ParsingTest.cpp.o -c /home/cricro/projects/dbgs-psis/src/ParsingTest.cpp",
+  "file": "/home/cricro/projects/dbgs-psis/src/ParsingTest.cpp",
+  "output": "CMakeFiles/ParsingTest.dir/ParsingTest.cpp.o"
+},
+{
+  "directory": "/home/cricro/projects/dbgs-psis/build",
+  "command": "/nix/store/f0m6caffiykyvsjim9376a3hx2yj2ghj-gcc-wrapper-14.2.1.20250322/bin/g++  -I/home/cricro/projects/dbgs-psis/src -std=gnu++17 -Wall -Wextra -pedantic -g -O2 -o CMakeFiles/Main.dir/Main.cpp.o -c /home/cricro/projects/dbgs-psis/src/Main.cpp",
+  "file": "/home/cricro/projects/dbgs-psis/src/Main.cpp",
+  "output": "CMakeFiles/Main.dir/Main.cpp.o"
+}
+]

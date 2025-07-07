@@ -1,0 +1,325 @@
+@startuml
+class "std::string" as C_0001275076681856179721
+class C_0001275076681856179721 {
+__
+}
+class "std::optional<V>" as C_0000104778404779150153
+class C_0000104778404779150153 {
+__
+}
+class "std::vector<int>" as C_0009228492206209329687
+class C_0009228492206209329687 {
+__
+}
+class "std::variant<int,double,std::string>" as C_0013286691501736849749
+class C_0013286691501736849749 {
+__
+}
+class "std::pair<std::string,DataType>" as C_0005333807765683474496
+class C_0005333807765683474496 {
+__
+}
+class "std::vector<std::pair<std::string,DataType>>" as C_0017233080784527609653
+class C_0017233080784527609653 {
+__
+}
+class "std::vector<std::variant<int,double,std::string>>" as C_0008766865828685879901
+class C_0008766865828685879901 {
+__
+}
+class "std::vector<DataType>" as C_0001581801557678914985
+class C_0001581801557678914985 {
+__
+}
+class "std::vector<Column>" as C_0008185653322218091566
+class C_0008185653322218091566 {
+__
+}
+class "std::vector<std::vector<std::variant<int,double,std::string>>>" as C_0004738583174731097660
+class C_0004738583174731097660 {
+__
+}
+class "std::vector<std::string>" as C_0001347152004389415025
+class C_0001347152004389415025 {
+__
+}
+class "std::unique_ptr<Table>" as C_0002037516834966591722
+class C_0002037516834966591722 {
+__
+}
+class "std::unordered_map<std::string,std::unique_ptr<Table>>" as C_0016715668785873241361
+class C_0016715668785873241361 {
+__
+}
+class "Node<T>" as C_0016752867097530543532
+class C_0016752867097530543532 {
++Node(int _degree) : void
+__
++children : Node<T> **
++degree : int
++is_leaf : bool
++item : T *
++parent : Node<T> *
++size : int
+}
+class "BPlusTree<T>" as C_0017364706048989676630
+class C_0017364706048989676630 {
++BPlusTree(int _degree) : void
++~BPlusTree() : void
+..
++_findIndex(T * arr, T data, int len) : int
++_findKey(Node<T> * node, T key) : Node<T> *
++_findRange(Node<T> * node, T key) : Node<T> *
++_innerInsert(Node<T> ** child_arr, Node<T> * child, int len, int index) : Node<T> **
++_insertInChild(Node<T> * node, T data, Node<T> * child) : Node<T> *
++_insertInParent(Node<T> * par, Node<T> * child, T data) : void
++_insertItem(T * arr, T data, int len) : T *
++_print(Node<T> * cursor) : void
++_removeFromParent(Node<T> * node, int index, Node<T> * par) : void
++clear(Node<T> * cursor) : void
++getRoot() : Node<T> *
++insert(T data) : void
++print() : void
++remove(T data) : void
++search(T data) : bool
++searchRange(T start, T end, T * result_data, int arr_length) : int
+__
+-degree : int
+-root : Node<T> *
+}
+class "HashNode<K,V>" as C_0007558460273794165053
+class C_0007558460273794165053 {
++HashNode(K key, V value) : void
+__
++key : K
++value : V
+}
+class "HashMap<K,V>" as C_0005305883418304897763
+class C_0005305883418304897763 {
++HashMap(int cap) : void
++~HashMap() : void
+..
++_getLoadFactor() : double
++_getPows() : long long *
++_grow() : void
++_hashCode(K key) : int
++_insert(K key, V value, HashNode<K,V> ** arr) : void
++_toStringGeneric(const K & val) : std::string
++_wrap(long long key, int size) : int
++clear() : void
++containsKey(K key) : bool
++display() : void
++get(K key) : std::optional<V>
++getSize() : int
++insert(K key, V value) : void
++isEmpty() : bool
++remove(K key) : std::optional<V>
++toList() : HashNode<K,V> **
+__
+-capacity : int
+-pows : long long *
+-size : int
+-table : HashNode<K,V> **
+}
+class "HashMap<std::string,std::vector<int>>" as C_0010633782215683993959
+class C_0010633782215683993959 {
+__
+}
+class "InvertedIndex" as C_0001527997930111628567
+class C_0001527997930111628567 {
++InvertedIndex(int initialCapacity = 128) : void
++~InvertedIndex() : void
+..
++add(const std::string & key, int rowId) : void
++clear() : void
++get(const std::string & key) : std::vector<int>
++remove(const std::string & key, int rowId) : void
+__
+-map_ : HashMap<std::string,std::vector<int>>
+}
+class "IndexEntry" as C_0002999865715810332645
+class C_0002999865715810332645 {
++IndexEntry() : void
++IndexEntry(const Cell & k, int r) : void
+..
++operator<(const IndexEntry & other) const : bool
++operator<=(const IndexEntry & other) const : bool
++operator==(const IndexEntry & other) const : bool
++operator>(const IndexEntry & other) const : bool
++operator>=(const IndexEntry & other) const : bool
+__
++key : Cell
++rowId : int
+}
+enum "DataType" as C_0005733058170336282203
+enum C_0005733058170336282203 {
+INT
+DOUBLE
+STRING
+}
+class "Column" as C_0017491645692381291295
+class C_0017491645692381291295 {
+__
++name : std::string
++type : DataType
+}
+class "HashMap<std::string,int>" as C_0010807060732309115429
+class C_0010807060732309115429 {
+__
+}
+class "BPlusTree<IndexEntry>" as C_0001443949619868695566
+class C_0001443949619868695566 {
+__
+}
+class "HashMap<std::string,BPlusTree<IndexEntry> *>" as C_0011865670903947820179
+class C_0011865670903947820179 {
+__
+}
+class "HashMap<std::string,InvertedIndex *>" as C_0000480201787714722220
+class C_0000480201787714722220 {
+__
+}
+class "Table" as C_0011693550169727612363
+class C_0011693550169727612363 {
++Table(const std::vector<std::pair<std::string,DataType>> & cols, int hashCapacity = 128) : void
++~Table() : void
+..
+{static} -cellMatchesType(const Cell & cell, DataType dt) : bool
+-columnIndex(const std::string & colName) : int
++createBPlusTreeIndex(const std::string & colName, int degree) : void
++createInvertedIndex(const std::string & colName) : void
+{static} -dataTypeToString(DataType dt) : std::string
++deleteRow(int rowIndex) : std::vector<Cell> &
++getCell(int rowIndex, const std::string & colName) : Cell &
++getColumnType(const std::string & colName) : DataType &
++getRow(int rowIndex) : std::vector<Cell> &
++getSchema() const : std::vector<DataType>
++insertRow(const std::vector<Cell> & row) : void
++printAllRows() const : void
++printSchema() const : void
++search(const std::string & colName, const Cell & key) : std::vector<int>
++searchByIndex(const std::string & colName, const Cell & key) : std::vector<int>
+__
+-bptIndices_ : HashMap<std::string,BPlusTree<IndexEntry> *>
+-data_ : std::vector<std::vector<Cell>>
+-invIndices_ : HashMap<std::string,InvertedIndex *>
+-nameToIndex_ : HashMap<std::string,int>
+-schema_ : std::vector<Column>
+}
+enum "CommandType" as C_0016546311247046166442
+enum C_0016546311247046166442 {
+CREATE_TABLE
+INSERT
+SELECT
+DELETE
+CREATE_INDEX
+CREATE_INVERTED_INDEX
+SHOW_SCHEMA
+SHOW_TABLES
+UNKNOWN
+}
+class "ParsedCommand" as C_0010698960685966017002
+class C_0010698960685966017002 {
+__
++columns : std::vector<std::string>
++indexColumn : std::string
++indexDegree : int
++tableName : std::string
++type : CommandType
++values : std::vector<std::string>
++whereColumn : std::string
++whereValue : std::string
+}
+class "Parser" as C_0009526667081451300772
+class C_0009526667081451300772 {
++Parser() : void
++~Parser() : void
+..
++executeCommand(const std::string & command) : bool
+-executeCreateIndex(const ParsedCommand & cmd) : bool
+-executeCreateInvertedIndex(const ParsedCommand & cmd) : bool
+-executeCreateTable(const ParsedCommand & cmd) : bool
+-executeDelete(const ParsedCommand & cmd) : bool
+-executeInsert(const ParsedCommand & cmd) : bool
+-executeSelect(const ParsedCommand & cmd) : bool
+-executeShowSchema(const ParsedCommand & cmd) : bool
+-executeShowTables() : bool
++getTable(const std::string & tableName) : Table *
++listTables() const : std::vector<std::string>
++parseCommand(const std::string & command) : ParsedCommand
+-parseDataType(const std::string & typeStr) : DataType
+-parseValue(const std::string & valueStr, DataType dataType) : Cell
+-split(const std::string & str, char delimiter, char escapeChar = '\0') : std::vector<std::string>
+-toUpper(const std::string & str) : std::string
+-trim(const std::string & str) : std::string
+__
+-tables_ : std::unordered_map<std::string,std::unique_ptr<Table>>
+}
+C_0013286691501736849749 ..> C_0001275076681856179721
+C_0005333807765683474496 ..> C_0001275076681856179721
+C_0005333807765683474496 ..> C_0005733058170336282203
+C_0017233080784527609653 ..> C_0005333807765683474496
+C_0008766865828685879901 ..> C_0013286691501736849749
+C_0001581801557678914985 ..> C_0005733058170336282203
+C_0008185653322218091566 ..> C_0017491645692381291295
+C_0004738583174731097660 ..> C_0008766865828685879901
+C_0001347152004389415025 ..> C_0001275076681856179721
+C_0002037516834966591722 ..> C_0011693550169727612363
+C_0016715668785873241361 ..> C_0001275076681856179721
+C_0016715668785873241361 ..> C_0002037516834966591722
+C_0016752867097530543532 ..|> C_0016752867097530543532
+C_0016752867097530543532 --> C_0016752867097530543532 : +children
+C_0016752867097530543532 --> C_0016752867097530543532 : +parent
+C_0017364706048989676630 --> C_0016752867097530543532 : -root
+C_0005305883418304897763 ..> C_0001275076681856179721
+C_0005305883418304897763 ..> C_0000104778404779150153
+C_0005305883418304897763 --> C_0007558460273794165053 : -table
+C_0010633782215683993959 ..> C_0001275076681856179721
+C_0010633782215683993959 ..> C_0009228492206209329687
+C_0010633782215683993959 ..|> C_0005305883418304897763
+C_0001527997930111628567 ..> C_0001275076681856179721
+C_0001527997930111628567 ..> C_0009228492206209329687
+C_0001527997930111628567 o-- C_0010633782215683993959 : -map_
+C_0002999865715810332645 o-- C_0013286691501736849749 : +key
+C_0017491645692381291295 o-- C_0001275076681856179721 : +name
+C_0017491645692381291295 o-- C_0005733058170336282203 : +type
+C_0010807060732309115429 ..> C_0001275076681856179721
+C_0010807060732309115429 ..|> C_0005305883418304897763
+C_0001443949619868695566 ..> C_0002999865715810332645
+C_0001443949619868695566 ..|> C_0017364706048989676630
+C_0011865670903947820179 ..> C_0001275076681856179721
+C_0011865670903947820179 ..> C_0001443949619868695566
+C_0011865670903947820179 ..|> C_0005305883418304897763
+C_0000480201787714722220 ..> C_0001275076681856179721
+C_0000480201787714722220 ..> C_0001527997930111628567
+C_0000480201787714722220 ..|> C_0005305883418304897763
+C_0011693550169727612363 ..> C_0017233080784527609653
+C_0011693550169727612363 ..> C_0005733058170336282203
+C_0011693550169727612363 ..> C_0008766865828685879901
+C_0011693550169727612363 ..> C_0001275076681856179721
+C_0011693550169727612363 ..> C_0013286691501736849749
+C_0011693550169727612363 ..> C_0001581801557678914985
+C_0011693550169727612363 ..> C_0009228492206209329687
+C_0011693550169727612363 o-- C_0008185653322218091566 : -schema_
+C_0011693550169727612363 o-- C_0010807060732309115429 : -nameToIndex_
+C_0011693550169727612363 o-- C_0004738583174731097660 : -data_
+C_0011693550169727612363 o-- C_0011865670903947820179 : -bptIndices_
+C_0011693550169727612363 o-- C_0000480201787714722220 : -invIndices_
+C_0010698960685966017002 o-- C_0016546311247046166442 : +type
+C_0010698960685966017002 o-- C_0001275076681856179721 : +tableName
+C_0010698960685966017002 o-- C_0001347152004389415025 : +columns
+C_0010698960685966017002 o-- C_0001347152004389415025 : +values
+C_0010698960685966017002 o-- C_0001275076681856179721 : +whereColumn
+C_0010698960685966017002 o-- C_0001275076681856179721 : +whereValue
+C_0010698960685966017002 o-- C_0001275076681856179721 : +indexColumn
+C_0009526667081451300772 ..> C_0001275076681856179721
+C_0009526667081451300772 ..> C_0010698960685966017002
+C_0009526667081451300772 ..> C_0011693550169727612363
+C_0009526667081451300772 ..> C_0001347152004389415025
+C_0009526667081451300772 ..> C_0005733058170336282203
+C_0009526667081451300772 ..> C_0013286691501736849749
+C_0009526667081451300772 o-- C_0016715668785873241361 : -tables_
+
+'Generated with clang-uml, version 0.6.1
+'LLVM version clang version 19.1.7
+@enduml

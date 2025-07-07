@@ -13,5 +13,7 @@
     stdenv.cc.cc.lib
     doxygen
     texlive.combined.scheme-full
+    clang-uml
+    graphviz
   ];
 }

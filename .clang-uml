@@ -1,0 +1,8 @@
+compilation_database_dir: .
+output_directory: diagrams
+diagrams:
+  DBGS_class:
+    type: class
+    glob:
+      - src/*.cpp
+      - src/*.hpp

@@ -7,10 +7,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 add_executable(TableTest TableTest.cpp)
 add_executable(ParsingTest ParsingTest.cpp)
+add_executable(StressTest StressTest.cpp)
 add_executable(Main Main.cpp)
 
 target_include_directories(TableTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(ParsingTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(StressTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(Main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
@@ -21,9 +23,6 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
         -g
         -O2
     )
-endif()
-
-if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(ParsingTest PRIVATE
         #-Wall
         #-Wextra
@@ -31,9 +30,13 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
         -g
         -O2
     )
-endif()
-
-if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    target_compile_options(StressTest PRIVATE
+        #-Wall
+        #-Wextra
+        #-pedantic
+        -g
+        -O2
+    )
     target_compile_options(Main PRIVATE
         -Wall
         -Wextra

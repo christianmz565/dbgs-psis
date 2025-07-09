@@ -114,7 +114,6 @@ La documentación se genera automáticamente con Doxygen:
 
 ```bash
 doxygen Doxyfile
-# Ver docs/html/index.html en tu navegador
 ```
 
 ## Arquitectura
@@ -153,14 +152,6 @@ El proyecto utiliza las siguientes herramientas:
 - **Doxygen**: Generación de documentación
 - **PlantUML**: Diagramas UML
 - **GCC/Clang**: Compiladores con C++17
-
-### Contribuir
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
 
 ## Autores
 
